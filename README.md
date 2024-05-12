@@ -1,9 +1,14 @@
-## TODO
+## About
 
-Personal Website core:
+A website About me :D
 
-- React
-- Tailwind CSS
-- CodeBerg Action
+- Vite + React
+- Tailwind CSS, daisyUI
 
-and more ... idk
+and more coming soon
+
+## Build
+
+```shell
+npm install && yarn run build
+```
