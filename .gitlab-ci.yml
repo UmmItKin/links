@@ -7,8 +7,9 @@ pages:
   - npm install
   - yarn cache clean -f
   - yarn run build
+  - mv dist publish 
   artifacts:
     paths:
-    - dist
+    - publish
   only:
   - master
