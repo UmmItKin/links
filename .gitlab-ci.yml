@@ -1,0 +1,10 @@
+pages:
+  stage: deploy
+  script:
+  - yarn cache clean -f
+  - yarn run build
+  artifacts:
+    paths:
+    - dist
+  only:
+  - master
