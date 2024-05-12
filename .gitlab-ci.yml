@@ -1,6 +1,7 @@
 pages:
   stage: deploy
   script:
+  - npm install
   - yarn cache clean -f
   - yarn run build
   artifacts:
