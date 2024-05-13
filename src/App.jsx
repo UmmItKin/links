@@ -30,7 +30,7 @@ function App() {
           <div class="flex flex-wrap justify-center">
 
             <div class="px-1">
-              <a href={_gitlab_url}>
+              <a href={_gitlab_url} target="_blank">
                 <svg
                   class="h-8 w-8 fill-stroke text-gray-500 hover:text-blue-500"
                   viewBox="0 0 24 24"
@@ -45,7 +45,7 @@ function App() {
               </a>
             </div>
             <div class="px-1">
-              <a href={_github_url}>
+              <a href={_github_url} target="_blank">
                 <svg
                   class="h-8 w-8 text-gray-500 hover:text-blue-500"
                   viewBox="0 0 24 24"
