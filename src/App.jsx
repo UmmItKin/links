@@ -30,9 +30,9 @@ function App() {
           <div class="flex flex-wrap justify-center">
 
             <div class="px-1">
-              <a href={_gitlab_url} target="_blank">
+              <a class="btn btn-ghost btn-circle fill-stroke text-gray-500 hover:text-blue-500" href={_gitlab_url} target="_blank">
                 <svg
-                  class="h-8 w-8 fill-stroke text-gray-500 hover:text-blue-500"
+                  class="h-8 w-8"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -45,9 +45,9 @@ function App() {
               </a>
             </div>
             <div class="px-1">
-              <a href={_github_url} target="_blank">
+              <a class="btn btn-ghost btn-circle fill-stroke text-gray-500 hover:text-blue-500" href={_github_url} target="_blank">
                 <svg
-                  class="h-8 w-8 text-gray-500 hover:text-blue-500"
+                  class="h-8 w-8"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -62,9 +62,9 @@ function App() {
             </div>
 
             <div class="px-1">
-              <a href={"mailto:" + _mail_address}>
+              <a class="btn btn-ghost btn-circle fill-stroke text-gray-500 hover:text-blue-500" href={"mailto:" + _mail_address}>
                 <svg
-                  class="h-8 w-8 fill-stroke text-gray-500 hover:text-blue-500"
+                  class="h-8 w-8"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
