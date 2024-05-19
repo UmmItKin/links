@@ -4,6 +4,7 @@ import "./App.css";
 const _gitlab_url = "https://gitlab.com/UmmIt";
 const _github_url = "https://github.com/UmmItC";
 const _mail_address = "hi@ummit.dev";
+const _name = "UmmIt :D";
 
 function Navbar() {
   return (
@@ -26,7 +27,7 @@ function Navbar() {
         </button>
       </div>
       <div class="navbar-center">
-        <a class="btn btn-ghost text-xl">UmmIt</a>
+        <a class="btn btn-ghost text-xl">{_name}</a>
       </div>
       <div class="navbar-end">
         <div class="px-2">
@@ -72,7 +73,7 @@ function App() {
               </div>
             </label>
 
-            <h1 className="text-5xl font-bold">UmmIt :D</h1>
+            <h1 className="text-5xl font-bold">{_name}</h1>
 
             <p className="py-6">
               Further information about me can be found on this site. It
