@@ -51,6 +51,58 @@ function Navbar() {
   );
 }
 
+
+function Project() {
+  return (
+    <div>
+      <div class="container mx-auto">
+        <h1 class="text-5xl font-bold text-center py-10">Project</h1>
+        <div className="card w-96 bg-base-100 shadow-xl">
+          <figure>
+            <img src="/project/cover_golang.png" alt="golang" />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">EasyStorage</h2>
+            <p>Simple Storage server. Written by go languages.</p>
+            <div className="card-actions justify-start">
+              <div className="badge-info badge badge-outline">Go</div>
+              <div className="badge-accent badge badge-outline">nginx</div>
+              <div className="badge-accent badge badge-outline">Web</div>
+            </div>
+            <div className="card-actions justify-end">
+              <button
+                className="btn btn-info"
+                onClick={() =>
+                  document.getElementById("my_modal_2").showModal()
+                }
+              >
+                Learn more
+              </button>
+              <dialog id="my_modal_2" className="modal">
+                <div className="modal-box">
+                  <h3 className="font-bold text-lg">Repository:</h3>
+                  <p className="py-4">
+                    <a
+                      className="link link-info"
+                      href="https://gitlab.com/UmmIt/EasyStorage"
+                      target="_blank"
+                    >
+                      https://gitlab.com/UmmIt/EasyStorage
+                    </a>
+                  </p>
+                </div>
+                <form method="dialog" className="modal-backdrop">
+                  <button>close</button>
+                </form>
+              </dialog>{" "}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   return (
     <div>
@@ -99,6 +151,8 @@ function App() {
           </div>
         </div>
       </div>
+
+      <Project />
     </div>
   );
 }
