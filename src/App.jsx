@@ -5,6 +5,7 @@ const _gitlab_url = "https://gitlab.com/UmmIt";
 const _github_url = "https://github.com/UmmItC";
 const _mail_address = "hi@ummit.dev";
 const _name = "UmmIt :D";
+const _bio = "Further information about me can be found on this site. It includes details of my skills, contacts and other relevant information."
 
 function Navbar() {
   return (
@@ -75,11 +76,7 @@ function App() {
 
             <h1 className="text-5xl font-bold">{_name}</h1>
 
-            <p className="py-6">
-              Further information about me can be found on this site. It
-              includes details of my skills, contacts and other relevant
-              information.
-            </p>
+            <p className="py-6">{_bio}</p>
 
             <div class="flex flex-wrap justify-center">
               <div class="px-1">
