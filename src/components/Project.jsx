@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import languageColors from '../languageColors.json';
 
 function Project() {
   const [repos, setRepos] = useState([]);
@@ -29,7 +30,9 @@ function Project() {
                 <h2 className="card-title">{repo.full_name}</h2>
                 <p>{repo.description}</p>
                 <div className="card-actions justify-start">
-                  <div className="badge-info badge badge-outline">{repo.language}</div>
+                  <div className="badge-info badge" style={{ backgroundColor: languageColors[repo.language] }}>
+                    {repo.language}
+                  </div>
                 </div>
                 <div className="card-actions justify-end">
                   <button
@@ -69,3 +72,4 @@ function Project() {
 }
 
 export default Project;
+
