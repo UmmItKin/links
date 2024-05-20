@@ -1,6 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import languageColors from '../languageColors.json';
 
+// Define a dictionary to map language to file extension
+const languageExtensions = {
+  go: 'png',
+  html: 'webp',
+  rust: 'jpg',
+  shell: 'webp',
+  cpp: 'jpg',
+  javascript: 'jpg',
+  python: 'jpg'
+};
+
 function Project() {
   const [repos, setRepos] = useState([]);
   const repositoryUsername = "UmmIt";
@@ -21,51 +32,56 @@ function Project() {
       <div className="container mx-auto">
         <h1 className="text-5xl font-bold text-center my-8">My Projects - Fetching via Codeberg API</h1>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1rem' }}>
-          {repos.map(repo => (
-            <div key={repo.id} className="card bg-base-500 shadow-xl">
-              <figure>
-                <img src="/project/cover_golang.png" alt="golang" />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">{repo.full_name}</h2>
-                <p>{repo.description}</p>
-                <div className="card-actions justify-start">
-                  <div className="badge-info badge" style={{ backgroundColor: languageColors[repo.language] }}>
-                    {repo.language}
+          {repos.map(repo => {
+            const language = repo.language.toLowerCase() || 'go';
+            const extension = languageExtensions[language] || 'jpg';
+            const backgroundImageUrl = `/project/cover_${language}.${extension}`;
+            return (
+              <div key={repo.id} className="card bg-base-500 shadow-xl">
+                <figure style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
+                  <img src={backgroundImageUrl} alt={language} style={{ width: '100%', height: '100%' }} />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">{repo.full_name}</h2>
+                  <p>{repo.description}</p>
+                  <div className="card-actions justify-start">
+                    <div className="badge-info badge" style={{ backgroundColor: languageColors[repo.language] }}>
+                      {repo.language}
+                    </div>
+                  </div>
+                  <div className="card-actions justify-end">
+                    <button
+                      className="btn badge-info badge"
+                      style={{ backgroundColor: languageColors[repo.language] }}
+                      onClick={() =>
+                        document.getElementById(`my_modal_${repo.id}`).showModal()
+                      }
+                    >
+                      Learn more
+                    </button>
+                    <dialog id={`my_modal_${repo.id}`} className="modal">
+                      <div className="modal-box">
+                        <h3 className="font-bold text-lg">Repository:</h3>
+                        <p className="">
+                          <a
+                            className="link link-info"
+                            href={repo.html_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {repo.html_url}
+                          </a>
+                        </p>
+                      </div>
+                      <form method="dialog" className="modal-backdrop">
+                        <button>close</button>
+                      </form>
+                    </dialog>{" "}
                   </div>
                 </div>
-                <div className="card-actions justify-end">
-                  <button
-                    className="btn badge-info badge"
-                    style={{backgroundColor: languageColors[repo.language]}}
-                    onClick={() =>
-                      document.getElementById(`my_modal_${repo.id}`).showModal()
-                    }
-                  >
-                    Learn more
-                  </button>
-                  <dialog id={`my_modal_${repo.id}`} className="modal">
-                    <div className="modal-box">
-                      <h3 className="font-bold text-lg">Repository:</h3>
-                      <p className="">
-                        <a
-                          className="link link-info"
-                          href={repo.html_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {repo.html_url}
-                        </a>
-                      </p>
-                    </div>
-                    <form method="dialog" className="modal-backdrop">
-                      <button>close</button>
-                    </form>
-                  </dialog>{" "}
-                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
