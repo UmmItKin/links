@@ -52,65 +52,67 @@ function Navbar() {
 }
 
 function Project() {
-  const [repoData, setRepoData] = useState(null);
+  const [repos, setRepos] = useState([]);
   const repositoryUsername = "UmmIt";
-  const repositoryName = "EasyStorage";
 
   useEffect(() => {
-    fetch(`https://codeberg.org/api/v1/repos/${repositoryUsername}/${repositoryName}`)
+    fetch(`https://codeberg.org/api/v1/users/${repositoryUsername}/repos`)
       .then(response => response.json())
-      .then(data => setRepoData(data))
+      .then(data => setRepos(data))
       .catch(error => console.error('Error fetching data:', error));
-  }, []);
+  }, [repositoryUsername]);
 
-  if (!repoData) {
+  if (repos.length === 0) {
     return <p>Loading...</p>;
   }
-
-  const { full_name, description, html_url, language } = repoData;
 
   return (
     <div>
       <div className="container mx-auto">
-        <h1 className="text-5xl font-bold text-center">Project</h1>
-        <div className="card w-96 bg-base-100 shadow-xl">
-          <figure>
-            <img src="/project/cover_golang.png" alt="golang" />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">{full_name}</h2>
-            <p>{description}</p>
-            <div className="card-actions justify-start">
-              <div className="badge-info badge badge-outline">{language}</div>
-            </div>
-            <div className="card-actions justify-end">
-              <button
-                className="btn btn-info"
-                onClick={() =>
-                  document.getElementById("my_modal_2").showModal()
-                }
-              >
-                Learn more
-              </button>
-              <dialog id="my_modal_2" className="modal">
-                <div className="modal-box">
-                  <h3 className="font-bold text-lg">Repository:</h3>
-                  <p className="py-4">
-                    <a
-                      className="link link-info"
-                      href={html_url}
-                      target="_blank"
-                    >
-                      {html_url}
-                    </a>
-                  </p>
+        <h1 className="text-5xl font-bold text-center my-8">My Projects - Fetching via Codeberg API</h1>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1rem' }}>
+          {repos.map(repo => (
+            <div key={repo.id} className="card bg-base-500 shadow-xl">
+              <figure>
+                <img src="/project/cover_golang.png" alt="golang" />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">{repo.full_name}</h2>
+                <p>{repo.description}</p>
+                <div className="card-actions justify-start">
+                  <div className="badge-info badge badge-outline">{repo.language}</div>
                 </div>
-                <form method="dialog" className="modal-backdrop">
-                  <button>close</button>
-                </form>
-              </dialog>{" "}
+                <div className="card-actions justify-end">
+                  <button
+                    className="btn btn-info"
+                    onClick={() =>
+                      document.getElementById(`my_modal_${repo.id}`).showModal()
+                    }
+                  >
+                    Learn more
+                  </button>
+                  <dialog id={`my_modal_${repo.id}`} className="modal">
+                    <div className="modal-box">
+                      <h3 className="font-bold text-lg">Repository:</h3>
+                      <p className="">
+                        <a
+                          className="link link-info"
+                          href={repo.html_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {repo.html_url}
+                        </a>
+                      </p>
+                    </div>
+                    <form method="dialog" className="modal-backdrop">
+                      <button>close</button>
+                    </form>
+                  </dialog>{" "}
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
