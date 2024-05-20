@@ -36,7 +36,8 @@ function Project() {
                 </div>
                 <div className="card-actions justify-end">
                   <button
-                    className="btn btn-info"
+                    className="btn badge-info badge"
+                    style={{backgroundColor: languageColors[repo.language]}}
                     onClick={() =>
                       document.getElementById(`my_modal_${repo.id}`).showModal()
                     }
