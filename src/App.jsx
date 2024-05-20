@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import "./App.css";
 
 const userData = {
@@ -51,23 +51,37 @@ function Navbar() {
   );
 }
 
-
 function Project() {
+  const [repoData, setRepoData] = useState(null);
+  const repositoryUsername = "UmmIt";
+  const repositoryName = "EasyStorage";
+
+  useEffect(() => {
+    fetch(`https://codeberg.org/api/v1/repos/${repositoryUsername}/${repositoryName}`)
+      .then(response => response.json())
+      .then(data => setRepoData(data))
+      .catch(error => console.error('Error fetching data:', error));
+  }, []);
+
+  if (!repoData) {
+    return <p>Loading...</p>;
+  }
+
+  const { full_name, description, html_url, language } = repoData;
+
   return (
     <div>
-      <div class="container mx-auto">
-        <h1 class="text-5xl font-bold text-center py-10">Project</h1>
+      <div className="container mx-auto">
+        <h1 className="text-5xl font-bold text-center">Project</h1>
         <div className="card w-96 bg-base-100 shadow-xl">
           <figure>
             <img src="/project/cover_golang.png" alt="golang" />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">EasyStorage</h2>
-            <p>Simple Storage server. Written by go languages.</p>
+            <h2 className="card-title">{full_name}</h2>
+            <p>{description}</p>
             <div className="card-actions justify-start">
-              <div className="badge-info badge badge-outline">Go</div>
-              <div className="badge-accent badge badge-outline">nginx</div>
-              <div className="badge-accent badge badge-outline">Web</div>
+              <div className="badge-info badge badge-outline">{language}</div>
             </div>
             <div className="card-actions justify-end">
               <button
@@ -84,10 +98,10 @@ function Project() {
                   <p className="py-4">
                     <a
                       className="link link-info"
-                      href="https://gitlab.com/UmmIt/EasyStorage"
+                      href={html_url}
                       target="_blank"
                     >
-                      https://gitlab.com/UmmIt/EasyStorage
+                      {html_url}
                     </a>
                   </p>
                 </div>
