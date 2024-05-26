@@ -38,9 +38,11 @@ function Project() {
             const backgroundImageUrl = `/project/cover_${language}.${extension}`;
             return (
               <div key={repo.id} className="card bg-base-500 shadow-xl">
+                {/*
                 <figure style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
                   <img src={backgroundImageUrl} alt={language} style={{ width: '100%', height: '100%' }} />
                 </figure>
+                */}
                 <div className="card-body">
                   <h2 className="card-title">{repo.full_name}</h2>
                   <p>{repo.description}</p>
