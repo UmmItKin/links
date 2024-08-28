@@ -59,7 +59,7 @@ function App() {
       <div className="hero min-h-screen bg-base-200 flex items-center justify-center">
         <div className="hero-content text-center">
           <div className="max-w-md">
-            <label className="swap swap-flip text-9xl pb-5">
+            <label className="swap swap-flip text-9xl pb-5 mt-20">
               <input type="checkbox" />
               <div className="swap-on">
                 <img width="150" height="150" src={userData.imagePaths.on} alt="Arch Linux" />
