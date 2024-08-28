@@ -17,7 +17,7 @@ const linksData = [
   { label: "GPU-Passthrough Docs", url: "https://github.com/UmmItC/GPU-Passthrough", icon: <BsGpuCard className="w-5 h-5 mr-2" />, alt: "In development"},
   { label: "Upptime Status", url: "https://status.ummit.dev", icon: <SiUpptime className="w-5 h-5 mr-2"/>, alt: "https://status.ummit.dev"},
  
-  { label: "Instagram", url: "https://instagram/@ltas.sh", icon: <BiLogoInstagramAlt className="w-5 h-5 mr-2" />, alt: "@ltas.sh" },
+  { label: "Instagram", url: "https://instagram.com/@ltas.sh", icon: <BiLogoInstagramAlt className="w-5 h-5 mr-2" />, alt: "@ltas.sh" },
   { label: "Threads", url: "https://threads.net/ltas.sh", icon: <FaSquareThreads className="w-5 h-5 mr-2" />, alt: "@ltas.sh" },
   { label: "Mastodon", url: "#", icon: <FaMastodon className="w-5 h-5 mr-2" />, alt: "not yet" },
   { label: "Youtube", url: "https://youtube.com/@PonnBOuO", icon: <FaYoutube className="w-5 h-5 mr-2" />, alt: "@PonnBOuO" },
