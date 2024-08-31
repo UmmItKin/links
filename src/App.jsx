@@ -5,6 +5,7 @@ import { MdEmail } from "react-icons/md";
 import { AiFillSun } from "react-icons/ai";
 import { IoMoon } from "react-icons/io5";
 import { SlMenu } from "react-icons/sl";
+import { LuCode2 } from "react-icons/lu";
 
 const userData = {
   name: "UmmIt 🐧",
@@ -13,7 +14,8 @@ const userData = {
   imagePaths: {
     on: "/cute-2.jpg",
     off: "/cute.jpg"
-  }
+  },
+  repo: "https://github.com/UmmItC/about"
 };
 
 const socialButtons = [
@@ -25,7 +27,12 @@ function Navbar() {
     <div className="navbar bg-base-100">
       <div className="navbar-start">
         <button className="btn btn-circle btn-ghost">
-          <SlMenu className="inline-block w-5 h-5 stroke-current"/>
+          <a 
+            href={userData.repo}
+            target="_blank"
+          >
+          <LuCode2 className="inline-block w-7 h-7 stroke-current"/>
+          </a>
         </button>
       </div>
       <div className="navbar-center">
