@@ -1,11 +1,13 @@
 import React from 'react';
 
-import { FaYoutube, FaGithub } from 'react-icons/fa';
-import { FaSquareThreads, FaGitlab } from "react-icons/fa6";
+import { FaYoutube, FaGithub, FaDiscord, FaPinterest } from 'react-icons/fa';
+import { FaSquareThreads, FaGitlab, FaMedium } from "react-icons/fa6";
 import { SiHugo, SiUpptime, SiMyanimelist, SiCodeberg } from "react-icons/si";
 import { BsGpuCard, BsReddit } from "react-icons/bs";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { IoLogoMarkdown } from "react-icons/io5";
+
+import { ReactSVG } from "react-svg";
 
 const linksData = [
 
@@ -13,6 +15,9 @@ const linksData = [
   { label: "Gitlab", url: "https://gitlab.com/UmmIt", icon: <FaGitlab className="w-5 h-5 mr-2" />, alt: "@UmmIt" },
   { label: "Github", url: "https://github.com/UmmItC", icon: <FaGithub className="w-5 h-5 mr-2" />, alt: "@UmmItC" },
   { label: "HackMD", url: "https://hackmd.io/@UmmIt", icon: <IoLogoMarkdown className="w-5 h-5 mr-2" />, alt: "@UmmIt" },
+  { label: "Medium", url: "https://medium.com/@UmmIt", icon: <FaMedium className="w-5 h-5 mr-2" />, alt: "@UmmIt" }, 
+
+  { label: "Librepay", url: "https://liberapay.com/UmmIt", icon: <ReactSVG src="/librepay.svg" className="w-5 h-5 mr-2" />, alt: "@UmmIt" }, 
 
   { label: "Personal Blog", url: "https://blog.ummit.dev", icon: <SiHugo className="w-5 h-5 mr-2" />, alt: "blog.ummit.dev" },
   { label: "InfoSec", url: "https://infosec.ummit.dev", icon: <SiHugo className="w-5 h-5 mr-2" />, alt: "infosec.ummit.dev" },
@@ -21,11 +26,12 @@ const linksData = [
  
   { label: "Instagram", url: "https://instagram.com/ltas.sh", icon: <BiLogoInstagramAlt className="w-5 h-5 mr-2" />, alt: "@ltas.sh" },
   { label: "Threads", url: "https://threads.net/ltas.sh", icon: <FaSquareThreads className="w-5 h-5 mr-2" />, alt: "@ltas.sh" },
-  { label: "Reddit", url: "https://www.reddit.com/user/Ferry0087_RD/", icon: <BsReddit className="w-5 h-5 mr-2" />, alt: "u/Ferry0087_RD" }, 
+  { label: "Reddit", url: "https://www.reddit.com/user/Ferry0087_RD/", icon: <BsReddit className="w-5 h-5 mr-2" />, alt: "u/Ferry0087_RD" },
+  { label: "Discord", url: "", icon: <FaDiscord className="w-5 h-5 mr-2" />, alt: "@linuss17_" }, 
   { label: "Youtube", url: "https://youtube.com/@PonnBOuO", icon: <FaYoutube className="w-5 h-5 mr-2" />, alt: "@PonnBOuO" },
   
   { label: "MyAnimeList", url: "https://myanimelist.net/profile/lovepenguin/", icon: <SiMyanimelist className="w-5 h-5 mr-2" />, alt: "@lovepenguin" },
-
+  { label: "Pinterest", url: "https://www.pinterest.com/gauging_shucking523/", icon: <FaPinterest className="w-5 h-5 mr-2" />, alt: "@gauging_shucking523" },
 ];
 
 function Links() {
