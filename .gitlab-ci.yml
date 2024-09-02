@@ -7,6 +7,10 @@ pages:
   script:
     - yarn cache clean -f
     - yarn run build
+
+    # Write commit hash to a file
+    - echo "Commit hash: ${CI_COMMIT_SHA}" > dist/commit_hash
+  
   artifacts:
     paths:
       # The folder that contains the files to be exposed at the Page URL
