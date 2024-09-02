@@ -9,7 +9,7 @@ pages:
     - yarn run build
 
     # Write commit hash to a file
-    - echo "Commit hash: ${CI_COMMIT_SHA}" > dist/commit_hash
+    - echo ${CI_COMMIT_SHA} > dist/commit_hash
 
   artifacts:
     paths:
