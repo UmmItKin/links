@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Links from "./components/Links.jsx";
+import Footer from "./components/Footer.jsx";
 import { MdEmail } from "react-icons/md";
 import { AiFillSun } from "react-icons/ai";
 import { IoMoon } from "react-icons/io5";
@@ -53,22 +54,6 @@ function Navbar() {
   );
 }
 
-function Footer() {
-  return (
-    <footer className="footer footer-center bg-base-100 text-gray-300 p-5">
-      <div className="container mx-auto">
-        <p className="text-sm mb-2">
-          &copy; {new Date().getFullYear()} <span className="font-semibold text-rose-200">UmmIt</span>. This site is fully open source and licensed under the <a href="https://opensource.org/licenses/MIT" className="text-rose-200 hover:text-rose-300 font-semibold">MIT License</a>.
-        </p>
-        <p className="text-sm text-rose-200 font-semibold">
-          Hosted on GitLab Pages (CI/CD)
-        </p>
-      </div>
-    </footer>
-  );
-}
-
-
 function App() {
   return (
     <div>
@@ -113,4 +98,3 @@ function App() {
 }
 
 export default App;
-
