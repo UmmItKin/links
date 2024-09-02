@@ -27,7 +27,7 @@ const linksData = [
   { label: "Instagram", url: "https://instagram.com/ltas.sh", icon: <BiLogoInstagramAlt className="w-5 h-5 mr-2" />, alt: "@ltas.sh" },
   { label: "Threads", url: "https://threads.net/ltas.sh", icon: <FaSquareThreads className="w-5 h-5 mr-2" />, alt: "@ltas.sh" },
   { label: "Reddit", url: "https://www.reddit.com/user/Ferry0087_RD/", icon: <BsReddit className="w-5 h-5 mr-2" />, alt: "u/Ferry0087_RD" },
-  { label: "Discord", url: "", icon: <FaDiscord className="w-5 h-5 mr-2" />, alt: "@linuss17_" }, 
+  { label: "Discord", url: "https://discordapp.com/users/1155419069420412968", icon: <FaDiscord className="w-5 h-5 mr-2" />, alt: "@linuss17_" }, 
   { label: "Youtube", url: "https://youtube.com/@PonnBOuO", icon: <FaYoutube className="w-5 h-5 mr-2" />, alt: "@PonnBOuO" },
   
   { label: "MyAnimeList", url: "https://myanimelist.net/profile/lovepenguin/", icon: <SiMyanimelist className="w-5 h-5 mr-2" />, alt: "@lovepenguin" },
