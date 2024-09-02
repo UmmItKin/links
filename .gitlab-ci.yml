@@ -10,7 +10,7 @@ pages:
 
     # Write commit hash to a file
     - echo "Commit hash: ${CI_COMMIT_SHA}" > dist/commit_hash
-  
+
   artifacts:
     paths:
       # The folder that contains the files to be exposed at the Page URL
@@ -20,4 +20,3 @@ pages:
     # This ensures that only pushes to the default branch will trigger
     # a pages deploy
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
-
