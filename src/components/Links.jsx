@@ -6,10 +6,13 @@ import { SiHugo, SiUpptime, SiMyanimelist, SiCodeberg } from "react-icons/si";
 import { BsGpuCard, BsReddit } from "react-icons/bs";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { IoLogoMarkdown } from "react-icons/io5";
+import { GrArchlinux } from "react-icons/gr";
 
 import { ReactSVG } from "react-svg";
 
 const linksData = [
+
+  { label: "Arch User Repository (AUR)", url: "https://aur.archlinux.org/account/UmmIt", icon: <GrArchlinux className="w-5 h-5 mr-2" />, alt: "@UmmIt" },
 
   { label: "Codeberg", url: "https://codeberg.org/UmmIt", icon: <SiCodeberg className="w-5 h-5 mr-2" />, alt: "@UmmIt" },
   { label: "Gitlab", url: "https://gitlab.com/UmmIt", icon: <FaGitlab className="w-5 h-5 mr-2" />, alt: "@UmmIt" },
