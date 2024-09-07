@@ -7,6 +7,7 @@ import { AiFillSun } from "react-icons/ai";
 import { IoMoon } from "react-icons/io5";
 import { SlMenu } from "react-icons/sl";
 import { LuCode2 } from "react-icons/lu";
+import { SiUmami } from "react-icons/si";
 
 const userData = {
   name: "UmmIt 🐧",
@@ -16,11 +17,19 @@ const userData = {
     on: "/cute-2.jpg",
     off: "/cute.jpg"
   },
-  repo: "https://github.com/UmmItC/about"
+  repo: "https://github.com/UmmItC/about",
+  umami_share_url: "https://cloud.umami.is/share/mLbSeRhkcLXWcdPZ/about.ummit.dev"
 };
 
 const socialButtons = [
-  { icon: "mail", url: `mailto:${userData.mail_address}` }
+  {
+    icon: "mail",
+    url: `mailto:${userData.mail_address}`
+  },
+  {
+    icon: "umami",
+    url: `${userData.umami_share_url}`
+  }
 ];
 
 function Navbar() {
@@ -81,6 +90,9 @@ function App() {
                   <a className="btn btn-ghost btn-circle fill-stroke text-gray-500 hover:text-blue-500" href={button.url} target="_blank">
                     {button.icon === "mail" && (
                       <MdEmail className="h-8 w-8"/>
+                    )}
+                    {button.icon === "umami" && (
+                      <SiUmami className="h-8 w-8"/>
                     )}
                   </a>
                 </div>
