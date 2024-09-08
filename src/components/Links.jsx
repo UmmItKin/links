@@ -2,7 +2,7 @@ import React from 'react';
 
 import { FaYoutube, FaGithub, FaDiscord, FaPinterest } from 'react-icons/fa';
 import { FaSquareThreads, FaGitlab, FaMedium } from "react-icons/fa6";
-import { SiHugo, SiUpptime, SiMyanimelist, SiCodeberg } from "react-icons/si";
+import { SiHugo, SiUpptime, SiMyanimelist, SiCodeberg, SiGnome } from "react-icons/si";
 import { BsGpuCard, BsReddit } from "react-icons/bs";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { IoLogoMarkdown } from "react-icons/io5";
@@ -18,7 +18,9 @@ const linksData = [
   { label: "Gitlab", url: "https://gitlab.com/UmmIt", icon: <FaGitlab className="w-5 h-5 mr-2" />, alt: "@UmmIt" },
   { label: "Github", url: "https://github.com/UmmItC", icon: <FaGithub className="w-5 h-5 mr-2" />, alt: "@UmmItC" },
   { label: "HackMD", url: "https://hackmd.io/@UmmIt", icon: <IoLogoMarkdown className="w-5 h-5 mr-2" />, alt: "@UmmIt" },
-  { label: "Medium", url: "https://medium.com/@UmmIt", icon: <FaMedium className="w-5 h-5 mr-2" />, alt: "@UmmIt" }, 
+  { label: "Medium", url: "https://medium.com/@UmmIt", icon: <FaMedium className="w-5 h-5 mr-2" />, alt: "@UmmIt" },
+
+  { label: "GNOME Shell Extensions", url: "https://extensions.gnome.org/accounts/profile/owfra", icon: <SiGnome className="w-5 h-5 mr-2" />, alt: "@owfra" },
 
   { label: "Librepay", url: "https://liberapay.com/UmmIt", icon: <ReactSVG src="/librepay.svg" className="w-5 h-5 mr-2" />, alt: "@UmmIt" }, 
 
