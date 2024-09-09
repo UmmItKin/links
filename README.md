@@ -21,6 +21,7 @@ Built with Vite, React, Tailwind CSS, and daisyUI.
 To visit the website locally, run the following command:
 
 ```shell
+npm install
 npm run dev
 ```
 
