@@ -18,7 +18,7 @@ const userData = {
     off: "/cute.jpg"
   },
   repo: "https://github.com/UmmItC/about",
-  umami_share_url: "https://cloud.umami.is/share/mLbSeRhkcLXWcdPZ/about.ummit.dev"
+  umami_share_url: "https://cloud.umami.is/share/mLbSeRhkcLXWcdPZ/links.ummit.dev"
 };
 
 const socialButtons = [
