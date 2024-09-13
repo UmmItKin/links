@@ -2,8 +2,8 @@ import React from 'react';
 
 import { FaYoutube, FaGithub, FaDiscord, FaPinterest } from 'react-icons/fa';
 import { FaSquareThreads, FaGitlab, FaMedium } from "react-icons/fa6";
-import { SiHugo, SiUpptime, SiMyanimelist, SiCodeberg, SiGnome } from "react-icons/si";
-import { BsGpuCard, BsReddit } from "react-icons/bs";
+import { SiHugo, SiUpptime, SiMyanimelist, SiCodeberg, SiGnome, SiDocusaurus } from "react-icons/si";
+import { BsReddit } from "react-icons/bs";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { IoLogoMarkdown } from "react-icons/io5";
 import { GrArchlinux } from "react-icons/gr";
@@ -26,7 +26,7 @@ const linksData = [
 
   { label: "Personal Blog", url: "https://blog.ummit.dev", icon: <SiHugo className="w-5 h-5 mr-2" />, alt: "blog.ummit.dev" },
   { label: "InfoSec", url: "https://infosec.ummit.dev", icon: <SiHugo className="w-5 h-5 mr-2" />, alt: "infosec.ummit.dev" },
-  { label: "GPU-Passthrough Docs", url: "https://github.com/UmmItC/GPU-Passthrough", icon: <BsGpuCard className="w-5 h-5 mr-2" />, alt: "In development"},
+  { label: "gpu.passthru.info", url: "https://github.com/UmmItC/gpu.passthru.info", icon: <SiDocusaurus className="w-5 h-5 mr-2" />, alt: "In development"},
   { label: "Upptime Status", url: "https://status.ummit.dev", icon: <SiUpptime className="w-5 h-5 mr-2"/>, alt: "status.ummit.dev"},
  
   { label: "Instagram", url: "https://instagram.com/ltas.sh", icon: <BiLogoInstagramAlt className="w-5 h-5 mr-2" />, alt: "@ltas.sh" },
