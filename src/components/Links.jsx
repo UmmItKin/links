@@ -1,10 +1,8 @@
 import React from 'react';
 
-import { FaYoutube, FaGithub, FaDiscord, FaPinterest } from 'react-icons/fa';
-import { FaSquareThreads, FaGitlab, FaMedium } from "react-icons/fa6";
-import { SiHugo, SiUpptime, SiMyanimelist, SiCodeberg, SiGnome, SiDocusaurus } from "react-icons/si";
-import { BsReddit } from "react-icons/bs";
-import { BiLogoInstagramAlt } from "react-icons/bi";
+import { FaGithub, FaDiscord } from 'react-icons/fa';
+import { FaGitlab, FaMedium } from "react-icons/fa6";
+import { SiHugo, SiUpptime, SiCodeberg, SiDocusaurus } from "react-icons/si";
 import { IoLogoMarkdown } from "react-icons/io5";
 import { GrArchlinux } from "react-icons/gr";
 
@@ -17,25 +15,12 @@ const linksData = [
   { label: "Codeberg", url: "https://codeberg.org/UmmIt", icon: <SiCodeberg className="w-5 h-5 mr-2" />, alt: "@UmmIt" },
   { label: "Gitlab", url: "https://gitlab.com/UmmIt", icon: <FaGitlab className="w-5 h-5 mr-2" />, alt: "@UmmIt" },
   { label: "Github", url: "https://github.com/UmmItC", icon: <FaGithub className="w-5 h-5 mr-2" />, alt: "@UmmItC" },
-  { label: "HackMD", url: "https://hackmd.io/@UmmIt", icon: <IoLogoMarkdown className="w-5 h-5 mr-2" />, alt: "@UmmIt" },
-  { label: "Medium", url: "https://medium.com/@UmmIt", icon: <FaMedium className="w-5 h-5 mr-2" />, alt: "@UmmIt" },
-
-  { label: "GNOME Shell Extensions", url: "https://extensions.gnome.org/accounts/profile/owfra", icon: <SiGnome className="w-5 h-5 mr-2" />, alt: "@owfra" },
 
   { label: "Librepay", url: "https://liberapay.com/UmmIt", icon: <ReactSVG src="/librepay.svg" className="w-5 h-5 mr-2" />, alt: "@UmmIt" }, 
 
   { label: "Personal Blog", url: "https://blog.ummit.dev", icon: <SiHugo className="w-5 h-5 mr-2" />, alt: "blog.ummit.dev" },
-  { label: "InfoSec", url: "https://infosec.ummit.dev", icon: <SiHugo className="w-5 h-5 mr-2" />, alt: "infosec.ummit.dev" },
   { label: "gpu.passthru.info", url: "https://github.com/UmmItC/gpu.passthru.info", icon: <SiDocusaurus className="w-5 h-5 mr-2" />, alt: "In development"},
   { label: "Upptime Status", url: "https://status.ummit.dev", icon: <SiUpptime className="w-5 h-5 mr-2"/>, alt: "status.ummit.dev"},
- 
-  { label: "Threads", url: "https://meta.ummit.dev", icon: <FaSquareThreads className="w-5 h-5 mr-2" />, alt: "@meta.ummit.dev" },
-  { label: "Reddit", url: "https://www.reddit.com/user/Ferry0087_RD/", icon: <BsReddit className="w-5 h-5 mr-2" />, alt: "u/Ferry0087_RD" },
-  { label: "Discord", url: "https://discordapp.com/users/1155419069420412968", icon: <FaDiscord className="w-5 h-5 mr-2" />, alt: "@linuss17_" }, 
-  { label: "Youtube", url: "https://youtube.com/@PonnBOuO", icon: <FaYoutube className="w-5 h-5 mr-2" />, alt: "@PonnBOuO" },
-  
-  { label: "MyAnimeList", url: "https://myanimelist.net/profile/lovepenguin/", icon: <SiMyanimelist className="w-5 h-5 mr-2" />, alt: "@lovepenguin" },
-  { label: "Pinterest", url: "https://www.pinterest.com/gauging_shucking523/", icon: <FaPinterest className="w-5 h-5 mr-2" />, alt: "@gauging_shucking523" },
 ];
 
 function Links() {
