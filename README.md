@@ -1,20 +1,14 @@
 ## Linktree
 
-This website is styled like Linktree, providing access to all my social platforms. I initially had a about page but found it challenging to create an effective one. So, I decided to switch to a Linktree-like style. It’s simpler and makes it easier to connect with me.
-
-Here are some features I’ve worked on before:
-
-## Codeberg API
-
-I used to integrate the Codeberg API to showcase all my repositories. However, it turned out to be redundant. It’s more convenient to visit my account directly, so I removed this feature a while ago. LMFAO 🤣
-
-## hCaptcha
-
-I previously used hCaptcha to prevent email addresses from being harvested by bots. However, I now think hiding my email isn’t necessary, so I decided to release it directly. Consequently, I’ve removed the hCaptcha protection.
+This website is styled like Linktree, providing access to all my social platforms :) It’s simpler and makes it easier to connect with me.
 
 ## Core Technologies
 
-Built with Vite, React, Tailwind CSS, and daisyUI.
+Built with:
+
+- React (Vite)
+- Tailwind CSS
+- DaisyUI
 
 ## Usage
 
