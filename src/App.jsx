@@ -6,7 +6,7 @@ import { MdEmail } from "react-icons/md";
 import { AiFillSun } from "react-icons/ai";
 import { IoMoon } from "react-icons/io5";
 import { SlMenu } from "react-icons/sl";
-import { LuCode2 } from "react-icons/lu";
+import { FaCode } from "react-icons/fa6";
 import { SiUmami } from "react-icons/si";
 
 const userData = {
@@ -41,7 +41,7 @@ function Navbar() {
             href={userData.repo}
             target="_blank"
           >
-          <LuCode2 className="inline-block w-7 h-7 stroke-current"/>
+            <FaCode className="h-8 w-8"/>
           </a>
         </button>
       </div>
