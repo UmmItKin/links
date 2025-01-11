@@ -67,7 +67,7 @@ const GPGModal = ({ isOpen, onClose, content }) => {
           </div>
           </div>
         </div>
-        <pre className="whitespace-pre-wrap font-mono text-sm bg-base-200 p-4 rounded-lg">
+        <pre className="whitespace-pre-wrap font-mono text-sm bg-base-200 p-4 rounded-lg overflow-auto max-w-full break-words">
           {content}
         </pre>
       </div>
