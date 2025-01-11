@@ -8,6 +8,7 @@ import { IoMoon } from "react-icons/io5";
 import { SlMenu } from "react-icons/sl";
 import { FaCode } from "react-icons/fa6";
 import { SiUmami } from "react-icons/si";
+import { HiMiniKey } from "react-icons/hi2";
 
 const userData = {
   name: "UmmIt 🐧",
@@ -17,8 +18,9 @@ const userData = {
     on: "/cute-2.jpg",
     off: "/cute.jpg"
   },
-  repo: "https://github.com/UmmItC/about",
-  umami_share_url: "https://cloud.umami.is/share/mLbSeRhkcLXWcdPZ/links.ummit.dev"
+  repo: "https://github.com/UmmItC/Links",
+  umami_share_url: "https://cloud.umami.is/share/mLbSeRhkcLXWcdPZ/links.ummit.dev",
+  gpg_key: "https://links.ummit.dev/info/UmmIt.gpg",
 };
 
 const socialButtons = [
@@ -29,6 +31,10 @@ const socialButtons = [
   {
     icon: "umami",
     url: `${userData.umami_share_url}`
+  },
+  {
+    icon: "gpg",
+    url: `${userData.gpg_key}`
   }
 ];
 
@@ -41,7 +47,7 @@ function Navbar() {
             href={userData.repo}
             target="_blank"
           >
-            <FaCode className="h-8 w-8"/>
+            <FaCode className="inline-block w-7 h-7 stroke-current"/>
           </a>
         </button>
       </div>
@@ -93,6 +99,9 @@ function App() {
                     )}
                     {button.icon === "umami" && (
                       <SiUmami className="h-8 w-8"/>
+                    )}
+                    {button.icon === "gpg" && (
+                      <HiMiniKey className="h-8 w-8"/>
                     )}
                   </a>
                 </div>

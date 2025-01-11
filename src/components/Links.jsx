@@ -13,13 +13,12 @@ const linksData = [
   { label: "Arch User Repository (AUR)", url: "https://aur.archlinux.org/account/UmmIt", icon: <GrArchlinux className="w-5 h-5 mr-2" />, alt: "@UmmIt" },
 
   { label: "Codeberg", url: "https://codeberg.org/UmmIt", icon: <SiCodeberg className="w-5 h-5 mr-2" />, alt: "@UmmIt" },
-  { label: "Gitlab", url: "https://gitlab.com/UmmIt", icon: <FaGitlab className="w-5 h-5 mr-2" />, alt: "@UmmIt" },
   { label: "Github", url: "https://github.com/UmmItC", icon: <FaGithub className="w-5 h-5 mr-2" />, alt: "@UmmItC" },
 
   { label: "Librepay", url: "https://liberapay.com/UmmIt", icon: <ReactSVG src="/librepay.svg" className="w-5 h-5 mr-2" />, alt: "@UmmIt" }, 
 
   { label: "Personal Blog", url: "https://blog.ummit.dev", icon: <SiHugo className="w-5 h-5 mr-2" />, alt: "blog.ummit.dev" },
-  { label: "gpu.passthru.info", url: "https://github.com/UmmItC/gpu.passthru.info", icon: <SiDocusaurus className="w-5 h-5 mr-2" />, alt: "In development"},
+  { label: "GPU-Passthru", url: "https://gpu-passthru.ummit.dev", icon: <SiDocusaurus className="w-5 h-5 mr-2" />, alt: "gpu-passthru.ummit.dev" },
   { label: "Upptime Status", url: "https://status.ummit.dev", icon: <SiUpptime className="w-5 h-5 mr-2"/>, alt: "status.ummit.dev"},
 ];
 
