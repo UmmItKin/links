@@ -26,6 +26,14 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: build # will run `yarn build` command
+
+      # Generate commit hash action
+      - name: Generate short commit hash
+        run: git rev-parse --short HEAD > dist/commit_hash
+
+      # Display the content of the commit hash file
+      - name: Display commit hash file
+        run: cat dist/commit_hash
       
       # Upload artifact action
       - name: Upload artifact
