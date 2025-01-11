@@ -32,13 +32,13 @@ function Footer() {
           &copy; {new Date().getFullYear()} <span className="font-semibold text-rose-200">UmmIt</span>. This site is fully open source and licensed under the <a href="https://opensource.org/licenses/MIT" className="text-rose-200 hover:text-rose-300 font-semibold">MIT License</a>.
         </p>
         <p className="text-sm text-rose-200 font-semibold">
-          Hosted on GitLab Pages (CI/CD)
+          Hosted on GitHub Pages (CI/CD)
         </p>
         {commitHash && (
           <p className="text-sm text-rose-200 font-semibold">
             <span className="text-sm text-rose-100 font-semibold">Updated with commit hash: </span>
             <a
-              href={`https://gitlab.com/UmmIt/Links/-/commit/${commitHash}`}
+              href={`https://github.com/UmmItC/Links/commit/${commitHash}`}
               className="text-rose-100 hover:text-rose-500 font-semibold"
               target="_blank"
               rel="noopener noreferrer"
