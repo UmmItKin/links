@@ -10,7 +10,12 @@ export default {
   },
 
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        myPink1: "#E2BBE9",
+        myPink2: "#E966A0",
+      }
+    },
   },
 
   plugins: [

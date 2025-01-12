@@ -30,17 +30,17 @@ function Footer() {
     <footer className="footer footer-center bg-base-100 text-gray-300 p-5">
       <div className="container mx-auto">
         <p className="text-sm mb-2">
-        &copy; <span className="font-semibold text-rose-200">{start_year}-{new Date().getFullYear()} UmmIt</span>. This site is fully open source and licensed under the <a href="https://opensource.org/licenses/MIT" className="text-rose-200 hover:text-rose-300 font-semibold">MIT License</a>.
+        &copy; <span className="font-semibold text-myPink1">{start_year}-{new Date().getFullYear()} UmmIt</span>. This site is fully open source and licensed under the <a href="https://opensource.org/licenses/MIT" className="text-myPink1 hover:text-rose-300 font-semibold">MIT License</a>.
         </p>
-        <p className="text-sm text-rose-200 font-semibold">
+        <p className="text-sm text-myPink1 font-semibold">
           Hosted on GitHub Pages (CI/CD)
         </p>
         {commitHash && (
-          <p className="text-sm text-rose-200 font-semibold">
-            <span className="text-sm text-rose-100 font-semibold">Updated with commit hash: </span>
+          <p className="text-sm text-myPink1 font-semibold">
+            <span className="text-sm text-myPink1 font-semibold">Updated with commit hash: </span>
             <a
               href={`https://github.com/UmmItC/Links/commit/${commitHash}`}
-              className="text-rose-100 hover:text-rose-500 font-semibold"
+              className="text-myPink1 hover:text-myPink2 font-semibold"
               target="_blank"
               rel="noopener noreferrer"
             >

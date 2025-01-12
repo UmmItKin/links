@@ -28,18 +28,18 @@ function Navbar() {
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
-        <button className="btn btn-circle btn-ghost">
+        <button className="btn btn-ghost btn-circle fill-stroke hover:text-myPink1">
           <a href={userData.repo} target="_blank" rel="noopener noreferrer">
             <FaCode className="inline-block w-7 h-7 stroke-current" />
           </a>
         </button>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost text-xl">{userData.name}</a>
+        <a className="btn btn-ghost fill-stroke hover:text-myPink1 text-xl">{userData.name}</a>
       </div>
       <div className="navbar-end">
         <div className="px-2">
-          <label className="swap swap-rotate btn btn-ghost btn-circle">
+          <label className="swap swap-rotate btn btn-ghost btn-circle fill-stroke hover:text-myPink1">
             <input type="checkbox" className="theme-controller" value="light" />
             <AiFillSun className="swap-off fill-current w-10 h-10" />
             <IoMoon className="swap-on fill-current w-10 h-10" />
@@ -121,7 +121,7 @@ function App() {
               {socialButtons.map((button, index) => (
                 <div key={index} className="px-1">
                   <a
-                    className="btn btn-ghost btn-circle fill-stroke text-gray-500 hover:text-blue-500"
+                    className="btn btn-ghost btn-circle fill-stroke text-gray-500 hover:text-myPink1"
                     href={button.url}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -134,7 +134,7 @@ function App() {
               <div className="px-1">
                 <button
                   onClick={handleGPGClick}
-                  className="btn btn-ghost btn-circle fill-stroke text-gray-500 hover:text-blue-500"
+                  className="btn btn-ghost btn-circle fill-stroke text-gray-500 hover:text-myPink1"
                 >
                   <HiMiniKey className="h-8 w-8" />
                 </button>
