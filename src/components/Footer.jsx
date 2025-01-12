@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+const start_year = 2024;
 function Footer() {
   const [commitHash, setCommitHash] = useState(null);
 
@@ -29,7 +30,7 @@ function Footer() {
     <footer className="footer footer-center bg-base-100 text-gray-300 p-5">
       <div className="container mx-auto">
         <p className="text-sm mb-2">
-          &copy; {new Date().getFullYear()} <span className="font-semibold text-rose-200">UmmIt</span>. This site is fully open source and licensed under the <a href="https://opensource.org/licenses/MIT" className="text-rose-200 hover:text-rose-300 font-semibold">MIT License</a>.
+        &copy; <span className="font-semibold text-rose-200">{start_year}-{new Date().getFullYear()} UmmIt</span>. This site is fully open source and licensed under the <a href="https://opensource.org/licenses/MIT" className="text-rose-200 hover:text-rose-300 font-semibold">MIT License</a>.
         </p>
         <p className="text-sm text-rose-200 font-semibold">
           Hosted on GitHub Pages (CI/CD)
