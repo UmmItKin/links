@@ -5,8 +5,7 @@ import { FaGitlab, FaMedium } from "react-icons/fa6";
 import { SiHugo, SiUpptime, SiCodeberg, SiDocusaurus } from "react-icons/si";
 import { IoLogoMarkdown } from "react-icons/io5";
 import { GrArchlinux } from "react-icons/gr";
-
-import { ReactSVG } from "react-svg";
+import { SiKofi } from "react-icons/si";
 
 const linksData = [
 
@@ -15,7 +14,7 @@ const linksData = [
   { label: "Codeberg", url: "https://codeberg.org/UmmIt", icon: <SiCodeberg className="w-5 h-5 mr-2" />, alt: "@UmmIt" },
   { label: "Github", url: "https://github.com/UmmItC", icon: <FaGithub className="w-5 h-5 mr-2" />, alt: "@UmmItC" },
 
-  { label: "Librepay", url: "https://liberapay.com/UmmIt", icon: <ReactSVG src="/librepay.svg" className="w-5 h-5 mr-2" />, alt: "@UmmIt" }, 
+  { label: "Ko-fi", url: "https://ko-fi.com/UmmIt", icon: <SiKofi className="w-5 h-5 mr-2" />, alt: "@UmmIt" }, 
 
   { label: "Personal Blog", url: "https://blog.ummit.dev", icon: <SiHugo className="w-5 h-5 mr-2" />, alt: "blog.ummit.dev" },
   { label: "GPU-Passthru", url: "https://gpu-passthru.ummit.dev", icon: <SiDocusaurus className="w-5 h-5 mr-2" />, alt: "gpu-passthru.ummit.dev" },
