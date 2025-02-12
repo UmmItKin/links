@@ -13,7 +13,7 @@ import { FiCopy, FiDownload } from "react-icons/fi";
 
 const userData = {
   name: "UmmIt 🐧",
-  bio: "This website provides all the information about my social media in a Linktree-like style. The site is built using React, Tailwind CSS, and DaisyUI.",
+  bio: "A weird tech geek from Hong Kong, an Arch Linux user, and a fan of open-source software. A Linktree-like style website built with React, Tailwind CSS, and DaisyUI. A tech enthusiast who loves to share.",
   mail_address: "hi@ummit.dev",
   imagePaths: {
     on: "/cute-2.jpg",
