@@ -15,8 +15,8 @@ Built with:
 To visit the website locally, run the following command:
 
 ```shell
-npm install
-npm run dev
+yarn install
+yarn run dev
 ```
 
 You can view it at `localhost:5173` while developing.
@@ -26,7 +26,6 @@ You can view it at `localhost:5173` while developing.
 To build the website, run the following commands:
 
 ```shell
-npm install
 yarn run build
 ```
 
@@ -34,6 +33,6 @@ The static files will be located in `./dist/`.
 
 ### Hosting
 
-For hosting, I have a GitLab CI configuration. Just adjust the necessary values. The configuration file is located at `./.gitlab-ci.yml`.
+For hosting, You can use Github pages, already setup in `.github/workflows/yarn.yaml`. Feel free to modify it to your needs.
 
 If you prefer using nginx, Apache, or another VPS setup, simply place the contents of the `dist` directory on your server.
