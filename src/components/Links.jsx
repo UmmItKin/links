@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { FaGithub, FaDiscord } from 'react-icons/fa';
-import { FaGitlab, FaMedium } from "react-icons/fa6";
 import { SiHugo, SiUpptime, SiCodeberg, SiDocusaurus } from "react-icons/si";
 import { IoLogoMarkdown } from "react-icons/io5";
 import { GrArchlinux } from "react-icons/gr";
