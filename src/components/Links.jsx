@@ -29,7 +29,7 @@ function Links() {
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full max-w-md px-4 py-2 text-gray-100 bg-gray-800 rounded-lg shadow-md transition-transform transform hover:bg-gray-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-400 flex items-center justify-between hover:text-myPink1"
+          className="w-full max-w-md px-4 py-2 text-gray-100 bg-gray-800 rounded-lg shadow-md transition-transform transform hover:bg-gray-700 hover:scale-105 focus:outline-hidden focus:ring-2 focus:ring-gray-400 flex items-center justify-between hover:text-myPink1"
         >
           <div className="flex items-center">
             {link.icon}
