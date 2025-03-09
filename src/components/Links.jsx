@@ -23,10 +23,11 @@ function Links() {
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full px-5 py-3 text-gray-100 bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-xl shadow-lg 
-                    transition-all duration-300 transform hover:bg-gray-700 hover:scale-102 hover:translate-y-px
+          className="w-full px-5 py-3 text-gray-100 bg-gray-800/50 backdrop-blur-md rounded-xl 
+                    transition-all duration-300 transform hover:bg-gray-700/70 hover:scale-102 hover:translate-y-px
                     focus:outline-none focus:ring-2 focus:ring-myPink1 focus:ring-opacity-50 
-                    flex items-center justify-between border border-gray-700 hover:border-myPink1 hover:text-myPink1"
+                    flex items-center justify-between border border-gray-700/30 hover:border-myPink1 hover:text-myPink1
+                    shadow-lg hover:shadow-myPink1/20"
         >
           <div className="flex items-center">
             <div className="text-myPink1 mr-3">

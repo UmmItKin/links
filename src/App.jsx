@@ -25,7 +25,7 @@ const userData = {
   repo: "https://github.com/UmmItC/Links",
   umami_share_url: "https://cloud.umami.is/share/mLbSeRhkcLXWcdPZ/links.ummit.dev",
   gpg_key: "https://links.ummit.dev/info/UmmIt.gpg",
-  wallpaper: "https://github.com/UmmItC/wallpaper/blob/master/%E6%8E%A8%E3%81%97%E3%81%AE%E5%AD%90/%E5%B0%8F%E6%84%9B/1314951.png?raw=true",
+  wallpaper: "https://github.com/UmmItC/wallpaper/blob/master/%E6%8E%A8%E3%81%97%E3%81%AE%E5%AD%90/%E5%B0%8F%E6%84%9B/1355637.jpeg?raw=true",
 };
 
 function Navbar() {
@@ -127,7 +127,7 @@ function App() {
               {socialButtons.map((button, index) => (
                 <div key={index} className="px-1">
                   <a
-                    className="btn btn-ghost btn-circle fill-stroke text-gray-500 hover:text-myPink1"
+                    className="btn btn-ghost btn-circle fill-stroke hover:text-myPink1"
                     href={button.url}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -140,7 +140,7 @@ function App() {
               <div className="px-1">
                 <button
                   onClick={handleGPGClick}
-                  className="btn btn-ghost btn-circle fill-stroke text-gray-500 hover:text-myPink1"
+                  className="btn btn-ghost btn-circle fill-stroke hover:text-myPink1"
                 >
                   <HiMiniKey className="h-8 w-8" />
                 </button>
