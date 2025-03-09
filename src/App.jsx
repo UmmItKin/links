@@ -12,8 +12,8 @@ import { IoMdClose } from "react-icons/io";
 import { FiCopy, FiDownload } from "react-icons/fi";
 
 const userData = {
-  name: "UmmIt 🐧",
-  bio: "A weird tech geek from Hong Kong, an Arch Linux user, and a fan of open-source software. A Linktree-like style website built with React, Tailwind CSS, and DaisyUI. A tech enthusiast who loves to share.",
+  name: "UmmIt{ArchUser}",
+  bio: "A quirky tech geek, Arch Linux user and open-source lover from Hong Kong, a cyber student with a hobby in hacking and penetration testing, and a Linktree-like site.",
   mail_address: "hi@ummit.dev",
   imagePaths: {
     on: "/cute-2.jpg",
@@ -151,7 +151,7 @@ function App() {
         <div className="modal-box bg-base-100 rounded-lg p-11 w-full max-w-2xl max-h-[75vh] overflow-auto">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-lg font-bold italic">
-              ❯ curl https://links.ummit.dev/UmmIt.gpg | less
+              ❯ curl https://links.ummit.dev/info/UmmIt.gpg | less
             </h3>
             <div className="flex gap-2">
               <button

@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { FaGithub, FaDiscord } from 'react-icons/fa';
-import { SiHugo, SiUpptime, SiCodeberg, SiDocusaurus } from "react-icons/si";
+import { SiHugo, SiUpptime, SiCodeberg } from "react-icons/si";
 import { IoLogoMarkdown } from "react-icons/io5";
-import { GrArchlinux } from "react-icons/gr";
-import { SiKofi } from "react-icons/si";
+import { GrArchlinux, GrBlog } from "react-icons/gr";
+import { SiKofi, SiReadthedocs, SiStatuspal } from "react-icons/si";
 
 const linksData = [
 
@@ -15,9 +15,10 @@ const linksData = [
 
   { label: "Ko-fi", url: "https://ko-fi.com/UmmIt", icon: <SiKofi className="w-5 h-5 mr-2" />, alt: "@UmmIt" }, 
 
-  { label: "Personal Blog", url: "https://blog.ummit.dev", icon: <SiHugo className="w-5 h-5 mr-2" />, alt: "blog.ummit.dev" },
-  { label: "GPU-Passthru", url: "https://gpu-passthru.ummit.dev", icon: <SiDocusaurus className="w-5 h-5 mr-2" />, alt: "gpu-passthru.ummit.dev" },
-  { label: "Upptime Status", url: "https://status.ummit.dev", icon: <SiUpptime className="w-5 h-5 mr-2"/>, alt: "status.ummit.dev"},
+  { label: "Blog", url: "https://blog.ummit.dev", icon: <GrBlog className="w-5 h-5 mr-2" />, alt: "blog.ummit.dev" },
+  { label: "GPU-Passthru Docs", url: "https://gpu-passthru.ummit.dev", icon: <SiReadthedocs className="w-5 h-5 mr-2" />, alt: "gpu-passthru.ummit.dev" },
+  { label: "Website Monitors", url: "https://status.ummit.dev", icon: <SiStatuspal className="w-5 h-5 mr-2"/>, alt: "status.ummit.dev"},
+
 ];
 
 function Links() {
