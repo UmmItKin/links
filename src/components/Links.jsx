@@ -1,42 +1,40 @@
 import React from 'react';
-
-import { FaGithub, FaDiscord } from 'react-icons/fa';
-import { SiHugo, SiUpptime, SiCodeberg } from "react-icons/si";
+import { FaGithub } from 'react-icons/fa';
+import { SiHugo, SiUpptime, SiCodeberg, SiKofi, SiReadthedocs, SiStatuspal } from "react-icons/si";
 import { IoLogoMarkdown } from "react-icons/io5";
 import { GrArchlinux, GrBlog } from "react-icons/gr";
-import { SiKofi, SiReadthedocs, SiStatuspal } from "react-icons/si";
 
 const linksData = [
-
-  { label: "Arch User Repository (AUR)", url: "https://aur.archlinux.org/account/UmmIt", icon: <GrArchlinux className="w-5 h-5 mr-2" />, alt: "@UmmIt" },
-
-  { label: "Codeberg", url: "https://codeberg.org/UmmIt", icon: <SiCodeberg className="w-5 h-5 mr-2" />, alt: "@UmmIt" },
-  { label: "Github", url: "https://github.com/UmmItC", icon: <FaGithub className="w-5 h-5 mr-2" />, alt: "@UmmItC" },
-
-  { label: "Ko-fi", url: "https://ko-fi.com/UmmIt", icon: <SiKofi className="w-5 h-5 mr-2" />, alt: "@UmmIt" }, 
-
-  { label: "Blog", url: "https://blog.ummit.dev", icon: <GrBlog className="w-5 h-5 mr-2" />, alt: "blog.ummit.dev" },
-  { label: "GPU-Passthru Docs", url: "https://gpu-passthru.ummit.dev", icon: <SiReadthedocs className="w-5 h-5 mr-2" />, alt: "gpu-passthru.ummit.dev" },
-  { label: "Website Monitors", url: "https://status.ummit.dev", icon: <SiStatuspal className="w-5 h-5 mr-2"/>, alt: "status.ummit.dev"},
-
+  { label: "Arch User Repository (AUR)", url: "https://aur.archlinux.org/account/UmmIt", icon: <GrArchlinux className="w-5 h-5" />, alt: "@UmmIt" },
+  { label: "Codeberg", url: "https://codeberg.org/UmmIt", icon: <SiCodeberg className="w-5 h-5" />, alt: "@UmmIt" },
+  { label: "Github", url: "https://github.com/UmmItC", icon: <FaGithub className="w-5 h-5" />, alt: "@UmmItC" },
+  { label: "Ko-fi", url: "https://ko-fi.com/UmmIt", icon: <SiKofi className="w-5 h-5" />, alt: "@UmmIt" }, 
+  { label: "Blog", url: "https://blog.ummit.dev", icon: <GrBlog className="w-5 h-5" />, alt: "blog.ummit.dev" },
+  { label: "GPU-Passthru Docs", url: "https://gpu-passthru.ummit.dev", icon: <SiReadthedocs className="w-5 h-5" />, alt: "gpu-passthru.ummit.dev" },
+  { label: "Website Monitors", url: "https://status.ummit.dev", icon: <SiStatuspal className="w-5 h-5" />, alt: "status.ummit.dev"},
 ];
 
 function Links() {
   return (
-    <div className="flex flex-col items-center space-y-4 mt-8">
+    <div className="flex flex-col items-center space-y-3 mt-8 w-full max-w-md mx-auto">
       {linksData.map((link, index) => (
         <a
           key={index}
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full max-w-md px-4 py-2 text-gray-100 bg-gray-800 rounded-lg shadow-md transition-transform transform hover:bg-gray-700 hover:scale-105 focus:outline-hidden focus:ring-2 focus:ring-gray-400 flex items-center justify-between hover:text-myPink1"
+          className="w-full px-5 py-3 text-gray-100 bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-xl shadow-lg 
+                    transition-all duration-300 transform hover:bg-gray-700 hover:scale-102 hover:translate-y-px
+                    focus:outline-none focus:ring-2 focus:ring-myPink1 focus:ring-opacity-50 
+                    flex items-center justify-between border border-gray-700 hover:border-myPink1 hover:text-myPink1"
         >
           <div className="flex items-center">
-            {link.icon}
-            <span className="ml-2">{link.label}</span>
+            <div className="text-myPink1 mr-3">
+              {link.icon}
+            </div>
+            <span className="font-medium tracking-wide">{link.label}</span>
           </div>
-          <span className="text-gray-400 text-sm">{link.alt}</span>
+          <span className="text-gray-400 text-sm font-light">{link.alt}</span>
         </a>
       ))}
     </div>

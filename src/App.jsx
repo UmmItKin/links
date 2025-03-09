@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
+
 import Links from "./components/Links.jsx";
 import Footer from "./components/Footer.jsx";
+import BackgroundWallpaper from "./components/BackgroundWallpaper.jsx";
+
 import { MdEmail } from "react-icons/md";
 import { AiFillSun } from "react-icons/ai";
 import { IoMoon } from "react-icons/io5";
@@ -22,6 +25,7 @@ const userData = {
   repo: "https://github.com/UmmItC/Links",
   umami_share_url: "https://cloud.umami.is/share/mLbSeRhkcLXWcdPZ/links.ummit.dev",
   gpg_key: "https://links.ummit.dev/info/UmmIt.gpg",
+  wallpaper: "https://github.com/UmmItC/wallpaper/blob/master/%E6%8E%A8%E3%81%97%E3%81%AE%E5%AD%90/%E5%B0%8F%E6%84%9B/1314951.png?raw=true",
 };
 
 function Navbar() {
@@ -90,8 +94,10 @@ function App() {
 
   return (
     <div>
+      <BackgroundWallpaper imageUrl={userData.wallpaper} />
+      
       <Navbar />
-      <div className="hero min-h-screen bg-base-200 flex items-center justify-center">
+      <div className="hero min-h-screen bg-transparent flex items-center justify-center">
         <div className="hero-content text-center">
           <div className="max-w-md">
             <label className="swap swap-flip text-9xl pb-5 mt-20">

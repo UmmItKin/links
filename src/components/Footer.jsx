@@ -7,7 +7,7 @@ import { GrArchlinux } from "react-icons/gr";
 
 function Footer() {
   const [commitHash, setCommitHash] = useState(null);
-
+  
   useEffect(() => {
     const fetchCommitHash = async () => {
       try {
@@ -23,33 +23,40 @@ function Footer() {
     };
     fetchCommitHash();
   }, []);
-
+  
   return (
-    <div className="flex flex-col min-h-full justify-between hero">
-      <div className="flex-grow" />
-      <footer className="bg-base-100 text-gray-400 py-6">
-        <div className="mx-auto max-w-5xl px-6 lg:px-20 text-center">
+    <div className="w-full mt-16">
+      <footer className="bg-base-100 bg-opacity-70 backdrop-blur-sm py-8 px-6 border-t border-gray-800 transition-all duration-300">
+        <div className="mx-auto max-w-5xl flex flex-col items-center justify-center">
           {commitHash && (
             <a 
               href={`https://github.com/UmmItC/Links/commit/${commitHash}`}
-              className="transition-colors duration-200 hover:text-gray-300 flex items-center justify-center text-xl font-bold"
+              className="inline-flex items-center space-x-2 mb-6 px-4 py-2 bg-gray-800 bg-opacity-80 rounded-full 
+                        transition-all duration-300 hover:bg-gray-700 hover:text-myPink1 hover:scale-105
+                        hover:shadow-lg hover:shadow-myPink1/20
+                        text-gray-200 text-bold font-medium tracking-wide"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <IoGitBranch className="mr-2" />
-              {commitHash.substring(0, 7)}
+              <IoGitBranch className="text-myPink1 transition-transform duration-300 hover:rotate-90" />
+              <span>{commitHash.substring(0, 7)}</span>
             </a>
           )}
-          <p className="text-lg text-gray-400 mt-5">
-            Made with
-            <FaReact className="inline mx-1 text-blue-400 pb-1 text-3xl" />
-            <SiTailwindcss className="inline mx-1 text-teal-400 pb-1 text-3xl" />
-            <AiOutlineLinux className="inline mx-1 text-yellow-400 pb-1 text-3xl" />
-            <GrArchlinux className="inline mx-1 text-blue-400 pb-1 text-3xl" />
-          </p>
           
-          <p className="text-lg text-gray-400 mt-5">
-           &copy; 2025 UmmIt. MIT License
+          <div className="text-gray-400 my-4 transition-all duration-300 hover:text-gray-300">
+            <p className="text-lg font-light flex flex-wrap items-center justify-center gap-2 md:gap-4">
+              <span>Made with</span>
+              <span className="inline-flex gap-4 items-center">
+                <FaReact className="text-blue-400 text-2xl transition-all duration-500 hover:rotate-180 hover:scale-110" />
+                <SiTailwindcss className="text-teal-400 text-2xl transition-all duration-300 hover:scale-125 hover:-translate-y-1" />
+                <AiOutlineLinux className="text-yellow-400 text-2xl transition-all duration-300 hover:scale-125 hover:-translate-y-1" />
+                <GrArchlinux className="text-blue-400 text-2xl transition-all duration-300 hover:scale-125 hover:-translate-y-1" />
+              </span>
+            </p>
+          </div>
+          
+          <p className="text-sm text-gray-400 mt-6 font-light tracking-wide hover:text-gray-100 transition-colors duration-300">
+            &copy; 2025 Ummlt. MIT License
           </p>
         </div>
       </footer>
