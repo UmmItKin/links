@@ -4,6 +4,7 @@ import { SiTailwindcss } from 'react-icons/si';
 import { IoGitBranch } from 'react-icons/io5';
 import { AiOutlineLinux } from "react-icons/ai";
 import { GrArchlinux } from "react-icons/gr";
+import { VscHeartFilled } from "react-icons/vsc";
 
 function Footer() {
   const [commitHash, setCommitHash] = useState(null);
@@ -33,7 +34,7 @@ function Footer() {
               href={`https://github.com/UmmItC/Links/commit/${commitHash}`}
               className="inline-flex items-center space-x-2 mb-6 px-4 py-2 bg-transparent backdrop-blur-sm
                         border border-gray-700/30 rounded-full
-                        transition-all duration-300 hover:bg-gray-800/20 hover:text-myPink1 hover:scale-105
+                        transition-all duration-300 hover:text-myPink1 hover:scale-105
                         hover:shadow-lg hover:shadow-myPink1/10 hover:border-myPink1/50
                         text-gray-300 text-bold font-medium tracking-wide"
               target="_blank"
@@ -53,6 +54,7 @@ function Footer() {
                 <AiOutlineLinux className="text-yellow-400 text-2xl transition-all duration-300 hover:scale-125 hover:-translate-y-1" />
                 <GrArchlinux className="text-blue-400 text-2xl transition-all duration-300 hover:scale-125 hover:-translate-y-1" />
               </span>
+              and <span className="text-red-500 text-2xl"><VscHeartFilled /></span>
             </p>
           </div>
           
