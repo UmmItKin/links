@@ -4,13 +4,14 @@ import "./App.css";
 import Links from "./components/Links.jsx";
 import Footer from "./components/Footer.jsx";
 import BackgroundWallpaper from "./components/BackgroundWallpaper.jsx";
+import Navbar from "./components/Navbar.jsx";
 
 import { MdEmail } from "react-icons/md";
 import { FaCode } from "react-icons/fa6";
 import { SiUmami } from "react-icons/si";
 import { HiMiniKey } from "react-icons/hi2";
 import { IoMdClose } from "react-icons/io";
-import { FiCopy, FiDownload } from "react-icons/fi";
+import { FiDownload } from "react-icons/fi";
 
 const userData = {
   name: "UmmIt{ArchUser}",
@@ -25,25 +26,6 @@ const userData = {
   gpg_key: "https://links.ummit.dev/info/UmmIt.gpg",
   wallpaper: "https://github.com/UmmItC/wallpaper/blob/master/%E6%8E%A8%E3%81%97%E3%81%AE%E5%AD%90/%E5%B0%8F%E6%84%9B/1355637.jpeg?raw=true",
 };
-
-function Navbar() {
-  return (
-    <div className="bg-background/30 shadow-xs fixed inset-x-0 top-4 z-40 mx-auto flex h-[60px] max-w-5xl items-center justify-between rounded-2xl px-8 saturate-100 backdrop-blur-md transition-colors">
-      <div className="flex-1">
-        <a href="/" className="text-xl font-semibold hover:text-myPink1 transition-colors duration-300">UmmIt</a>
-      </div>
-      <div className="flex-none gap-3 flex items-center">
-        <a href="/blog" className="inline-block px-3 rounded-md hover:text-myPink1 transition-colors duration-300 font-bold">Blog</a>
-        <a href="/projects" className="inline-block px-3 rounded-md hover:text-myPink1 transition-colors duration-300 font-bold">Projects</a>
-        <a href="/gear" className="inline-block px-3 rounded-md hover:text-myPink1 transition-colors duration-300 font-bold">Gear</a>
-        <a href="/about" className="inline-block px-3 rounded-md hover:text-myPink1 transition-colors duration-300 font-bold">About</a>
-        <a href={userData.repo} target="_blank" rel="noopener noreferrer" className="px-3 flex items-center">
-          <FaCode className="inline-block w-5 h-5 hover:text-myPink1 transition-colors duration-300 font-bold" />
-        </a>
-      </div>
-    </div>
-  );
-}
 
 function App() {
   const [gpgContent, setGPGContent] = useState("");
@@ -87,7 +69,8 @@ function App() {
     <div>
       <BackgroundWallpaper imageUrl={userData.wallpaper} />
       
-      <Navbar />
+      <Navbar userData={userData} />
+      
       <div className="hero min-h-screen bg-transparent flex items-center justify-center">
         <div className="hero-content text-center">
           <div className="max-w-md">
