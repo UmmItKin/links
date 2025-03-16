@@ -6,8 +6,6 @@ import Footer from "./components/Footer.jsx";
 import BackgroundWallpaper from "./components/BackgroundWallpaper.jsx";
 
 import { MdEmail } from "react-icons/md";
-import { AiFillSun } from "react-icons/ai";
-import { IoMoon } from "react-icons/io5";
 import { FaCode } from "react-icons/fa6";
 import { SiUmami } from "react-icons/si";
 import { HiMiniKey } from "react-icons/hi2";
@@ -42,13 +40,7 @@ function Navbar() {
         <a className="btn btn-ghost fill-stroke hover:text-myPink1 text-xl">{userData.name}</a>
       </div>
       <div className="navbar-end">
-        <div className="px-2">
-          <label className="swap swap-rotate btn btn-ghost btn-circle fill-stroke hover:text-myPink1">
-            <input type="checkbox" className="theme-controller" value="light" />
-            <AiFillSun className="swap-off fill-current w-10 h-10" />
-            <IoMoon className="swap-on fill-current w-10 h-10" />
-          </label>
-        </div>
+
       </div>
     </div>
   );
