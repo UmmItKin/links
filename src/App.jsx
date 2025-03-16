@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 
@@ -35,20 +35,47 @@ const userData = {
 
 function App() {
   const [gpgContent, setGPGContent] = useState("");
+  const [isGpgLoaded, setIsGpgLoaded] = useState(false);
 
-  const handleGPGClick = async (e) => {
-    e.preventDefault();
+  // Fetch GPG key when the app loads
+  useEffect(() => {
+    fetchGPGKey();
+  }, []);
+
+  // Fetch GPG key from the server
+  const fetchGPGKey = async () => {
     try {
       const response = await fetch(userData.gpg_key);
-      const text = await response.text();
-      setGPGContent(text);
-      document.getElementById("gpg_modal").showModal();
+      if (response.ok) {
+        const text = await response.text();
+        setGPGContent(text);
+        setIsGpgLoaded(true);
+      } else {
+        console.error("Failed to fetch GPG key:", response.statusText);
+      }
     } catch (error) {
       console.error("Error fetching GPG key:", error);
     }
   };
 
+  // Handle opening the GPG modal
+  const handleGPGClick = (e) => {
+    if (e) e.preventDefault();
+    
+    // If GPG content isn't loaded yet, try to fetch it again
+    if (!isGpgLoaded) {
+      fetchGPGKey();
+    }
+    
+    document.getElementById("gpg_modal").showModal();
+  };
+
   const handleDownload = () => {
+    if (!gpgContent) {
+      console.error("Cannot download: GPG content is empty");
+      return;
+    }
+    
     const blob = new Blob([gpgContent], { type: "text/plain" });
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -113,7 +140,7 @@ function App() {
             </div>
           </div>
           <pre className="whitespace-pre-wrap font-mono text-sm bg-base-200 p-4 rounded-lg overflow-auto max-w-full break-words">
-            {gpgContent}
+            {gpgContent || "Loading GPG key..."}
           </pre>
         </div>
       </dialog>

@@ -5,15 +5,9 @@ import { MdEmail } from "react-icons/md";
 import { SiUmami } from "react-icons/si";
 
 const HomePage = ({ userData, socialButtons }) => {
-  const handleGPGClick = async (e) => {
+  const handleGPGClick = (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch(userData.gpg_key);
-      const text = await response.text();
-      document.getElementById("gpg_modal").showModal();
-    } catch (error) {
-      console.error("Error fetching GPG key:", error);
-    }
+    document.getElementById("gpg_modal").showModal();
   };
 
   return (
