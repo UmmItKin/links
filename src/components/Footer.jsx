@@ -26,15 +26,16 @@ function Footer() {
   
   return (
     <div className="w-full mt-16">
-      <footer className="bg-base-100 bg-opacity-70 backdrop-blur-sm py-8 px-6 border-t border-gray-800 transition-all duration-300">
+      <footer className="bg-transparent backdrop-blur-lg py-8 px-6 transition-all duration-300">
         <div className="mx-auto max-w-5xl flex flex-col items-center justify-center">
           {commitHash && (
             <a 
               href={`https://github.com/UmmItC/Links/commit/${commitHash}`}
-              className="inline-flex items-center space-x-2 mb-6 px-4 py-2 bg-gray-800 bg-opacity-80 rounded-full 
-                        transition-all duration-300 hover:bg-gray-700 hover:text-myPink1 hover:scale-105
-                        hover:shadow-lg hover:shadow-myPink1/20
-                        text-gray-200 text-bold font-medium tracking-wide"
+              className="inline-flex items-center space-x-2 mb-6 px-4 py-2 bg-transparent backdrop-blur-sm
+                        border border-gray-700/30 rounded-full
+                        transition-all duration-300 hover:bg-gray-800/20 hover:text-myPink1 hover:scale-105
+                        hover:shadow-lg hover:shadow-myPink1/10 hover:border-myPink1/50
+                        text-gray-300 text-bold font-medium tracking-wide"
               target="_blank"
               rel="noopener noreferrer"
             >

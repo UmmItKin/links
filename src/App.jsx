@@ -28,16 +28,16 @@ const userData = {
 
 function Navbar() {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-transparent backdrop-blur-lg bg-opacity-150 transition-all duration-300">
       <div className="navbar-start">
-        <button className="btn btn-ghost btn-circle fill-stroke hover:text-myPink1">
+        <button className="fill-stroke hover:text-myPink1">
           <a href={userData.repo} target="_blank" rel="noopener noreferrer">
             <FaCode className="inline-block w-7 h-7 stroke-current" />
           </a>
         </button>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost fill-stroke hover:text-myPink1 text-xl">{userData.name}</a>
+        <a className="hover:text-myPink1 text-3xl font-bold">{userData.name}</a>
       </div>
       <div className="navbar-end">
 
@@ -117,9 +117,9 @@ function App() {
             <p className="py-6">{userData.bio}</p>
             <div className="flex flex-wrap justify-center">
               {socialButtons.map((button, index) => (
-                <div key={index} className="px-1">
+                <div key={index} className="px-1 hover:text-myPink1 transition-transform duration-200 transform hover:scale-105">
                   <a
-                    className="btn btn-ghost btn-circle fill-stroke hover:text-myPink1"
+                    className="hover:text-myPink1"
                     href={button.url}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -129,10 +129,10 @@ function App() {
                   </a>
                 </div>
               ))}
-              <div className="px-1">
+              <div className="px-1 hover:text-myPink1 transition-transform duration-200 transform hover:scale-105">
                 <button
                   onClick={handleGPGClick}
-                  className="btn btn-ghost btn-circle fill-stroke hover:text-myPink1"
+                  className="hover:text-myPink1"
                 >
                   <HiMiniKey className="h-8 w-8" />
                 </button>
