@@ -28,19 +28,18 @@ const userData = {
 
 function Navbar() {
   return (
-    <div className="navbar bg-transparent backdrop-blur-lg bg-opacity-150 transition-all duration-300">
-      <div className="navbar-start">
-        <button className="fill-stroke hover:text-myPink1">
-          <a href={userData.repo} target="_blank" rel="noopener noreferrer">
-            <FaCode className="inline-block w-7 h-7 stroke-current" />
-          </a>
-        </button>
+    <div className="bg-background/30 shadow-xs fixed inset-x-0 top-4 z-40 mx-auto flex h-[60px] max-w-5xl items-center justify-between rounded-2xl px-8 saturate-100 backdrop-blur-md transition-colors">
+      <div className="flex-1">
+        <a href="/" className="text-xl font-semibold hover:text-myPink1 transition-colors duration-300">UmmIt</a>
       </div>
-      <div className="navbar-center">
-        <a className="hover:text-myPink1 text-3xl font-bold">{userData.name}</a>
-      </div>
-      <div className="navbar-end">
-
+      <div className="flex-none gap-3 flex items-center">
+        <a href="/blog" className="inline-block px-3 rounded-md hover:text-myPink1 transition-colors duration-300 font-bold">Blog</a>
+        <a href="/projects" className="inline-block px-3 rounded-md hover:text-myPink1 transition-colors duration-300 font-bold">Projects</a>
+        <a href="/gear" className="inline-block px-3 rounded-md hover:text-myPink1 transition-colors duration-300 font-bold">Gear</a>
+        <a href="/about" className="inline-block px-3 rounded-md hover:text-myPink1 transition-colors duration-300 font-bold">About</a>
+        <a href={userData.repo} target="_blank" rel="noopener noreferrer" className="px-3 flex items-center">
+          <FaCode className="inline-block w-5 h-5 hover:text-myPink1 transition-colors duration-300 font-bold" />
+        </a>
       </div>
     </div>
   );
