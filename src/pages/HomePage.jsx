@@ -3,6 +3,7 @@ import Links from "../components/Links";
 import { HiMiniKey } from "react-icons/hi2";
 import { MdEmail } from "react-icons/md";
 import { SiUmami } from "react-icons/si";
+import { DiLinux } from "react-icons/di";
 
 const HomePage = ({ userData, socialButtons }) => {
   const handleGPGClick = (e) => {
@@ -35,7 +36,7 @@ const HomePage = ({ userData, socialButtons }) => {
               />
             </div>
           </label>
-          <h1 className="text-5xl font-bold">{userData.name}</h1>
+          <h1 className="text-5xl font-bold">{userData.name} <DiLinux className="inline-block w-10 h-10 px-auto mb-2.5" /></h1>
           <p className="py-6">{userData.bio}</p>
           <div className="flex flex-wrap justify-center">
             {socialButtons.map((button, index) => (

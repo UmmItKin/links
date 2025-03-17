@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaCode } from "react-icons/fa6";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
+import { DiLinux } from "react-icons/di";
 
 function Navbar({ userData }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +37,7 @@ function Navbar({ userData }) {
   return (
     <div className="shadow-xs fixed inset-x-0 top-4 z-40 mx-auto flex h-[60px] max-w-4xl items-center justify-between rounded-2xl px-2 saturate-100 backdrop-blur-[10px] transition-colors">
       <div className="flex-1">
-        <Link to="/" className="text-xl font-semibold hover:text-myPink1 transition-colors duration-300">UmmIt</Link>
+        <Link to="/" className="text-xl font-semibold hover:text-myPink1 transition-colors duration-300">UmmIt <DiLinux className="inline-block w-6 h-6 mb-2" /></Link>
       </div>
       
       {/* Desktop Navigation */}
