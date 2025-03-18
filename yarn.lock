@@ -2910,6 +2910,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"links@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "links@workspace:."
+  dependencies:
+    "@hcaptcha/react-hcaptcha": "npm:^1.10.1"
+    "@tailwindcss/postcss": "npm:^4.0.12"
+    "@types/react": "npm:^19.0.4"
+    "@types/react-dom": "npm:^19.0.2"
+    "@vitejs/plugin-react": "npm:^4.2.1"
+    daisyui: "npm:^5.0.0"
+    dotenv: "npm:^16.4.5"
+    eslint: "npm:^9.18.0"
+    eslint-plugin-react: "npm:^7.34.1"
+    eslint-plugin-react-hooks: "npm:^5.1.0"
+    eslint-plugin-react-refresh: "npm:^0.4.6"
+    postcss: "npm:^8.4.38"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
+    react-icons: "npm:^5.3.0"
+    react-router-dom: "npm:^7.3.0"
+    react-svg: "npm:^16.1.34"
+    tailwindcss: "npm:^4.0.12"
+    vite: "npm:^6.0.7"
+  languageName: unknown
+  linkType: soft
+
 "locate-path@npm:^6.0.0":
   version: 6.0.0
   resolution: "locate-path@npm:6.0.0"
@@ -3408,32 +3434,6 @@ __metadata:
   checksum: 10c0/33977da7a5f1a287936a0c85639fec6ca74f4f15ef1e59a6bc20338fc73dc69555381e211f7a3529b8150a1f71e4225525b41b60b52965bda53ce7d47377ada1
   languageName: node
   linkType: hard
-
-"react-project@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "react-project@workspace:."
-  dependencies:
-    "@hcaptcha/react-hcaptcha": "npm:^1.10.1"
-    "@tailwindcss/postcss": "npm:^4.0.12"
-    "@types/react": "npm:^19.0.4"
-    "@types/react-dom": "npm:^19.0.2"
-    "@vitejs/plugin-react": "npm:^4.2.1"
-    daisyui: "npm:^5.0.0"
-    dotenv: "npm:^16.4.5"
-    eslint: "npm:^9.18.0"
-    eslint-plugin-react: "npm:^7.34.1"
-    eslint-plugin-react-hooks: "npm:^5.1.0"
-    eslint-plugin-react-refresh: "npm:^0.4.6"
-    postcss: "npm:^8.4.38"
-    react: "npm:^19.0.0"
-    react-dom: "npm:^19.0.0"
-    react-icons: "npm:^5.3.0"
-    react-router-dom: "npm:^7.3.0"
-    react-svg: "npm:^16.1.34"
-    tailwindcss: "npm:^4.0.12"
-    vite: "npm:^6.0.7"
-  languageName: unknown
-  linkType: soft
 
 "react-refresh@npm:^0.14.0":
   version: 0.14.2
