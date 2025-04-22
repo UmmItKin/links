@@ -2931,7 +2931,7 @@ __metadata:
     react-icons: "npm:^5.3.0"
     react-router-dom: "npm:^7.3.0"
     react-svg: "npm:^16.1.34"
-    tailwindcss: "npm:^4.0.12"
+    tailwindcss: "npm:^4.1.4"
     vite: "npm:^6.0.7"
   languageName: unknown
   linkType: soft
@@ -3942,10 +3942,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:4.0.12, tailwindcss@npm:^4.0.12":
+"tailwindcss@npm:4.0.12":
   version: 4.0.12
   resolution: "tailwindcss@npm:4.0.12"
   checksum: 10c0/186e94e49b97e974daf999c350bfc50e727039f22c44baf9144b987b6c9b754bc983e8c9ef5b99a3ca2d399115eb7811967f66cf9e88edc08ac729746d80dc56
+  languageName: node
+  linkType: hard
+
+"tailwindcss@npm:^4.1.4":
+  version: 4.1.4
+  resolution: "tailwindcss@npm:4.1.4"
+  checksum: 10c0/4927653b740861f0279b6b465c87e188652d3c0e311c633b4efe5d72bbb4dce12b9dddc674a386a3d0454ef4dd4951aac6fd7346dcd9b2b2b06952e431c1835d
   languageName: node
   linkType: hard
 
