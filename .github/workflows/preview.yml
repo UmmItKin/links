@@ -36,6 +36,10 @@ jobs:
         with:
           cmd: build
 
+      # Remove CNAME file for PR preview
+      - name: Remove CNAME file
+        run: rm -f dist/CNAME
+
       # Generate commit hash action
       - name: Generate short commit hash
         run: git rev-parse --short HEAD > dist/commit_hash
