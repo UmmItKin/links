@@ -36,6 +36,12 @@ jobs:
         env:
           VITE_BASE_URL: /Links-preview/pr-${{ github.event.pull_request.number }}/
 
+      # Remove CNAME file
+      - name: Remove CNAME file
+        run: |
+          rm -f dist/CNAME
+          rm -f public/CNAME
+
       # Generate commit hash action
       - name: Generate short commit hash
         run: git rev-parse --short HEAD > dist/commit_hash
@@ -52,6 +58,7 @@ jobs:
           external_repository: UmmItC/Links-preview
           publish_dir: ./dist
           destination_dir: pr-${{ github.event.pull_request.number }}
+          cname: ''
 
       - name: Find Comment
         uses: peter-evans/find-comment@v3
