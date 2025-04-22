@@ -592,23 +592,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hcaptcha/loader@npm:^1.2.1":
-  version: 1.2.4
-  resolution: "@hcaptcha/loader@npm:1.2.4"
-  checksum: 10c0/1c9d26dc159f0c5b518c74082439122d3ff97ca304dfeb9a6443f6ca88496827c28080e58e0420ee1e9800af8e798bd0f94a8e373c89643aba6aede1f97b88b3
+"@hcaptcha/loader@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@hcaptcha/loader@npm:2.0.0"
+  checksum: 10c0/c69c8e62ccf41cc5cce8f25721b9bd8284e201da608022476dc6d69afbd70512a6f272dd2bfe558c4b5fdbc0ee20fb5f062033c4d556e6d523ecb2448203298f
   languageName: node
   linkType: hard
 
-"@hcaptcha/react-hcaptcha@npm:^1.10.1":
-  version: 1.10.1
-  resolution: "@hcaptcha/react-hcaptcha@npm:1.10.1"
+"@hcaptcha/react-hcaptcha@npm:^1.12.0":
+  version: 1.12.0
+  resolution: "@hcaptcha/react-hcaptcha@npm:1.12.0"
   dependencies:
     "@babel/runtime": "npm:^7.17.9"
-    "@hcaptcha/loader": "npm:^1.2.1"
+    "@hcaptcha/loader": "npm:^2.0.0"
   peerDependencies:
     react: ">= 16.3.0"
     react-dom: ">= 16.3.0"
-  checksum: 10c0/aa6bc10c4d2d0e89c7c8d1efdb227a9e8f9cf76979576b9cbeca1ed98d28d62506d444e368c80e740e71c7bd7d745392cdd788f1de0b08efadd7f196459541e5
+  checksum: 10c0/58fddf7cbbeb1c9d784a90a4ee76604efd8d0c968d1d256f72d112d95c8d68bbb1255dd4184148e7e43e38491c5614b3747f4d17393a17d320e28935da47f8e8
   languageName: node
   linkType: hard
 
@@ -3426,7 +3426,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "links@workspace:."
   dependencies:
-    "@hcaptcha/react-hcaptcha": "npm:^1.10.1"
+    "@hcaptcha/react-hcaptcha": "npm:^1.12.0"
     "@tailwindcss/postcss": "npm:^4.1.4"
     "@types/react": "npm:^19.1.2"
     "@types/react-dom": "npm:^19.1.2"
