@@ -34,7 +34,7 @@ jobs:
         with:
           cmd: build
         env:
-          VITE_BASE_URL: /Links-preview/pr-${{ github.event.pull_request.number }}/
+          VITE_BASE_URL: /Links-preview/pr-${{ github.event.pull_request.number }}
 
       # Remove CNAME file
       - name: Remove CNAME file
