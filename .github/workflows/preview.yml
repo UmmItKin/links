@@ -28,13 +28,16 @@ jobs:
         with:
           cmd: install
 
+      # Set base URL for build
+      - name: Set base URL
+        run: |
+          echo "VITE_BASE_URL=/Links-preview/pr-${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+
       # Yarn build action
       - name: Build production bundle
         uses: borales/actions-yarn@v4
         with:
           cmd: build
-        env:
-          VITE_BASE_URL: /Links-preview/pr-${{ github.event.pull_request.number }}
 
       # Remove CNAME file
       - name: Remove CNAME file
