@@ -12,26 +12,40 @@ permissions:
 
 jobs:
   build-preview:
+    name: PR Preview 🔍
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Set Node.js version
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: 18.x
 
-      - name: Install dependencies
-        run: npm ci
+      # Yarn install action
+      - name: Run install
+        uses: borales/actions-yarn@v5.0.0
+        with:
+          cmd: install
 
-      - name: Build
-        run: npm run build
+      # Yarn build action
+      - name: Build production bundle
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build
+
+      # Generate commit hash action
+      - name: Generate short commit hash
+        run: git rev-parse --short HEAD > dist/commit_hash
+
+      # Display the content of the commit hash file
+      - name: Display commit hash file
+        run: cat dist/commit_hash
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: dist
 
       - name: Deploy PR Preview
         uses: rossjrw/pr-preview-action@v1
@@ -59,4 +73,5 @@ jobs:
             Preview URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-preview/pr-${{ github.event.pull_request.number }}/
             
             Changes will be automatically updated when you push new commits.
+            Commit: $(cat dist/commit_hash)
           edit-mode: replace 
