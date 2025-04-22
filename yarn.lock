@@ -3372,7 +3372,7 @@ __metadata:
     eslint-plugin-react: "npm:^7.37.5"
     eslint-plugin-react-hooks: "npm:^5.2.0"
     eslint-plugin-react-refresh: "npm:^0.4.20"
-    postcss: "npm:^8.4.38"
+    postcss: "npm:^8.5.3"
     react: "npm:^19.1.0"
     react-dom: "npm:^19.0.0"
     react-icons: "npm:^5.3.0"
@@ -3859,7 +3859,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.38, postcss@npm:^8.4.41":
+"postcss@npm:^8.4.41":
   version: 8.4.49
   resolution: "postcss@npm:8.4.49"
   dependencies:
