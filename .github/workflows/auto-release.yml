@@ -1,0 +1,53 @@
+name: Auto Release
+
+on:
+  push:
+    tags:
+      - '*'  # This will trigger on any tag push
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      
+    steps:
+      - uses: actions/checkout@v4
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Generate Release Notes
+        id: release_notes
+        run: |
+          # Get the tag message
+          echo "## Release Notes" > release_notes.md
+          git tag -l --format='%(contents)' ${{ github.ref_name }} >> release_notes.md
+          
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Release ${{ github.ref_name }}
+          tag_name: ${{ github.ref_name }}
+          body_path: release_notes.md
+          draft: false
+          prerelease: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Build Release Assets
+        run: |
+          # Add your build commands here
+          # Example:
+          # yarn install
+          # yarn build
+          # zip -r build.zip dist/
+          
+      - name: Upload Release Assets
+        if: true
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            build.zip
+          token: ${{ secrets.GITHUB_TOKEN }} 
