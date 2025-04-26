@@ -1,3 +1,28 @@
+# [1.2.0](https://github.com/UmmItC/links/compare/v1.1.0...v1.2.0) (2025-04-26)
+
+
+### Bug Fixes
+
+* **ci:** adjust VITE_BASE_URL in workflow and set dynamic base path in Vite config ([277ce60](https://github.com/UmmItC/links/commit/277ce603d9f0590b21c7a42d8d79df17ea36b770))
+* **ci:** refactor Vite config to use dynamic base URL and update workflow to set environment variable ([e5060a1](https://github.com/UmmItC/links/commit/e5060a15f0c5e8e7309a03d78d9120afc906935e))
+* **ci:** remove CNAME file from PR preview workflow ([c464774](https://github.com/UmmItC/links/commit/c464774b55a826f623d8b94ea530e40a674366c8))
+* **ci:** remove CNAME file from PR preview workflow ([077a64b](https://github.com/UmmItC/links/commit/077a64bc22b6761190ab6c77c0d07d2442132804))
+* **ci:** update Dependabot configuration to manage npm dependencies instead of Yarn ([1876f2d](https://github.com/UmmItC/links/commit/1876f2dcb6c0528213b1cadb8c7a047fd9515a07))
+* **ci:** update Dependabot configuration to remove labels and streamline commit message format ([043aee1](https://github.com/UmmItC/links/commit/043aee1c8ffc45a69c472b19b53371c2ba820e8a))
+* **ci:** update PR preview URL in workflow to use specific URL ([c8c19e5](https://github.com/UmmItC/links/commit/c8c19e5dfc034a4ffae618d31ae3d3942faaed9a))
+* **ci:** update PR preview workflow permissions and add token for deployment ([c788991](https://github.com/UmmItC/links/commit/c788991453706cfb92e5f147ac0b3f16ce610241))
+* **ci:** update PR preview workflow to use new deployment action and adjust environment variables ([1651e80](https://github.com/UmmItC/links/commit/1651e80f957c58b8f6127d3af4f9755519e72b2a))
+* **ci:** update PR preview workflow to use Yarn and include commit hash generation ([7d4510c](https://github.com/UmmItC/links/commit/7d4510cb4027d87ac280ad6bba79de5a9b10a7a6))
+* configure Vite server settings for history API fallback and set base path ([a5b32e3](https://github.com/UmmItC/links/commit/a5b32e3e2048c0a1d35b206a24f8a2429c36fbcf))
+* create _redirects file for routing to index.html with 200 status ([e55533f](https://github.com/UmmItC/links/commit/e55533fc68ff1ba0f84625836a476a2934482ec5))
+* switch from BrowserRouter to HashRouter for react routing ([d9f8aa0](https://github.com/UmmItC/links/commit/d9f8aa0b10e7349e480a64ba85fbf05dfaf1133d))
+* update _redirects file format and set BrowserRouter basename ([69be663](https://github.com/UmmItC/links/commit/69be663729e013bd0d8036a3a57ad89cae388cbf))
+
+
+### Features
+
+* add automatic changelog and release commit generation ([61d43bf](https://github.com/UmmItC/links/commit/61d43bfebff6c25e2edc4443832d5a5bb4f04311))
+
 ## Release v1.0.0 - Links
 
 🎉 **This is the first release of Links!** 🎉
