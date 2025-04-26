@@ -13,6 +13,7 @@ permissions:
 jobs:
   build-preview:
     name: PR Preview 🔍
+    if: github.event.pull_request.user.login == 'UmmItC'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
