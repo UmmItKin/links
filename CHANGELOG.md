@@ -1,6 +1,5 @@
 # [1.2.0](https://github.com/UmmItC/links/compare/v1.1.0...v1.2.0) (2025-04-26)
 
-
 ### Bug Fixes
 
 * **ci:** adjust VITE_BASE_URL in workflow and set dynamic base path in Vite config ([277ce60](https://github.com/UmmItC/links/commit/277ce603d9f0590b21c7a42d8d79df17ea36b770))
@@ -18,22 +17,11 @@
 * switch from BrowserRouter to HashRouter for react routing ([d9f8aa0](https://github.com/UmmItC/links/commit/d9f8aa0b10e7349e480a64ba85fbf05dfaf1133d))
 * update _redirects file format and set BrowserRouter basename ([69be663](https://github.com/UmmItC/links/commit/69be663729e013bd0d8036a3a57ad89cae388cbf))
 
-
 ### Features
 
 * add automatic changelog and release commit generation ([61d43bf](https://github.com/UmmItC/links/commit/61d43bfebff6c25e2edc4443832d5a5bb4f04311))
 
-## Release v1.0.0 - Links
-
-🎉 **This is the first release of Links!** 🎉
-
-As this is the first version, there are currently no changes to compare against previous versions. (No tag lol)
-
-### Full Changelog
-
-You can view the full changelog and commit history for this release [here](https://github.com/UmmItC/Links/commits/v1.0.0).
-
-## Release v1.1.0 - Links
+# [1.1.0](https://github.com/UmmItC/links/compare/v1.0.0...v1.1.0) (2025-3-19)
 
 Here’s the updated release note for version 1.1.0:
 
@@ -86,3 +74,15 @@ You can view the full changelog and commit history for this release [here](https
 ### Full Changelog
 
 You can view the full changelog and commit history for this release [here](https://github.com/UmmItC/Links/commits/v1.1.0).
+
+# Release v1.0.0 - Links
+
+# [1.2.0](https://github.com/UmmItC/links/compare/v1.1.0...v1.2.0) (2025-01-12)
+
+🎉 **This is the first release of Links!** 🎉
+
+As this is the first version, there are currently no changes to compare against previous versions. (No tag lol)
+
+### Full Changelog
+
+You can view the full changelog and commit history for this release [here](https://github.com/UmmItC/Links/commits/v1.0.0).
