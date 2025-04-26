@@ -21,37 +21,82 @@ jobs:
         with:
           node-version: '18'
           
-      - name: Generate Release Notes
+      - name: Generate Categorized Release Notes
         id: release_notes
         run: |
-          # Get the tag message
           echo "## Release Notes" > release_notes.md
-          
+          echo "" >> release_notes.md
+
           # Get the tag message
           TAG_MESSAGE=$(git tag -l --format='%(contents)' ${{ github.ref_name }})
-          echo "$TAG_MESSAGE" >> release_notes.md
-          
-          # Get commit history since last tag
-          echo -e "\n## Changes" >> release_notes.md
-          echo "### Commits" >> release_notes.md
-          
+          if [ -n "$TAG_MESSAGE" ]; then
+            echo "$TAG_MESSAGE" >> release_notes.md
+            echo "" >> release_notes.md
+          fi
+
           # Get the previous tag
           PREV_TAG=$(git describe --tags --abbrev=0 ${{ github.ref_name }}^ 2>/dev/null || echo "")
-          
+          RANGE=""
           if [ -n "$PREV_TAG" ]; then
-            # Get commits between previous tag and current tag
-            git log --pretty=format:"- %s (%h)" $PREV_TAG..${{ github.ref_name }} >> release_notes.md
+            RANGE="$PREV_TAG..${{ github.ref_name }}"
           else
-            # If no previous tag, get all commits
-            git log --pretty=format:"- %s (%h)" ${{ github.ref_name }} >> release_notes.md
+            RANGE="${{ github.ref_name }}"
           fi
-          
-          # Add dependency changes if package.json was modified
-          if git diff --name-only $PREV_TAG ${{ github.ref_name }} | grep -q "package.json"; then
-            echo -e "\n### Dependency Updates" >> release_notes.md
-            echo "The following dependencies were updated:" >> release_notes.md
-            git diff $PREV_TAG ${{ github.ref_name }} package.json | grep -E '^[+-]  "' | sed 's/^[+-]  "/- /' >> release_notes.md
-          fi
+
+          echo "## Changes" >> release_notes.md
+
+          # Features
+          echo "## Features" >> release_notes.md
+          git log $RANGE --pretty=format:"- %s [\`%h\`](https://github.com/UmmItC/Links/commit/%h)" | grep -E '^feat:' || echo "- (No new features)" >> release_notes.md
+          echo "" >> release_notes.md
+
+          # Bug Fixes
+          echo "## Fix" >> release_notes.md
+          git log $RANGE --pretty=format:"- %s [\`%h\`](https://github.com/UmmItC/Links/commit/%h)" | grep -E '^fix:' || echo "- (No bug fixes)" >> release_notes.md
+          echo "" >> release_notes.md
+
+          # Refactoring
+          echo "## Refactor" >> release_notes.md
+          git log $RANGE --pretty=format:"- %s [\`%h\`](https://github.com/UmmItC/Links/commit/%h)" | grep -E '^refactor:' || echo "- (No refactoring)" >> release_notes.md
+          echo "" >> release_notes.md
+
+          # Chore
+          echo "## Chore" >> release_notes.md
+          git log $RANGE --pretty=format:"- %s [\`%h\`](https://github.com/UmmItC/Links/commit/%h)" | grep -E '^chore:' || echo "- (No chores)" >> release_notes.md
+          echo "" >> release_notes.md
+
+          # Style
+          echo "## Styles" >> release_notes.md
+          git log $RANGE --pretty=format:"- %s [\`%h\`](https://github.com/UmmItC/Links/commit/%h)" | grep -E '^style:' || echo "- (No style changes)" >> release_notes.md
+          echo "" >> release_notes.md
+
+          # Documentation
+          echo "## Docs" >> release_notes.md
+          git log $RANGE --pretty=format:"- %s [\`%h\`](https://github.com/UmmItC/Links/commit/%h)" | grep -E '^docs:' || echo "- (No documentation changes)" >> release_notes.md
+          echo "" >> release_notes.md
+
+          # Build
+          echo "## Build" >> release_notes.md
+          git log $RANGE --pretty=format:"- %s [\`%h\`](https://github.com/UmmItC/Links/commit/%h)" | grep -E '^build:' || echo "- (No build changes)" >> release_notes.md
+          echo "" >> release_notes.md
+
+          # Performance
+          echo "## Performance" >> release_notes.md
+          git log $RANGE --pretty=format:"- %s [\`%h\`](https://github.com/UmmItC/Links/commit/%h)" | grep -E '^perf:' || echo "- (No performance changes)" >> release_notes.md
+          echo "" >> release_notes.md
+
+          # CI/CD
+          echo "## CI/CD" >> release_notes.md
+          git log $RANGE --pretty=format:"- %s [\`%h\`](https://github.com/UmmItC/Links/commit/%h)" | grep -E '^ci:' || echo "- (No CI/CD changes)" >> release_notes.md
+          echo "" >> release_notes.md
+
+          # Reverts
+          echo "## Reverts" >> release_notes.md
+          git log $RANGE --pretty=format:"- %s [\`%h\`](https://github.com/UmmItC/Links/commit/%h)" | grep -E '^revert:' || echo "- (No reverts)" >> release_notes.md
+
+          echo "\n---\n" >> release_notes.md
+          echo "## Full Changelog" >> release_notes.md
+          echo "You can view the full changelog and commit history for this release [here](https://github.com/UmmItC/Links/commits/master)." >> release_notes.md
           
       - name: Create Release
         uses: softprops/action-gh-release@v1
