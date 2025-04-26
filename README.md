@@ -2,11 +2,11 @@
 
 [![Release](https://github.com/UmmItC/Links/actions/workflows/semantic-release.yml/badge.svg)](https://github.com/UmmItC/Links/actions/workflows/semantic-release.yml)
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 A modern, minimalist landing page that serves as your digital business card. Inspired by Linktree, but enhanced with custom features and a sleek design. Perfect for creators, developers, and professionals who want to share their online presence elegantly.
 
-## :tools: Tech Stack
+## Tech Stack
 
 - **Frontend:** [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/) for utility-first CSS
@@ -15,7 +15,7 @@ A modern, minimalist landing page that serves as your digital business card. Ins
 - **Versioning:** Semantic Release for automated versioning
 - **Hosting:** GitHub Pages (configurable for other platforms)
 
-## :rocket: Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -42,7 +42,7 @@ A modern, minimalist landing page that serves as your digital business card. Ins
 
 4. View your site at [http://localhost:5173](http://localhost:5173)
 
-## :construction_site: Production Build
+## Production Build
 
 Create a production-ready build:
 ```bash
@@ -56,7 +56,7 @@ yarn preview
 
 The optimized files will be generated in the `dist/` directory.
 
-## :globe_with_meridians: Deployment Options
+## Deployment Options
 
 ### GitHub Pages (Recommended)
 This project includes automated deployment to GitHub Pages through GitHub Actions workflows (see `.github/` directory).
@@ -79,7 +79,7 @@ The `dist/` directory can be deployed to any static hosting service:
   - AWS S3
   - Any static file hosting
 
-## :computer: Development Guidelines
+## Development Guidelines
 
 ### Commit Convention
 We follow the [Conventional Commits](https://www.conventionalcommits.org/) specification:
@@ -99,11 +99,11 @@ chore: maintenance tasks
 - `dev`: Development and integration
 - Feature branches: `feature/your-feature-name`
 
-## :pencil: License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](./LICENSE) file for details.
 
-## :handshake: Contributing
+## Contributing
 
 Contributions are welcome! To contribute:
 
