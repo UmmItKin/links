@@ -75,8 +75,6 @@ You can view the full changelog and commit history for this release [here](https
 
 You can view the full changelog and commit history for this release [here](https://github.com/UmmItC/Links/commits/v1.1.0).
 
-# Release v1.0.0 - Links
-
 # [1.2.0](https://github.com/UmmItC/links/compare/v1.1.0...v1.2.0) (2025-01-12)
 
 🎉 **This is the first release of Links!** 🎉
