@@ -1,17 +1,15 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
-import { SiHugo, SiUpptime, SiCodeberg, SiKofi, SiReadthedocs, SiStatuspal } from "react-icons/si";
-import { IoLogoMarkdown } from "react-icons/io5";
+import { SiKofi, SiReadthedocs, SiStatuspal } from "react-icons/si";
 import { GrArchlinux, GrBlog } from "react-icons/gr";
 
 const linksData = [
-  { label: "Arch User Repository (AUR)", url: "https://aur.archlinux.org/account/UmmIt", icon: <GrArchlinux className="w-5 h-5" />, alt: "@UmmIt" },
-  { label: "Codeberg", url: "https://codeberg.org/UmmIt", icon: <SiCodeberg className="w-5 h-5" />, alt: "@UmmIt" },
+  { label: "Arch User Repository", url: "https://aur.archlinux.org/account/UmmIt", icon: <GrArchlinux className="w-5 h-5" />, alt: "@UmmIt" },
   { label: "Github", url: "https://github.com/UmmItC", icon: <FaGithub className="w-5 h-5" />, alt: "@UmmItC" },
   { label: "Ko-fi", url: "https://ko-fi.com/UmmIt", icon: <SiKofi className="w-5 h-5" />, alt: "@UmmIt" }, 
   { label: "Blog", url: "https://blog.ummit.dev", icon: <GrBlog className="w-5 h-5" />, alt: "blog.ummit.dev" },
-  { label: "GPU-Passthru Docs", url: "https://gpu-passthru.ummit.dev", icon: <SiReadthedocs className="w-5 h-5" />, alt: "gpu-passthru.ummit.dev" },
-  { label: "Website Monitors", url: "https://status.ummit.dev", icon: <SiStatuspal className="w-5 h-5" />, alt: "status.ummit.dev"},
+  { label: "GPU-Passthru", url: "https://gpu-passthru.ummit.dev", icon: <SiReadthedocs className="w-5 h-5" />, alt: "gpu-passthru.ummit.dev" },
+  { label: "Monitors", url: "https://status.ummit.dev", icon: <SiStatuspal className="w-5 h-5" />, alt: "status.ummit.dev"},
 ];
 
 function Links() {
