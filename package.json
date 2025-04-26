@@ -19,6 +19,9 @@
     "react-svg": "^16.3.0"
   },
   "devDependencies": {
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/github": "^11.0.2",
+    "@semantic-release/release-notes-generator": "^14.0.3",
     "@tailwindcss/postcss": "^4.1.4",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
@@ -29,6 +32,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "postcss": "^8.5.3",
+    "semantic-release": "^24.2.3",
     "tailwindcss": "^4.1.4",
     "vite": "^6.3.3"
   },
