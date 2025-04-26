@@ -1551,10 +1551,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"daisyui@npm:^5.0.27":
-  version: 5.0.27
-  resolution: "daisyui@npm:5.0.27"
-  checksum: 10c0/704f90839c140efd655e16823073ca9023151c79b0a17798b5109954a8ee888a5a083f24024d8e79e553ff0cd305bbda0101e39e0adc96a30c301ba61f65c849
+"daisyui@npm:^5.0.28":
+  version: 5.0.28
+  resolution: "daisyui@npm:5.0.28"
+  checksum: 10c0/480fa9935cfd6d1f87c3c34a87f1f4799fa15ab0b000f8b8e679f9d7575625322dbf78c71d908636d37078a131de1ba5b8931909d8248ba77adbf438d7dd2e0a
   languageName: node
   linkType: hard
 
@@ -3351,7 +3351,7 @@ __metadata:
     "@types/react": "npm:^19.1.2"
     "@types/react-dom": "npm:^19.1.2"
     "@vitejs/plugin-react": "npm:^4.4.1"
-    daisyui: "npm:^5.0.27"
+    daisyui: "npm:^5.0.28"
     dotenv: "npm:^16.5.0"
     eslint: "npm:^9.25.1"
     eslint-plugin-react: "npm:^7.37.5"
