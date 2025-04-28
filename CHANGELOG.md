@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/UmmItC/links/compare/v1.3.0...v1.3.1) (2025-04-28)
+
+
+### Bug Fixes
+
+* **release:** update .releaserc.json to preserve version during releases ([4621984](https://github.com/UmmItC/links/commit/4621984f7e9fca2b38e256889eeba692c58b8e90))
+
 # [1.3.0](https://github.com/UmmItC/links/compare/v1.2.1...v1.3.0) (2025-04-28)
 
 
