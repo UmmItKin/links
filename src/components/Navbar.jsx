@@ -6,6 +6,8 @@ import { DiLinux } from "react-icons/di";
 
 function Navbar({ userData }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
   
   useEffect(() => {
@@ -29,13 +31,32 @@ function Navbar({ userData }) {
     setIsMenuOpen(false);
   }, [location]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
   const handleMenuButtonClick = (e) => {
     e.stopPropagation();
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <div className="shadow-xs fixed inset-x-0 top-4 z-40 mx-auto flex h-[60px] max-w-4xl items-center justify-between rounded-2xl px-2 saturate-100 backdrop-blur-[10px] transition-colors">
+    <div className={`shadow-xs fixed inset-x-0 top-0 z-40 mx-auto flex h-[60px] max-w-4xl items-center justify-between rounded-2xl px-2 saturate-100 backdrop-blur-[10px] transition-all duration-500 ${
+      isVisible ? 'translate-y-4 opacity-100' : '-translate-y-full opacity-0'
+    }`}>
       <div className="flex-1">
         <Link to="/" className="text-xl font-semibold hover:text-myPink1 transition-colors duration-300">UmmIt <DiLinux className="inline-block w-6 h-6 mb-2" /></Link>
       </div>
