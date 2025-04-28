@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/UmmItC/links/compare/v1.3.1...v1.3.2) (2025-04-28)
+
+
+### Bug Fixes
+
+* test version bump ([89dc1cf](https://github.com/UmmItC/links/commit/89dc1cf400afb529d0ca59386c07ddcb1e4ff349))
+
 ## [1.3.1](https://github.com/UmmItC/links/compare/v1.3.0...v1.3.1) (2025-04-28)
 
 
