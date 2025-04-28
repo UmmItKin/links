@@ -8,6 +8,7 @@ import { VscHeartFilled } from "react-icons/vsc";
 
 function Footer() {
   const [commitHash, setCommitHash] = useState(null);
+  const currentYear = new Date().getFullYear();
   
   useEffect(() => {
     const fetchCommitHash = async () => {
@@ -59,7 +60,7 @@ function Footer() {
           </div>
           
           <p className="text-sm text-gray-400 mt-6 font-light tracking-wide hover:text-gray-100 transition-colors duration-300">
-            &copy; 2025 Ummlt. GPLv3 License
+            &copy; {currentYear} Ummlt. GPLv3 License
           </p>
         </div>
       </footer>
