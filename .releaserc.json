@@ -11,8 +11,9 @@
       "tarballDir": "dist"
     }],
     ["@semantic-release/git", {
-      "assets": ["CHANGELOG.md", "package.json", "yarn.lock"],
-      "message": "chore(release): ${nextRelease.version} \n\n${nextRelease.notes}"
+      "assets": ["package.json", "CHANGELOG.md", "yarn.lock"],
+      "message": "chore(release): ${nextRelease.version} \n\n${nextRelease.notes}",
+      "preserveVersion": true
     }],
     "@semantic-release/github"
   ]
