@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/UmmItC/links/compare/v1.2.0...v1.2.1) (2025-04-28)
+
+
+### Bug Fixes
+
+* bump version from 1.1.1 to 1.2.0 due to a human error that affected the CI system ([863ad6a](https://github.com/UmmItC/links/commit/863ad6aada0a1fb20ee53282e3ca0ae921dbf27b))
+
 # [1.2.0](https://github.com/UmmItC/links/compare/v1.1.0...v1.2.0) (2025-04-26)
 
 ### Bug Fixes
