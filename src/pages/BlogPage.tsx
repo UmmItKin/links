@@ -1,8 +1,16 @@
 import React from "react";
 import { FaRss } from "react-icons/fa";
 
-const BlogPage = () => {
-  const posts = [
+interface Post {
+  id: number;
+  title: string;
+  date: string;
+  excerpt: string;
+  tags: string[];
+}
+
+const BlogPage: React.FC = () => {
+  const posts: Post[] = [
     {
       id: 1,
       title: "Why my name is UmmIt",

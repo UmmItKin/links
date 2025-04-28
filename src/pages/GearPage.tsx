@@ -1,11 +1,22 @@
 import React from 'react';
-import { FaLaptop, FaKeyboard, FaDesktop, FaHeadphones, FaServer } from 'react-icons/fa';
+import { FaLaptop, FaKeyboard, FaServer } from 'react-icons/fa';
 import { IoHardwareChip } from 'react-icons/io5';
 import { HiMiniDevicePhoneMobile } from "react-icons/hi2";
 import { DiLinux } from "react-icons/di";
 
-function Gear() {
-  const gearCategories = [
+interface GearItem {
+  name: string;
+  value: string;
+}
+
+interface GearCategory {
+  title: string;
+  icon: React.ReactNode;
+  items: GearItem[];
+}
+
+const GearPage: React.FC = () => {
+  const gearCategories: GearCategory[] = [
     {
       title: "Desktop (Triple Boot with three GNU/Linux)",
       icon: <FaLaptop className="text-myPink1 text-2xl" />,
@@ -103,6 +114,6 @@ function Gear() {
       </div>
     </div>
   );
-}
+};
 
-export default Gear;
+export default GearPage;

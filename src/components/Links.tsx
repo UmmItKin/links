@@ -3,7 +3,14 @@ import { FaGithub } from 'react-icons/fa';
 import { SiKofi, SiReadthedocs, SiStatuspal } from "react-icons/si";
 import { GrArchlinux, GrBlog } from "react-icons/gr";
 
-const linksData = [
+interface LinkData {
+  label: string;
+  url: string;
+  icon: React.ReactNode;
+  alt: string;
+}
+
+const linksData: LinkData[] = [
   { label: "Arch User Repository", url: "https://aur.archlinux.org/account/UmmIt", icon: <GrArchlinux className="w-5 h-5" />, alt: "@UmmIt" },
   { label: "Github", url: "https://github.com/UmmItC", icon: <FaGithub className="w-5 h-5" />, alt: "@UmmItC" },
   { label: "Ko-fi", url: "https://ko-fi.com/UmmIt", icon: <SiKofi className="w-5 h-5" />, alt: "@UmmIt" }, 
@@ -12,7 +19,7 @@ const linksData = [
   { label: "Monitors", url: "https://status.ummit.dev", icon: <SiStatuspal className="w-5 h-5" />, alt: "status.ummit.dev"},
 ];
 
-function Links() {
+const Links: React.FC = () => {
   return (
     <div className="flex flex-col items-center space-y-3 mt-8 w-full max-w-md mx-auto">
       {linksData.map((link, index) => (
@@ -38,6 +45,6 @@ function Links() {
       ))}
     </div>
   );
-}
+};
 
 export default Links;

@@ -2,7 +2,13 @@ import React from 'react';
 import { IoMdClose } from "react-icons/io";
 import { FiDownload } from "react-icons/fi";
 
-const GPGModal = ({ gpgContent, onClose, onDownload }) => {
+interface GPGModalProps {
+  gpgContent: string | null;
+  onClose: () => void;
+  onDownload: () => void;
+}
+
+const GPGModal: React.FC<GPGModalProps> = ({ gpgContent, onClose, onDownload }) => {
   return (
     <dialog id="gpg_modal" className="modal">
       <div className="modal-box bg-transparent rounded-lg p-11 w-full max-w-2xl max-h-[75vh] overflow-auto backdrop-blur-md rounded-xl p-6 border border-gray-700/30 hover:border-myPink1 transition-all duration-650 hover:shadow-lg hover:shadow-myPink1/20">

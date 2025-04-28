@@ -3,7 +3,31 @@ import { FaCode, FaServer, FaMapMarkerAlt } from 'react-icons/fa';
 import { SiArchlinux } from 'react-icons/si';
 import { MdOutlineSecurity } from "react-icons/md";
 
-function About() {
+interface Interest {
+  icon: React.ReactNode;
+  label: string;
+}
+
+const AboutPage: React.FC = () => {
+  const interests: Interest[] = [
+    {
+      icon: <SiArchlinux className="text-3xl text-myPink1 mb-2" />,
+      label: "Arch Linux"
+    },
+    {
+      icon: <FaCode className="text-3xl text-myPink1 mb-2" />,
+      label: "Open Source"
+    },
+    {
+      icon: <FaServer className="text-3xl text-myPink1 mb-2" />,
+      label: "Homelab"
+    },
+    {
+      icon: <MdOutlineSecurity className="text-3xl text-myPink1 mb-2" />,
+      label: "Cybersecurity"
+    }
+  ];
+
   return (
     <div className="pt-24 px-4 max-w-5xl mx-auto">
       <h1 className="text-4xl font-bold mb-6 text-center">About Me</h1>
@@ -33,28 +57,18 @@ function About() {
             </p>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="flex flex-col items-center p-3 bg-gray-700/30 rounded-lg">
-                <SiArchlinux className="text-3xl text-myPink1 mb-2" />
-                <span className="text-center">Arch Linux</span>
-              </div>
-              <div className="flex flex-col items-center p-3 bg-gray-700/30 rounded-lg">
-                <FaCode className="text-3xl text-myPink1 mb-2" />
-                <span className="text-center">Open Source</span>
-              </div>
-              <div className="flex flex-col items-center p-3 bg-gray-700/30 rounded-lg">
-                <FaServer className="text-3xl text-myPink1 mb-2" />
-                <span className="text-center">Homelab</span>
-              </div>
-              <div className="flex flex-col items-center p-3 bg-gray-700/30 rounded-lg">
-                <MdOutlineSecurity className="text-3xl text-myPink1 mb-2" />
-                <span className="text-center">Cybersecurity</span>
-              </div>
+              {interests.map((interest, index) => (
+                <div key={index} className="flex flex-col items-center p-3 bg-gray-700/30 rounded-lg">
+                  {interest.icon}
+                  <span className="text-center">{interest.label}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default About;
+export default AboutPage;

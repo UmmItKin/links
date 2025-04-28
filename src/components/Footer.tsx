@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { FaGithub, FaReact } from 'react-icons/fa';
+import { useState, useEffect } from 'react';
+import { FaReact } from 'react-icons/fa';
 import { SiTailwindcss } from 'react-icons/si';
 import { IoGitBranch } from 'react-icons/io5';
 import { AiOutlineLinux } from "react-icons/ai";
 import { GrArchlinux } from "react-icons/gr";
 import { VscHeartFilled } from "react-icons/vsc";
 
-function Footer() {
-  const [commitHash, setCommitHash] = useState(null);
+const Footer: React.FC = () => {
+  const [commitHash, setCommitHash] = useState<string | null>(null);
   const currentYear = new Date().getFullYear();
   
   useEffect(() => {
@@ -15,12 +15,17 @@ function Footer() {
       try {
         const response = await fetch('https://links.ummit.dev/commit_hash');
         if (response.ok) {
-          setCommitHash((await response.text()).trim());
+          const text = await response.text();
+          setCommitHash(text.trim());
         } else {
           console.error('Failed to fetch commit hash:', response.statusText);
         }
       } catch (error) {
-        console.error('Error fetching commit hash:', error);
+        if (error instanceof Error) {
+          console.error('Error fetching commit hash:', error.message);
+        } else {
+          console.error('Error fetching commit hash:', error);
+        }
       }
     };
     fetchCommitHash();
@@ -66,6 +71,6 @@ function Footer() {
       </footer>
     </div>
   );
-}
+};
 
 export default Footer;

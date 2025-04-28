@@ -4,13 +4,15 @@ import { HiMiniKey } from "react-icons/hi2";
 import { MdEmail } from "react-icons/md";
 import { SiUmami } from "react-icons/si";
 import { DiLinux } from "react-icons/di";
+import { UserData, SocialButton } from "../config/userData";
 
-const HomePage = ({ userData, socialButtons }) => {
-  const handleGPGClick = (e) => {
-    e.preventDefault();
-    document.getElementById("gpg_modal").showModal();
-  };
+interface HomePageProps {
+  userData: UserData;
+  socialButtons: SocialButton[];
+  onGPGClick: (e: React.MouseEvent) => void;
+}
 
+const HomePage: React.FC<HomePageProps> = ({ userData, socialButtons, onGPGClick }) => {
   return (
     <div className="hero min-h-screen bg-transparent flex items-center justify-center">
       <div className="hero-content text-center">
@@ -54,7 +56,7 @@ const HomePage = ({ userData, socialButtons }) => {
             ))}
             <div className="px-1 hover:text-myPink1 transition-transform duration-200 transform hover:scale-105">
               <button
-                onClick={handleGPGClick}
+                onClick={onGPGClick}
                 className="hover:text-myPink1"
               >
                 <HiMiniKey className="h-8 w-8" />

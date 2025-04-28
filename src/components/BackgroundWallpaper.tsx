@@ -1,6 +1,10 @@
 import React from 'react';
 
-const BackgroundWallpaper = ({ imageUrl }) => {
+interface BackgroundWallpaperProps {
+  imageUrl: string;
+}
+
+const BackgroundWallpaper: React.FC<BackgroundWallpaperProps> = ({ imageUrl }) => {
   return (
     <div 
       className="fixed inset-0 w-full h-full bg-cover bg-center -z-10"

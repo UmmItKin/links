@@ -4,22 +4,32 @@ import { FaCode } from "react-icons/fa6";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { DiLinux } from "react-icons/di";
 
-function Navbar({ userData }) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+interface UserData {
+  repo?: string;
+}
+
+interface NavbarProps {
+  userData?: UserData;
+}
+
+function Navbar({ userData }: NavbarProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isVisible, setIsVisible] = useState<boolean>(true);
+  const [lastScrollY, setLastScrollY] = useState<number>(0);
   const location = useLocation();
   
   useEffect(() => {
     if (!isMenuOpen) return;
     
-    const handleClickOutside = (event) => {
-      if (event.target.closest('.menu-button')) {
-        return;
-      }
-      
-      if (!event.target.closest('.mobile-menu')) {
-        setIsMenuOpen(false);
+    const handleClickOutside = (event: MouseEvent) => {
+      if (event.target instanceof Element) {
+        if (event.target.closest('.menu-button')) {
+          return;
+        }
+        
+        if (!event.target.closest('.mobile-menu')) {
+          setIsMenuOpen(false);
+        }
       }
     };
     
@@ -48,7 +58,7 @@ function Navbar({ userData }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
-  const handleMenuButtonClick = (e) => {
+  const handleMenuButtonClick = (e: React.MouseEvent) => {
     e.stopPropagation();
     setIsMenuOpen(!isMenuOpen);
   };
@@ -105,4 +115,4 @@ function Navbar({ userData }) {
   );
 }
 
-export default Navbar;
+export default Navbar; 

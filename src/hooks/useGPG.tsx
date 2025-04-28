@@ -1,11 +1,18 @@
 import { useState, useEffect } from 'react';
 import { userData } from '../config/userData';
 
-export const useGPG = () => {
-  const [gpgContent, setGPGContent] = useState("");
-  const [isGpgLoaded, setIsGpgLoaded] = useState(false);
+interface GPGHookReturn {
+  gpgContent: string;
+  isGpgLoaded: boolean;
+  fetchGPGKey: () => Promise<void>;
+  handleDownload: () => void;
+}
 
-  const fetchGPGKey = async () => {
+export const useGPG = (): GPGHookReturn => {
+  const [gpgContent, setGPGContent] = useState<string>("");
+  const [isGpgLoaded, setIsGpgLoaded] = useState<boolean>(false);
+
+  const fetchGPGKey = async (): Promise<void> => {
     try {
       const response = await fetch(userData.gpg_key);
       if (response.ok) {
@@ -16,11 +23,15 @@ export const useGPG = () => {
         console.error("Failed to fetch GPG key:", response.statusText);
       }
     } catch (error) {
-      console.error("Error fetching GPG key:", error);
+      if (error instanceof Error) {
+        console.error("Error fetching GPG key:", error.message);
+      } else {
+        console.error("Error fetching GPG key:", error);
+      }
     }
   };
 
-  const handleDownload = () => {
+  const handleDownload = (): void => {
     if (!gpgContent) {
       console.error("Cannot download: GPG content is empty");
       return;
