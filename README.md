@@ -9,11 +9,11 @@ A modern, minimalist landing page that serves as your digital business card. Ins
 ## Tech Stack
 
 - **Frontend:** [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/) for utility-first CSS
-- **Components:** [DaisyUI](https://daisyui.com/) for pre-built UI components
-- **CI/CD:** GitHub Actions for automated testing and deployment
-- **Versioning:** Semantic Release for automated versioning
-- **Hosting:** GitHub Pages (configurable for other platforms)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) for Style
+- **Components:** [DaisyUI](https://daisyui.com/) for Style components
+- **CI/CD:** GitHub Actions for automated deployment
+- **Versioning:** Semantic Release for automated detection versioning
+- **Hosting:** GitHub Pages
 
 ## Getting Started
 
@@ -37,7 +37,7 @@ A modern, minimalist landing page that serves as your digital business card. Ins
 
 3. Start the development server:
    ```bash
-   yarn dev
+   yarn run dev
    ```
 
 4. View your site at [http://localhost:5173](http://localhost:5173)
@@ -46,42 +46,32 @@ A modern, minimalist landing page that serves as your digital business card. Ins
 
 Create a production-ready build:
 ```bash
-yarn build
+yarn run build
 ```
 
 Preview the production build:
 ```bash
-yarn preview
+yarn run preview
 ```
 
-The optimized files will be generated in the `dist/` directory.
+The static files will be generated in the `dist/` directory.
 
 ## Deployment Options
 
 ### GitHub Pages (Recommended)
+
 This project includes automated deployment to GitHub Pages through GitHub Actions workflows (see `.github/` directory).
 
 Simply push your changes to the master branch, and the site will be automatically:
+
 - Built
 - Versioned
 - Deployed
 
-### Alternative Hosting Platforms
-
-The `dist/` directory can be deployed to any static hosting service:
-
-- **Serverless Platforms**
-  - Netlify
-  - Vercel
-  - Firebase Hosting
-- **Traditional Hosting**
-  - Apache/Nginx servers
-  - AWS S3
-  - Any static file hosting
-
 ## Development Guidelines
 
 ### Commit Convention
+
 We follow the [Conventional Commits](https://www.conventionalcommits.org/) specification:
 
 ```bash
@@ -95,7 +85,8 @@ chore: maintenance tasks
 ```
 
 ### Branch Strategy
-- `master`: Production-ready code
+
+- `master`: Production-ready code (do not use this branch, since it's the Production branch)
 - `dev`: Development and integration
 - Feature branches: `feature/your-feature-name`
 
@@ -108,7 +99,7 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 Contributions are welcome! To contribute:
 
 1. Fork the repository
-2. Create your feature branch (do not use master branch, since it's the Production branch)
+2. Create your feature branch
 3. Commit changes following conventional commit style
 4. Push to your branch
 5. Open a Pull Request
