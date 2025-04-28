@@ -54,7 +54,7 @@ function Navbar({ userData }) {
   };
 
   return (
-    <div className={`shadow-xs fixed inset-x-0 top-0 z-40 mx-auto flex h-[60px] max-w-4xl items-center justify-between rounded-2xl px-2 saturate-100 backdrop-blur-[10px] transition-all duration-500 ${
+    <div className={`shadow-xs fixed inset-x-0 top-0 z-40 mx-auto flex h-[60px] max-w-4xl items-center justify-between rounded-2xl px-2 bg-background/70 saturate-100 backdrop-blur-[10px] transition-all duration-500 ${
       isVisible ? 'translate-y-4 opacity-100' : '-translate-y-full opacity-0'
     }`}>
       <div className="flex-1">
