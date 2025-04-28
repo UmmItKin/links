@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/UmmItC/links/compare/v1.2.1...v1.3.0) (2025-04-28)
+
+
+### Features
+
+* **GearPage:** enhance gear items with icons for better visual representation ([fcb5f2c](https://github.com/UmmItC/links/commit/fcb5f2c67380d875b2649b6ece9103902b0a3c10))
+
 ## [1.2.1](https://github.com/UmmItC/links/compare/v1.2.0...v1.2.1) (2025-04-28)
 
 
