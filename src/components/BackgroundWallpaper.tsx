@@ -7,7 +7,7 @@ interface BackgroundWallpaperProps {
 const BackgroundWallpaper: React.FC<BackgroundWallpaperProps> = ({ imageUrl }) => {
   return (
     <div 
-      className="fixed inset-0 w-full h-full bg-cover bg-center -z-10"
+      className="fixed inset-0 w-full h-[100svh] bg-cover bg-center -z-10"
       style={{
         backgroundImage: `url(${imageUrl})`,
         filter: 'blur(8px)',

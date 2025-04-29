@@ -64,11 +64,11 @@ function Navbar({ userData }: NavbarProps) {
   };
 
   return (
-    <div className={`shadow-xs fixed inset-x-0 top-0 z-40 mx-auto flex h-[60px] max-w-4xl items-center justify-between rounded-2xl px-2 bg-background/70 saturate-100 backdrop-blur-[10px] transition-all duration-500 ${
+    <div className={`shadow-xs fixed inset-x-0 top-0 z-40 mx-auto flex h-[60px] max-w-4xl items-center justify-between px-2 bg-background/70 saturate-100 backdrop-blur-[10px] transition-all duration-500 ${
       isVisible ? 'translate-y-4 opacity-100' : '-translate-y-full opacity-0'
-    }`}>
-      <div className="flex-1">
-        <Link to="/" className="text-xl font-semibold hover:text-myPink1 transition-colors duration-300">UmmIt <DiLinux className="inline-block w-6 h-6 mb-2" /></Link>
+    } md:rounded-2xl`}>
+      <div className="flex-1 flex justify-start">
+        <Link to="/" className="text-xl font-semibold hover:text-myPink1 transition-colors duration-300 ml-4 flex items-center">UmmIt <DiLinux className="w-6 h-6 ml-1" /></Link>
       </div>
       
       {/* Desktop Navigation */}
@@ -77,7 +77,7 @@ function Navbar({ userData }: NavbarProps) {
         <Link to="/project" className={`inline-block px-3 rounded-md hover:text-myPink1 transition-colors duration-300 font-bold ${location.pathname === '/project' ? 'text-myPink1' : ''}`}>Project</Link>
         <Link to="/gear" className={`inline-block px-3 rounded-md hover:text-myPink1 transition-colors duration-300 font-bold ${location.pathname === '/gear' ? 'text-myPink1' : ''}`}>Gear</Link>
         <Link to="/about" className={`inline-block px-3 rounded-md hover:text-myPink1 transition-colors duration-300 font-bold ${location.pathname === '/about' ? 'text-myPink1' : ''}`}>About</Link>
-        <a href={userData?.repo} target="_blank" rel="noopener noreferrer" className="px-3 flex items-center">
+        <a href={userData?.repo} target="_blank" rel="noopener noreferrer" className="px-3 flex items-center mr-4">
           <FaCode className="inline-block w-5 h-5 hover:text-myPink1 transition-colors duration-300" />
         </a>
       </div>
@@ -99,18 +99,18 @@ function Navbar({ userData }: NavbarProps) {
       </div>
       
       {/* Mobile Menu Dropdown */}
-      {isMenuOpen && (
-        <div className="mobile-menu absolute top-full right-0 mt-2 w-48 rounded-xl bg-background/80 backdrop-blur-[10px] shadow-lg py-2 z-50 transform origin-top-right md:hidden">
-          <Link to="/blog" className={`block px-4 py-2 hover:bg-background/40 hover:text-myPink1 transition-colors duration-300 font-bold ${location.pathname === '/blog' ? 'text-myPink1' : ''}`}>Blog</Link>
-          <Link to="/project" className={`block px-4 py-2 hover:bg-background/40 hover:text-myPink1 transition-colors duration-300 font-bold ${location.pathname === '/project' ? 'text-myPink1' : ''}`}>Project</Link>
-          <Link to="/gear" className={`block px-4 py-2 hover:bg-background/40 hover:text-myPink1 transition-colors duration-300 font-bold ${location.pathname === '/gear' ? 'text-myPink1' : ''}`}>Gear</Link>
-          <Link to="/about" className={`block px-4 py-2 hover:bg-background/40 hover:text-myPink1 transition-colors duration-300 font-bold ${location.pathname === '/about' ? 'text-myPink1' : ''}`}>About</Link>
-          <a href={userData?.repo} target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-background/40 hover:text-myPink1 transition-colors duration-300">
-            <FaCode className="inline-block w-5 h-5 mr-2" />
-            <span className="font-bold">Source</span>
-          </a>
-        </div>
-      )}
+      <div className={`mobile-menu absolute top-full right-0 mt-2 w-48 bg-background/80 backdrop-blur-[10px] shadow-lg py-2 z-50 transform origin-top md:hidden transition-all duration-300 ease-in-out ${
+        isMenuOpen ? 'opacity-100 translate-y-0 rounded-xl' : 'opacity-0 -translate-y-2 pointer-events-none'
+      }`}>
+        <Link to="/blog" className={`block px-4 py-2 hover:bg-background/40 hover:text-myPink1 transition-colors duration-300 font-bold ${location.pathname === '/blog' ? 'text-myPink1' : ''}`}>Blog</Link>
+        <Link to="/project" className={`block px-4 py-2 hover:bg-background/40 hover:text-myPink1 transition-colors duration-300 font-bold ${location.pathname === '/project' ? 'text-myPink1' : ''}`}>Project</Link>
+        <Link to="/gear" className={`block px-4 py-2 hover:bg-background/40 hover:text-myPink1 transition-colors duration-300 font-bold ${location.pathname === '/gear' ? 'text-myPink1' : ''}`}>Gear</Link>
+        <Link to="/about" className={`block px-4 py-2 hover:bg-background/40 hover:text-myPink1 transition-colors duration-300 font-bold ${location.pathname === '/about' ? 'text-myPink1' : ''}`}>About</Link>
+        <a href={userData?.repo} target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-background/40 hover:text-myPink1 transition-colors duration-300">
+          <FaCode className="inline-block w-5 h-5 mr-2" />
+          <span className="font-bold">Source</span>
+        </a>
+      </div>
     </div>
   );
 }
