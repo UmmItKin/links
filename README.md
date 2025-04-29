@@ -8,7 +8,7 @@ A modern, minimalist landing page that serves as your digital business card. Ins
 
 ## Tech Stack
 
-- **Frontend:** [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+- **Frontend:** [React](https://reactjs.org/) + [Vite](https://vitejs.dev/) (Typescript)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/) for Style
 - **Components:** [DaisyUI](https://daisyui.com/) for Style components
 - **CI/CD:** GitHub Actions for automated deployment
