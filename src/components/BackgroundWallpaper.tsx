@@ -22,7 +22,7 @@ const BackgroundWallpaper: React.FC<BackgroundWallpaperProps> = ({ imageUrl }) =
       <div 
         className="absolute inset-0 w-full h-full"
         style={{
-          background: 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%)',
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%)',
           zIndex: '-5'
         }}
       />
@@ -30,7 +30,7 @@ const BackgroundWallpaper: React.FC<BackgroundWallpaperProps> = ({ imageUrl }) =
       <div 
         className="absolute inset-0 w-full h-full"
         style={{
-          background: 'radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.4) 100%)',
+          background: 'radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.8) 100%)',
           zIndex: '-4'
         }}
       />
