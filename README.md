@@ -96,10 +96,8 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 
 ## Contributing
 
-Contributions are welcome! To contribute:
+There are many ways to contribute, such as recommending features, reporting bugs, fixing documentation typos, and more.
 
-1. Fork the repository
-2. Create your feature branch
-3. Commit changes following conventional commit style
-4. Push to your branch
-5. Open a Pull Request
+If you would like to open a Pull Request (or Merge Request), please review this document first before making any commits or fixes: [CONTRIBUTING.md](./CONTRIBUTING.md).
+
+Thank you for your interest in contributing!
