@@ -1,3 +1,13 @@
+## [1.4.1](https://github.com/UmmItC/links/compare/v1.4.0...v1.4.1) (2025-05-02)
+
+### Bug Fixes
+
+* **ci-release:** update release configuration in .releaserc.json ([3aff25a](https://github.com/UmmItC/links/commit/3aff25a42e2653f04b3f307fa9329112c001916d))
+
+### Chores
+
+* **deps:** add conventional-changelog-conventionalcommits package ([db591bd](https://github.com/UmmItC/links/commit/db591bd039394441922f7a5b060cd369e0d4de00))
+
 # [1.4.0](https://github.com/UmmItC/links/compare/v1.3.2...v1.4.0) (2025-05-02)
 
 
