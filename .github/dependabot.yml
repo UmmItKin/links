@@ -6,6 +6,6 @@ updates:
       interval: "daily"
     open-pull-requests-limit: 10
     commit-message:
-      prefix: "yarn"
+      prefix: "chore"
       include: "scope"
     versioning-strategy: "auto" 
