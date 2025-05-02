@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/UmmItC/links/compare/v1.3.2...v1.4.0) (2025-05-02)
+
+
+### Features
+
+* **index:** enhance index.html with improved meta tags and structured data for SEO ([ad1a4b7](https://github.com/UmmItC/links/commit/ad1a4b7558048ff237f8790607f9428c5d7f8cb0))
+
 ## [1.3.2](https://github.com/UmmItC/links/compare/v1.3.1...v1.3.2) (2025-04-28)
 
 
