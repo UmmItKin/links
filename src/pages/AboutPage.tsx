@@ -55,7 +55,7 @@ const AboutPage: React.FC = () => {
               A quirky tech geek, Arch Linux user, and open-source lover from Hong Kong. 
               I'm a cyber student with a hobby in hacking and penetration testing. 
               I enjoy working on various tech projects, particularly focusing on GNU/Linux systems, and cybersecurity. <br/><br/>
-              I’m also member of a CTF (Capture The Flag) team called <a href="https://ctftime.org/team/303514/" className="text-myPink1 link link-hover" target="_blank">ICEETEA (冰茶)</a> <FaFlag className="inline text-myPink1" />
+              I’m also member of a CTF (Capture The Flag) team called <a href="https://ctftime.org/team/303514/" className="text-myPink1 link link-hover" target="_blank">ICEDTEA (冰茶)</a> <FaFlag className="inline text-myPink1" />
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
