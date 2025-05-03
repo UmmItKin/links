@@ -1,3 +1,17 @@
+## [1.4.2](https://github.com/UmmItC/links/compare/v1.4.1...v1.4.2) (2025-05-03)
+
+### Bug Fixes
+
+* **AboutPage:** typo CTF team name ([f8dbd9f](https://github.com/UmmItC/links/commit/f8dbd9f77e3268525dc53834415a63bf38e6a0df))
+
+### Styles
+
+* **BackgroundWallpaper:** add dynamic blur effect on scroll ([df19740](https://github.com/UmmItC/links/commit/df197406aa874b2404879ebb99f4b63d84d23344))
+
+### Chores
+
+* **AboutPage:** add CTF team information ([becdad2](https://github.com/UmmItC/links/commit/becdad2cd05ec2035f22bdd3b86b611687c3dcdd))
+
 ## [1.4.1](https://github.com/UmmItC/links/compare/v1.4.0...v1.4.1) (2025-05-02)
 
 ### Bug Fixes
