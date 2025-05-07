@@ -3,7 +3,6 @@ import Links from "../components/Links";
 import { HiMiniKey } from "react-icons/hi2";
 import { MdEmail } from "react-icons/md";
 import { SiUmami } from "react-icons/si";
-import { DiLinux } from "react-icons/di";
 import { UserData, SocialButton } from "../config/userData";
 import CustomZoom from "../components/CustomZoom";
 import '../styles/customZoom.css';
