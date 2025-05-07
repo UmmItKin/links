@@ -5,6 +5,8 @@ import { MdEmail } from "react-icons/md";
 import { SiUmami } from "react-icons/si";
 import { DiLinux } from "react-icons/di";
 import { UserData, SocialButton } from "../config/userData";
+import CustomZoom from "../components/CustomZoom";
+import '../styles/customZoom.css';
 
 interface HomePageProps {
   userData: UserData;
@@ -17,28 +19,18 @@ const HomePage: React.FC<HomePageProps> = ({ userData, socialButtons, onGPGClick
     <div className="hero min-h-screen bg-transparent flex items-center justify-center">
       <div className="hero-content text-center">
         <div className="max-w-md">
-          <label className="swap swap-flip text-9xl pb-5 mt-20">
-            <input type="checkbox" />
-            <div className="swap-on">
-              <img
-                className="rounded-full"
-                width="150"
-                height="150"
-                src={userData.imagePaths.on}
-                alt="Arch Linux"
-              />
+          <div className="pb-5 mt-20 flex justify-center items-center">
+            <div className="zoom-container" style={{ display: 'inline-block', textAlign: 'center' }}>
+              <CustomZoom zoomScale={1.0}>
+                <img
+                  className="zoom-thumbnail rounded-full mx-auto"
+                  src={userData.imagePaths.on}
+                  alt="星 野 アイ"
+                />
+              </CustomZoom>
             </div>
-            <div className="swap-off">
-              <img
-                className="rounded-full"
-                width="150"
-                height="150"
-                src={userData.imagePaths.off}
-                alt="Gentoo"
-              />
-            </div>
-          </label>
-          <h1 className="text-5xl font-bold">{userData.name} <DiLinux className="inline-block w-10 h-10 px-auto mb-2.5" /></h1>
+          </div>
+          <h1 className="text-5xl font-bold">{userData.name}</h1>
           <p className="py-6">{userData.bio}</p>
           <div className="flex flex-wrap justify-center">
             {socialButtons.map((button, index) => (
