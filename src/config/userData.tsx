@@ -25,10 +25,10 @@ export const userData: UserData = {
     on: "/cute-2.jpg",
     off: "/cute.jpg"
   },
-  repo: "https://github.com/UmmItC/Links",
-  umami_share_url: "https://cloud.umami.is/share/mLbSeRhkcLXWcdPZ/links.ummit.dev",
+  repo: "https://short.ummit.dev/links-repo",
+  umami_share_url: "https://short.ummit.dev/links-umami",
   gpg_key: "https://links.ummit.dev/info/UmmIt.gpg",
-  wallpaper: "https://github.com/UmmItC/wallpaper/blob/master/%E6%8E%A8%E3%81%97%E3%81%AE%E5%AD%90/%E5%B0%8F%E6%84%9B/1355637.jpeg?raw=true",
+  wallpaper: "https://short.ummit.dev/wallpaper-links-01",
 };
 
 export const socialButtons: SocialButton[] = [
