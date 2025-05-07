@@ -11,7 +11,7 @@ interface LinkData {
 }
 
 const linksData: LinkData[] = [
-  { label: "Arch User Repository", url: "https://short.ummit.dev/i-use-arch-btw", icon: <GrArchlinux className="w-5 h-5" />, alt: "@UmmIt" },
+  { label: "AUR", url: "https://short.ummit.dev/i-use-arch-btw", icon: <GrArchlinux className="w-5 h-5" />, alt: "@UmmIt" },
   { label: "Github", url: "https://short.ummit.dev/github", icon: <FaGithub className="w-5 h-5" />, alt: "@UmmItC" },
   { label: "Ko-fi", url: "https://short.ummit.dev/ko-fi", icon: <SiKofi className="w-5 h-5" />, alt: "@UmmIt" }, 
   { label: "Blog", url: "https://short.ummit.dev/blog-old", icon: <GrBlog className="w-5 h-5" />, alt: "blog.ummit.dev" },
@@ -28,19 +28,18 @@ const Links: React.FC = () => {
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full px-5 py-3 text-gray-100 bg-gray-800/50 backdrop-blur-md rounded-xl 
-                    transition-all duration-300 transform hover:bg-gray-700/70 hover:scale-102 hover:translate-y-px
-                    focus:outline-none focus:ring-2 focus:ring-myPink1 focus:ring-opacity-50 
-                    flex items-center justify-between border border-gray-700/30 hover:border-myPink1 hover:text-myPink1
-                    shadow-lg hover:shadow-myPink1/20"
+          className="group w-full px-6 py-4 flex items-center justify-center gap-4
+                     bg-gray-900/25 backdrop-blur-md rounded-xl border border-gray-700/40
+                     transition-all duration-300 
+                     hover:bg-gray-800/30 hover:text-myPink1 hover:scale-102 hover:border-myPink1/50
+                     hover:shadow-lg hover:shadow-myPink1/20
+                     focus:outline-none focus:ring-2 focus:ring-myPink1 focus:ring-opacity-50
+                     text-gray-100"
         >
-          <div className="flex items-center">
-            <div className="text-myPink1 mr-3">
-              {link.icon}
-            </div>
-            <span className="font-medium tracking-wide">{link.label}</span>
+          <div className="text-myPink1 text-2xl transition-transform duration-500 group-hover:rotate-30">
+            {link.icon}
           </div>
-          <span className="text-gray-400 text-sm font-light">{link.alt}</span>
+          <span className="font-medium tracking-wide">{link.label}</span>
         </a>
       ))}
     </div>
