@@ -1,3 +1,14 @@
+## [1.5.0](https://github.com/UmmItC/links/compare/v1.4.2...v1.5.0) (2025-05-07)
+
+### Features
+
+* new CustomZoom component for nice image zoom of my icon (Modal image) ([abc6d65](https://github.com/UmmItC/links/commit/abc6d65d9da694d4236e3f0fe8bd986b1d6466a1))
+
+### Chores
+
+* **deps-dev:** bump eslint from 9.25.1 to 9.26.0 ([e7ffcd5](https://github.com/UmmItC/links/commit/e7ffcd51520b3e4839cfe3134279b75ae50324b6))
+* **deps-dev:** bump vite from 6.3.4 to 6.3.5 ([515895c](https://github.com/UmmItC/links/commit/515895c87b2b7d396d9dacece4f54776c3e6b181))
+
 ## [1.4.2](https://github.com/UmmItC/links/compare/v1.4.1...v1.4.2) (2025-05-03)
 
 ### Bug Fixes
