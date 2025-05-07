@@ -18,7 +18,7 @@ export interface SocialButton {
 }
 
 export const userData: UserData = {
-  name: "UmmIt{ArchUser}",
+  name: "@UmmIt",
   bio: "Cyber Security Student / Arch Linux User / Open Source Lover",
   mail_address: "hi@ummit.dev",
   imagePaths: {
