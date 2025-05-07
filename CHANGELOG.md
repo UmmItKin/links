@@ -1,3 +1,9 @@
+## [1.5.1](https://github.com/UmmItC/links/compare/v1.5.0...v1.5.1) (2025-05-07)
+
+### Bug Fixes
+
+* unused imports to prevent TypeScript errors ([e288ddc](https://github.com/UmmItC/links/commit/e288ddcab76c7c409f7db0aa5ce31b9c61d32763))
+
 ## [1.5.0](https://github.com/UmmItC/links/compare/v1.4.2...v1.5.0) (2025-05-07)
 
 ### Features
