@@ -23,7 +23,7 @@ const HomePage: React.FC<HomePageProps> = ({ userData, socialButtons, onGPGClick
               <CustomZoom zoomScale={1.0}>
                 <img
                   className="zoom-thumbnail rounded-full mx-auto"
-                  src={userData.imagePaths.on}
+                  src={userData.imageIcon}
                   alt="星 野 アイ"
                 />
               </CustomZoom>
