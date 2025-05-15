@@ -1,3 +1,35 @@
+## [1.6.0](https://github.com/UmmItC/links/compare/v1.5.1...v1.6.0) (2025-05-15)
+
+### Features
+
+* **GeatPage:** add placeholder image HTML and enhance GearPage with image to text toggle support ([67eeb33](https://github.com/UmmItC/links/commit/67eeb3392c67e391d2392455bf600243a080583c))
+
+### Documentation
+
+* add DeepWiki badge for repository understanding ([a0e8c47](https://github.com/UmmItC/links/commit/a0e8c474b297e9d87bd1f1b1a26cfc1a0fbe4f13))
+
+### Styles
+
+* **Links:** Improved button styles for better visual appeal ([00ec568](https://github.com/UmmItC/links/commit/00ec5686c8c6e87e877747f82b3fd090d35efe14))
+
+### Refactors
+
+* **userData:** update imagePaths with imageIcon for corrected structure ([bc0417d](https://github.com/UmmItC/links/commit/bc0417da7cafee16a376fedc51a3738d0d0c8054))
+
+### Chores
+
+* **deps-dev:** bump @tailwindcss/postcss from 4.1.5 to 4.1.6 ([2fb6c7e](https://github.com/UmmItC/links/commit/2fb6c7e6bee70735b4ab71167bcb4609d9927fdc))
+* **deps-dev:** bump @types/node from 22.15.12 to 22.15.17 ([b6a6622](https://github.com/UmmItC/links/commit/b6a66229acf2a8c1f11dcc6238c5fa6c773db66d))
+* **deps-dev:** bump @types/node from 22.15.17 to 22.15.18 ([29ffd01](https://github.com/UmmItC/links/commit/29ffd016b061f5b2713ac416673d5c0fc13da0e8))
+* **deps-dev:** bump @types/node from 22.15.3 to 22.15.12 ([ba08324](https://github.com/UmmItC/links/commit/ba083245900ba1e73b347943d19201baedc8c54b))
+* **deps-dev:** bump @types/react from 19.1.2 to 19.1.3 ([f5f3c33](https://github.com/UmmItC/links/commit/f5f3c33c4ed2bbb4b885300fcee63e8a79bf94c2))
+* **deps-dev:** bump @types/react from 19.1.3 to 19.1.4 ([7227ce5](https://github.com/UmmItC/links/commit/7227ce562da9551e18484238caf40bef9529c598))
+* **deps-dev:** bump @types/react-dom from 19.1.3 to 19.1.5 ([1e4d717](https://github.com/UmmItC/links/commit/1e4d717a2e599261ce6e75766bdfba958707e6e4))
+* **deps-dev:** bump tailwindcss from 4.1.5 to 4.1.6 ([c367134](https://github.com/UmmItC/links/commit/c367134ee52839a6583f4d120700a09a9a7f40a1))
+* **deps:** bump react-router-dom from 7.5.3 to 7.6.0 ([facf174](https://github.com/UmmItC/links/commit/facf1740b9c49eb80580a93ff1b6d6457f10bcba))
+* **userData:** replaced long URLs with my short URL server ([316bf19](https://github.com/UmmItC/links/commit/316bf1994306121afb07ab60b920091c358734e7))
+* **username:** update userData name format from CTF style to normal style using "@" ([846b16e](https://github.com/UmmItC/links/commit/846b16e3d2b24581d74990c441184c338737787f))
+
 ## [1.5.1](https://github.com/UmmItC/links/compare/v1.5.0...v1.5.1) (2025-05-07)
 
 ### Bug Fixes
