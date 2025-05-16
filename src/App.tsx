@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import GPGModal from "./components/GPGModal";
 import HomePage from "./pages/HomePage";
 import BlogPage from "./pages/BlogPage";
+import BlogPostPage from "./pages/BlogPostPage";
 import ProjectPage from "./pages/ProjectPage";
 import GearPage from "./pages/GearPage";
 import AboutPage from "./pages/AboutPage";
@@ -33,6 +34,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<HomePage userData={userData} socialButtons={socialButtons} onGPGClick={handleGPGClick} />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug/*" element={<BlogPostPage />} />
         <Route path="/project" element={<ProjectPage />} />
         <Route path="/gear" element={<GearPage />} />
         <Route path="/about" element={<AboutPage />} />
