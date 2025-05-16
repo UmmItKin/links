@@ -1,3 +1,9 @@
+## [1.8.1](https://github.com/UmmItC/links/compare/v1.8.0...v1.8.1) (2025-05-16)
+
+### Bug Fixes
+
+* **BlogPostPage:** remove unused className prop from code block rendering avoid typescript error checking ([9cd0e43](https://github.com/UmmItC/links/commit/9cd0e432bdc8243196ee64a489cbe19fabfbc472))
+
 ## [1.8.0](https://github.com/UmmItC/links/compare/v1.7.0...v1.8.0) (2025-05-16)
 
 ### Features
