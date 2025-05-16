@@ -138,7 +138,7 @@ const BlogPostPage: React.FC = () => {
   // GitHub edit URL 
   const getGitHubEditUrl = () => {
     if (!post || !post.filename) return '#';
-    return `https://github.com/UmmItC/links/src/posts/${post.filename}`;
+    return `https://github.com/UmmItC/blob/master/src/posts/${post.filename}`;
   };
 
   // Calculate reading time (rough estimate: 200 words per minute)
