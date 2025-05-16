@@ -47,7 +47,7 @@ const MarkdownComponents = {
           code={String(children).replace(/\n$/, "")}
           language={language || "text"}
         >
-          {({ className, style, tokens, getLineProps, getTokenProps }) => (
+          {({ style, tokens, getLineProps, getTokenProps }) => (
             <pre
               className="p-4 overflow-x-auto bg-gray-900/50 backdrop-blur-sm"
               style={style}
