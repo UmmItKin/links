@@ -1,3 +1,9 @@
+## [1.8.4](https://github.com/UmmItC/links/compare/v1.8.3...v1.8.4) (2025-05-16)
+
+### Bug Fixes
+
+* **BlogPostPage:** update GitHub edit URL to point to the correct repository path ([4c93021](https://github.com/UmmItC/links/commit/4c9302169ec6e8411d26f6677768dc03d20e80e2))
+
 ## [1.8.3](https://github.com/UmmItC/links/compare/v1.8.2...v1.8.3) (2025-05-16)
 
 ### Bug Fixes
