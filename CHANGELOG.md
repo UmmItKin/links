@@ -1,3 +1,13 @@
+## [1.8.2](https://github.com/UmmItC/links/compare/v1.8.1...v1.8.2) (2025-05-16)
+
+### Bug Fixes
+
+* **BlogPostPage:** update GitHub edit URL to point to the correct repository path ([bcc0011](https://github.com/UmmItC/links/commit/bcc0011f0b625a690fe23262c1d036ea43d6645b))
+
+### CI/CD
+
+* **semantic-release:** add test type to configuration ([a8abfa9](https://github.com/UmmItC/links/commit/a8abfa9fd830b7c8af0c8bb3a7f734bc895e0e12))
+
 ## [1.8.1](https://github.com/UmmItC/links/compare/v1.8.0...v1.8.1) (2025-05-16)
 
 ### Bug Fixes
