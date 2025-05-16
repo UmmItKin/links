@@ -1,3 +1,9 @@
+## [1.8.3](https://github.com/UmmItC/links/compare/v1.8.2...v1.8.3) (2025-05-16)
+
+### Bug Fixes
+
+* trigger release after tag deletion ([fa417cc](https://github.com/UmmItC/links/commit/fa417cc3ac9a11e2b9e90b95fcb375130014fbf3))
+
 ## [1.8.2](https://github.com/UmmItC/links/compare/v1.8.1...v1.8.2) (2025-05-16)
 
 ### Bug Fixes
