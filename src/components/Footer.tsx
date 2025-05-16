@@ -5,6 +5,7 @@ import { IoGitBranch } from 'react-icons/io5';
 import { AiOutlineLinux } from "react-icons/ai";
 import { GrArchlinux } from "react-icons/gr";
 import { VscHeartFilled } from "react-icons/vsc";
+import { IoImageOutline } from "react-icons/io5";
 
 const Footer: React.FC = () => {
   const [commitHash, setCommitHash] = useState<string | null>(null);
@@ -35,21 +36,37 @@ const Footer: React.FC = () => {
     <div className="w-full mt-16">
       <footer className="bg-transparent backdrop-blur-lg py-8 px-6 transition-all duration-300">
         <div className="mx-auto max-w-5xl flex flex-col items-center justify-center">
-          {commitHash && (
-            <a 
-              href={`https://github.com/UmmItC/Links/commit/${commitHash}`}
-              className="inline-flex items-center space-x-2 mb-6 px-4 py-2 bg-transparent backdrop-blur-sm
-                        border border-gray-700/30 rounded-full
-                        transition-all duration-300 hover:text-myPink1 hover:scale-105
-                        hover:shadow-lg hover:shadow-myPink1/10 hover:border-myPink1/50
-                        text-gray-300 text-bold font-medium tracking-wide"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <IoGitBranch className="text-myPink1 transition-transform duration-300 hover:rotate-90" />
-              <span>{commitHash.substring(0, 7)}</span>
-            </a>
-          )}
+          <div className="flex flex-row gap-4 mb-6 flex-wrap justify-center">
+                          <a 
+                href="/og-card-image-preview.html"
+                className="inline-flex items-center space-x-2 px-4 py-2 bg-transparent backdrop-blur-sm
+                          border border-gray-700/30 rounded-full
+                          transition-all duration-300 hover:text-myPink1 hover:scale-105
+                          hover:shadow-lg hover:shadow-myPink1/10 hover:border-myPink1/50
+                          text-gray-300 text-bold font-medium tracking-wide"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IoImageOutline className="text-myPink1" />
+                <span>OG Image Generator</span>
+              </a>
+            
+            {commitHash && (
+              <a 
+                href={`https://github.com/UmmItC/Links/commit/${commitHash}`}
+                className="inline-flex items-center space-x-2 px-4 py-2 bg-transparent backdrop-blur-sm
+                          border border-gray-700/30 rounded-full
+                          transition-all duration-300 hover:text-myPink1 hover:scale-105
+                          hover:shadow-lg hover:shadow-myPink1/10 hover:border-myPink1/50
+                          text-gray-300 text-bold font-medium tracking-wide"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IoGitBranch className="text-myPink1 transition-transform duration-300 hover:rotate-90" />
+                <span>{commitHash.substring(0, 7)}</span>
+              </a>
+            )}
+          </div>
           
           <div className="text-gray-400 my-4 transition-all duration-300 hover:text-gray-300">
             <p className="text-lg font-light flex flex-wrap items-center justify-center gap-2 md:gap-4">
