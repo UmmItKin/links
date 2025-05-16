@@ -1,3 +1,9 @@
+## [1.8.0](https://github.com/UmmItC/links/compare/v1.7.0...v1.8.0) (2025-05-16)
+
+### Features
+
+* **Blog:** implement blog functionality with markdown support ([f4052ab](https://github.com/UmmItC/links/commit/f4052ab175050ccd51e585aa0209cba840454ab1)), closes [#41](https://github.com/UmmItC/links/issues/41)
+
 ## [1.7.0](https://github.com/UmmItC/links/compare/v1.6.0...v1.7.0) (2025-05-16)
 
 ### Features
