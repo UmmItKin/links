@@ -1,3 +1,15 @@
+## [1.7.0](https://github.com/UmmItC/links/compare/v1.6.0...v1.7.0) (2025-05-16)
+
+### Features
+
+* **OG-image:** update Open Graph and Twitter image links, new OG image preview page ([3e3d547](https://github.com/UmmItC/links/commit/3e3d547cab495c6acbb10ad13e2559fbb4103f5b))
+
+### Chores
+
+* **deps-dev:** bump @tailwindcss/postcss from 4.1.6 to 4.1.7 ([fcfd146](https://github.com/UmmItC/links/commit/fcfd146b9e7bd5c9316a0dfdf5bfe56f6f13d2be))
+* **deps-dev:** bump tailwindcss from 4.1.6 to 4.1.7 ([bf2fe62](https://github.com/UmmItC/links/commit/bf2fe62b1f5377eedda88af8dcaa324f0ff78511))
+* **Footer:** add OG Image preview link in footer ([8d3d390](https://github.com/UmmItC/links/commit/8d3d3907bf67d3b4181764b2efb1f7209cf57f2d))
+
 ## [1.6.0](https://github.com/UmmItC/links/compare/v1.5.1...v1.6.0) (2025-05-15)
 
 ### Features
