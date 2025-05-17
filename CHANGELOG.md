@@ -1,3 +1,9 @@
+## [1.9.0](https://github.com/UmmItC/links/compare/v1.8.5...v1.9.0) (2025-05-17)
+
+### Features
+
+* **style-theme:** implement theme switching functionality and update styles ([96b2ea9](https://github.com/UmmItC/links/commit/96b2ea956c790237148c021b8272ee41c057d988))
+
 ## [1.8.5](https://github.com/UmmItC/links/compare/v1.8.4...v1.8.5) (2025-05-17)
 
 ### Bug Fixes
