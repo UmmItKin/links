@@ -1,3 +1,10 @@
+## [1.11.0](https://github.com/UmmItC/links/compare/v1.10.0...v1.11.0) (2025-05-17)
+
+### Features
+
+* **FriendsPage:** add Friends page and component to display friends list ([a5bf1ad](https://github.com/UmmItC/links/commit/a5bf1ad844097e0119faa2f79e5920e97d7ae073))
+* **supabase:** integrate Supabase for page analytics and add environment configuration ([b76605a](https://github.com/UmmItC/links/commit/b76605a69f43930ce7a1d3264708ad0ee8b4ac90))
+
 ## [1.10.0](https://github.com/UmmItC/links/compare/v1.9.0...v1.10.0) (2025-05-17)
 
 ### Features
