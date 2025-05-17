@@ -79,6 +79,7 @@ function Navbar({ userData }: NavbarProps) {
         <Link to="/blog" className={`inline-block px-3 rounded-md hover:text-primary transition-colors duration-300 font-bold ${location.pathname === '/blog' ? 'text-primary' : ''}`}>Blog</Link>
         <Link to="/project" className={`inline-block px-3 rounded-md hover:text-primary transition-colors duration-300 font-bold ${location.pathname === '/project' ? 'text-primary' : ''}`}>Project</Link>
         <Link to="/gear" className={`inline-block px-3 rounded-md hover:text-primary transition-colors duration-300 font-bold ${location.pathname === '/gear' ? 'text-primary' : ''}`}>Gear</Link>
+        <Link to="/friends" className={`inline-block px-3 rounded-md hover:text-primary transition-colors duration-300 font-bold ${location.pathname === '/friends' ? 'text-primary' : ''}`}>Friends</Link>
         <Link to="/about" className={`inline-block px-3 rounded-md hover:text-primary transition-colors duration-300 font-bold ${location.pathname === '/about' ? 'text-primary' : ''}`}>About</Link>
         
         {/* Theme Toggle Button - Desktop */}
@@ -118,6 +119,7 @@ function Navbar({ userData }: NavbarProps) {
         <Link to="/blog" className={`block px-4 py-2 hover:bg-background/40 hover:text-primary transition-colors duration-300 font-bold ${location.pathname === '/blog' ? 'text-primary' : ''}`}>Blog</Link>
         <Link to="/project" className={`block px-4 py-2 hover:bg-background/40 hover:text-primary transition-colors duration-300 font-bold ${location.pathname === '/project' ? 'text-primary' : ''}`}>Project</Link>
         <Link to="/gear" className={`block px-4 py-2 hover:bg-background/40 hover:text-primary transition-colors duration-300 font-bold ${location.pathname === '/gear' ? 'text-primary' : ''}`}>Gear</Link>
+        <Link to="/friends" className={`block px-4 py-2 hover:bg-background/40 hover:text-primary transition-colors duration-300 font-bold ${location.pathname === '/friends' ? 'text-primary' : ''}`}>Friends</Link>
         <Link to="/about" className={`block px-4 py-2 hover:bg-background/40 hover:text-primary transition-colors duration-300 font-bold ${location.pathname === '/about' ? 'text-primary' : ''}`}>About</Link>
         <a href={userData?.repo} target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-background/40 hover:text-primary transition-colors duration-300">
           <FaCode className="inline-block w-5 h-5 mr-2" />
