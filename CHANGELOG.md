@@ -1,3 +1,13 @@
+## [1.8.5](https://github.com/UmmItC/links/compare/v1.8.4...v1.8.5) (2025-05-17)
+
+### Bug Fixes
+
+* **BlogPost:** clean up unused code and ensure content is directly available from posts array. ([31cc49d](https://github.com/UmmItC/links/commit/31cc49de0206aec3c310a5b2f979a51ef6f15fe1))
+
+### Tests
+
+* **md:** include raw content in post metadata and update post fetching logic ([d30e4b7](https://github.com/UmmItC/links/commit/d30e4b7597656f7a72db38d0fd4981cc91e7a6a0))
+
 ## [1.8.4](https://github.com/UmmItC/links/compare/v1.8.3...v1.8.4) (2025-05-16)
 
 ### Bug Fixes
