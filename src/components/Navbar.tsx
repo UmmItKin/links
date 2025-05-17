@@ -87,7 +87,7 @@ function Navbar({ userData }: NavbarProps) {
           className="px-3 py-2 rounded-md hover:text-primary transition-colors duration-300"
           aria-label="Toggle theme"
         >
-          {theme === 'cuteai' ? <FiMoon className="w-5 h-5" /> : <FiSun className="w-5 h-5" />}
+          {theme === 'cuteai' ? <FiSun className="w-5 h-5" /> : <FiMoon className="w-5 h-5" />}
         </button>
 
         <a href={userData?.repo} target="_blank" rel="noopener noreferrer" className="px-3 flex items-center mr-4">
@@ -129,8 +129,8 @@ function Navbar({ userData }: NavbarProps) {
           className="w-full text-left block px-4 py-2 hover:bg-background/40 hover:text-primary transition-colors duration-300 font-bold flex items-center"
           aria-label="Toggle theme"
         >
-          {theme === 'cuteai' ? <FiMoon className="w-5 h-5 mr-2" /> : <FiSun className="w-5 h-5 mr-2" />}
-          <span>{theme === 'cuteai' ? 'Night Mode' : 'cuteai Mode'}</span>
+          {theme === 'cuteai' ? <FiSun className="w-5 h-5 mr-2" /> : <FiMoon className="w-5 h-5 mr-2" />}
+          <span>{theme === 'cuteai' ? 'Cute Ai Theme' : 'Night Theme'}</span>
         </button>
       </div>
     </div>
