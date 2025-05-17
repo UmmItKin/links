@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@hcaptcha/react-hcaptcha": "^1.12.0",
+    "@supabase/supabase-js": "^2.49.4",
     "dotenv": "^16.5.0",
     "gray-matter": "^4.0.3",
     "prism-react-renderer": "^2.4.1",
