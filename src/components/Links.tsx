@@ -31,12 +31,12 @@ const Links: React.FC = () => {
           className="group w-full px-6 py-4 flex items-center justify-center gap-4
                      bg-gray-900/25 backdrop-blur-md rounded-xl border border-gray-700/40
                      transition-all duration-300 
-                     hover:bg-gray-800/30 hover:text-myPink1 hover:scale-102 hover:border-myPink1/50
-                     hover:shadow-lg hover:shadow-myPink1/20
-                     focus:outline-none focus:ring-2 focus:ring-myPink1 focus:ring-opacity-50
+                     hover:bg-gray-800/30 hover:text-primary hover:scale-102 hover:border-primary/50
+                     hover:shadow-lg hover:shadow-primary/20
+                     focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50
                      text-gray-100"
         >
-          <div className="text-myPink1 text-2xl transition-transform duration-500 group-hover:rotate-30">
+          <div className="text-primary text-2xl transition-transform duration-500 group-hover:rotate-30">
             {link.icon}
           </div>
           <span className="font-medium tracking-wide">{link.label}</span>

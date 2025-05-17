@@ -28,7 +28,7 @@ const ProjectPage: React.FC = () => {
       url: "https://github.com/UmmItC/Dotfiles"
     }
   ];
-
+  
   return (
     <div className="pt-24 px-4 max-w-5xl mx-auto">
       <h1 className="text-4xl font-bold mb-6 text-center">My Projects</h1>
@@ -36,7 +36,8 @@ const ProjectPage: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
-          <div key={index} className="bg-gray-800/50 backdrop-blur-md rounded-xl p-6 border border-gray-700/30 hover:border-myPink1 transition-all duration-300 hover:shadow-lg hover:shadow-myPink1/20">
+          <div key={index} className="bg-gray-800/50 backdrop-blur-md rounded-xl p-6 border border-gray-700/30 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 mb-8">
+
             <h2 className="text-2xl font-bold mb-2 text-myPink1">{project.title}</h2>
             <p className="text-gray-300 mb-4">{project.description}</p>
             <div className="flex gap-2">
@@ -48,7 +49,7 @@ const ProjectPage: React.FC = () => {
               href={project.url}
               target="_blank" 
               rel="noopener noreferrer"
-              className="mt-4 inline-block px-4 py-2 bg-myPink1/20 text-myPink1 rounded-lg hover:bg-myPink1/30 transition-colors duration-300"
+              className="mt-4 inline-block px-4 py-2 bg-myPink1/40 text-myPink1 rounded-lg border border-myPink1/50 hover:bg-myPink1/60 transition-all duration-300 hover:scale-105 hover:shadow-md hover:shadow-myPink1/30 transform"
             >
               View Project
             </a>

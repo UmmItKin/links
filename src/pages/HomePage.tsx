@@ -33,9 +33,9 @@ const HomePage: React.FC<HomePageProps> = ({ userData, socialButtons, onGPGClick
           <p className="py-6">{userData.bio}</p>
           <div className="flex flex-wrap justify-center">
             {socialButtons.map((button, index) => (
-              <div key={index} className="px-1 hover:text-myPink1 transition-transform duration-200 transform hover:scale-105">
+              <div key={index} className="px-1 hover:text-primary transition-transform duration-200 transform hover:scale-105">
                 <a
-                  className="hover:text-myPink1"
+                  className="hover:text-primary"
                   href={button.url}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -45,10 +45,10 @@ const HomePage: React.FC<HomePageProps> = ({ userData, socialButtons, onGPGClick
                 </a>
               </div>
             ))}
-            <div className="px-1 hover:text-myPink1 transition-transform duration-200 transform hover:scale-105">
+            <div className="px-1 hover:text-primary transition-transform duration-200 transform hover:scale-105">
               <button
                 onClick={onGPGClick}
-                className="hover:text-myPink1"
+                className="hover:text-primary"
               >
                 <HiMiniKey className="h-8 w-8" />
               </button>

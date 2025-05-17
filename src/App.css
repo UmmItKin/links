@@ -1,5 +1,36 @@
 @import 'tailwindcss';
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: cuteai --default, night;
+}
+
+@plugin "daisyui/theme" {
+  name: "cuteai";
+  color-scheme: dark;
+
+  --color-base-100: oklch(0.17 0.01 268.61);
+  --color-base-200: oklch(0.20 0.01 268.36);
+  --color-base-300: oklch(0.23 0.02 268.18);
+  --color-base-content: oklch(0.85 0.02 266.94);
+
+  --color-primary: #E2BBE9;
+  --color-primary-content: oklch(0.17 0.01 268.61);
+  --color-secondary: #E966A0;
+  --color-secondary-content: oklch(0.98 0.01 240);
+  --color-accent: #E966A0;
+  --color-accent-content: oklch(0.98 0.01 240);
+
+  --color-neutral: oklch(0.29 0.02 267.77);
+  --color-neutral-content: oklch(0.85 0.02 266.94);
+
+  --color-info: oklch(0.61 0.19 236.05);
+  --color-info-content: oklch(0.98 0.01 240);
+  --color-success: oklch(0.67 0.16 160.57);
+  --color-success-content: oklch(0.17 0.01 268.61);
+  --color-warning: oklch(0.73 0.18 84.53);
+  --color-warning-content: oklch(0.17 0.01 268.61);
+  --color-error: oklch(0.59 0.21 24.05);
+  --color-error-content: oklch(0.98 0.01 240);
+}
 
 @layer base {
   *,
@@ -9,11 +40,6 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
-}
-
-@theme {
-    --color-myPink1: #E2BBE9;
-    --color-myPink2: #E966A0;
 }
 
 html, body {

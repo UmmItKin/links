@@ -165,10 +165,10 @@ const BlogPostPage: React.FC = () => {
             <p className="mb-6">{error || "Unknown error"}</p>
             <Link 
               to="/blog" 
-              className="inline-block px-4 py-2 bg-transparent backdrop-blur-sm
+              className="inline-flex items-center space-x-2 px-4 py-2 bg-transparent backdrop-blur-sm
                         border border-gray-700/30 rounded-full
-                        transition-all duration-300 hover:bg-gray-800/20 hover:text-myPink1
-                        hover:shadow-lg hover:shadow-myPink1/10 hover:border-myPink1/50
+                        transition-all duration-300 hover:text-primary hover:scale-105
+                        hover:shadow-lg hover:shadow-primary/10 hover:border-primary/50
                         text-gray-300 text-bold font-medium tracking-wide"
             >
               Back to Blog
@@ -190,8 +190,8 @@ const BlogPostPage: React.FC = () => {
               to="/blog" 
               className="inline-flex items-center space-x-2 px-4 py-2 bg-transparent backdrop-blur-sm
                         border border-gray-700/30 rounded-full
-                        transition-all duration-300 hover:bg-gray-800/20 hover:text-myPink1 hover:scale-105
-                        hover:shadow-lg hover:shadow-myPink1/10 hover:border-myPink1/50
+                        transition-all duration-300 hover:text-primary hover:scale-105
+                        hover:shadow-lg hover:shadow-primary/10 hover:border-primary/50
                         text-gray-300 text-bold font-medium tracking-wide"
             >
               <FaArrowLeft className="mr-2" /> Back to Blog
@@ -205,8 +205,8 @@ const BlogPostPage: React.FC = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 px-4 py-2 bg-transparent backdrop-blur-sm
                         border border-gray-700/30 rounded-full
-                        transition-all duration-300 hover:bg-gray-800/20 hover:text-myPink1 hover:scale-105
-                        hover:shadow-lg hover:shadow-myPink1/10 hover:border-myPink1/50
+                        transition-all duration-300 hover:text-primary hover:scale-105
+                        hover:shadow-lg hover:shadow-primary/10 hover:border-primary/50
                         text-gray-300 text-bold font-medium tracking-wide"
             >
               <FaEdit className="mr-1" /> Edit on GitHub
@@ -219,7 +219,7 @@ const BlogPostPage: React.FC = () => {
             
             <div className="flex flex-wrap items-center justify-center text-gray-400 mb-6 gap-4">
               <div className="flex items-center">
-                <FaCalendarAlt className="mr-2 text-myPink1" />
+                <FaCalendarAlt className="mr-2 text-primary" />
                 <span>{post.date}</span>
               </div>
               
@@ -231,18 +231,18 @@ const BlogPostPage: React.FC = () => {
               )}
               
               <div className="flex items-center">
-                <FaClock className="mr-2 text-myPink1" />
+                <FaClock className="mr-2 text-primary" />
                 <span>{getReadingTime(post.content)}</span>
               </div>
               
               <div className="flex items-center flex-wrap gap-2">
-                <FaTags className="text-myPink1" />
+                <FaTags className="text-primary" />
                 {post.tags.map(tag => (
                   <button 
                     key={tag}
                     onClick={() => handleTagClick(tag)}
                     className="px-3 py-1 text-xs bg-gray-800/70 rounded-full border border-gray-700/30
-                              hover:bg-gray-700/70 hover:border-myPink1/50 hover:text-myPink1
+                              hover:bg-gray-700/70 hover:border-primary/50 hover:text-primary
                               transition-all duration-300 cursor-pointer"
                   >
                     {tag}
@@ -273,22 +273,12 @@ const BlogPostPage: React.FC = () => {
               href="https://github.com/UmmItC"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-myPink1 transition-colors"
+              className="text-gray-400 hover:text-primary transition-colors"
             >
               <FaGithub size={20} />
             </a>
           </div>
-          
-          <Link
-            to="/blog"
-            className="inline-flex items-center space-x-2 px-4 py-2 bg-transparent backdrop-blur-sm
-                      border border-gray-700/30 rounded-full
-                      transition-all duration-300 hover:bg-gray-800/20 hover:text-myPink1
-                      hover:shadow-lg hover:shadow-myPink1/10 hover:border-myPink1/50
-                      text-gray-300 text-bold font-medium tracking-wide"
-          >
-            Back to Blog
-          </Link>
+
         </div>
       </div>
     </div>

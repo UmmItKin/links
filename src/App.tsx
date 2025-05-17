@@ -15,9 +15,11 @@ import AboutPage from "./pages/AboutPage";
 
 import { userData, socialButtons } from "./config/userData";
 import { useGPG } from "./hooks/useGPG";
+import { useTheme } from "./hooks/useTheme";
 
 const App: React.FC = () => {
   const { gpgContent, handleDownload } = useGPG();
+  const { theme } = useTheme();
 
   const handleGPGClick = (e?: React.MouseEvent) => {
     if (e) e.preventDefault();
@@ -27,7 +29,7 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <BackgroundWallpaper imageUrl={userData.wallpaper} />
+      {theme === 'cuteai' && userData.wallpaper && <BackgroundWallpaper imageUrl={userData.wallpaper} />}
       
       <Navbar userData={userData} />
       

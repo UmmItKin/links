@@ -182,7 +182,7 @@ const BlogPage: React.FC = () => {
                 : "No blog posts found. Add markdown files to the src/posts directory to get started."}
             </p>
             {activeTag && (
-              <button
+                              <button
                 onClick={() => {
                   setActiveTag(null);
                   navigate('/blog');
@@ -276,10 +276,10 @@ const BlogPage: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 px-4 py-2 bg-transparent backdrop-blur-sm
-                      border border-gray-700/30 rounded-full
-                      transition-all duration-300 hover:bg-gray-800/20 hover:text-myPink1
-                      hover:shadow-lg hover:shadow-myPink1/10 hover:border-myPink1/50
-                      text-gray-300 text-bold font-medium tracking-wide"
+                          border border-gray-700/30 rounded-full
+                          transition-all duration-300 hover:text-primary hover:scale-105
+                          hover:shadow-lg hover:shadow-primary/10 hover:border-primary/50
+                          text-gray-300 text-bold font-medium tracking-wide"
           >
             <FaGithub className="mr-2" /> View repository
           </a>

@@ -41,13 +41,13 @@ const Footer: React.FC = () => {
                 href="/og-card-image-preview.html"
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-transparent backdrop-blur-sm
                           border border-gray-700/30 rounded-full
-                          transition-all duration-300 hover:text-myPink1 hover:scale-105
-                          hover:shadow-lg hover:shadow-myPink1/10 hover:border-myPink1/50
+                          transition-all duration-300 hover:text-primary hover:scale-105
+                          hover:shadow-lg hover:shadow-primary/10 hover:border-primary/50
                           text-gray-300 text-bold font-medium tracking-wide"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <IoImageOutline className="text-myPink1" />
+                <IoImageOutline className="text-primary" />
                 <span>OG Image Generator</span>
               </a>
             
@@ -56,13 +56,13 @@ const Footer: React.FC = () => {
                 href={`https://github.com/UmmItC/Links/commit/${commitHash}`}
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-transparent backdrop-blur-sm
                           border border-gray-700/30 rounded-full
-                          transition-all duration-300 hover:text-myPink1 hover:scale-105
-                          hover:shadow-lg hover:shadow-myPink1/10 hover:border-myPink1/50
+                          transition-all duration-300 hover:text-primary hover:scale-105
+                          hover:shadow-lg hover:shadow-primary/10 hover:border-primary/50
                           text-gray-300 text-bold font-medium tracking-wide"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <IoGitBranch className="text-myPink1 transition-transform duration-300 hover:rotate-90" />
+                <IoGitBranch className="text-primary transition-transform duration-300 hover:rotate-90" />
                 <span>{commitHash.substring(0, 7)}</span>
               </a>
             )}
