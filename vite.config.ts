@@ -62,7 +62,7 @@ function markdownPlugin() {
             const fileContent = fs.readFileSync(filePath, 'utf8');
             
             // Use gray-matter to parse frontmatter during build
-            const { data } = matter(fileContent);
+            const { data, content: rawContent } = matter(fileContent);
             
             // Get filename relative to the posts directory
             const relativePath = path.relative(postsDir, filePath);
@@ -81,6 +81,7 @@ function markdownPlugin() {
               lastmod: data.lastmod !== undefined && data.lastmod !== false ? data.lastmod : false,
               excerpt: data.excerpt || '',
               tags: data.tags || [],
+              content: rawContent,
             };
           });
 

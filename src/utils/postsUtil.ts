@@ -10,13 +10,15 @@ export interface Post {
   excerpt: string;
   tags: string[];
   slug: string;
-  content?: string;
-  filename?: string;
+  content?: string; // Content will now be populated from initialPosts
+  filename?: string; // Kept for reference, but not primary for content
 }
 
-// Posts data from the virtual module (generated at build time)
+// Posts data from the virtual module (generated at build time, now includes content)
 export const posts: Post[] = initialPosts;
 
+// The following are no longer needed if content is bundled:
+/*
 // In-memory cache of fully loaded posts (with content)
 const postContentCache: Record<string, string> = {};
 
@@ -77,7 +79,7 @@ async function fetchMarkdownContent(slug: string): Promise<string> {
   const post = posts.find(p => p.slug === slug);
   
   if (!post || !post.filename) {
-    throw new Error(`Post with slug "${slug}" not found`);
+    throw new Error(`Post with slug "${slug}" not found or has no filename`);
   }
   
   // Check if we already have this post's content in cache
@@ -107,31 +109,33 @@ async function fetchMarkdownContent(slug: string): Promise<string> {
     throw error;
   }
 }
+*/
 
-// Get all posts (metadata only, no content)
+// Get all posts (metadata only, no content - this is fine, content is in each post object)
 export async function getAllPosts(): Promise<Post[]> {
   return posts;
 }
 
 // Get a single post by slug (with full content)
 export async function getPostBySlug(slug: string): Promise<Post | undefined> {
-  const post = posts.find(p => p.slug === slug);
+  const postFromList = posts.find(p => p.slug === slug);
   
-  if (!post) {
+  if (!postFromList) {
+    console.error(`Post with slug "${slug}" not found in the pre-loaded list.`);
     return undefined;
   }
   
-  try {
-    // Get the content
-    const content = await fetchMarkdownContent(slug);
-    
-    // Return the post with content
+  // The 'content' should now be directly available from the 'posts' array,
+  // as populated by the vite-plugin-markdown-posts.
+  if (typeof postFromList.content === 'string') {
+    return postFromList; // Returns the post object which includes the content
+  } else {
+    // This case should ideally not be reached if the Vite plugin is correctly bundling content.
+    console.error(`Content for post "${slug}" is missing or not a string from the pre-loaded list. This may indicate an issue with the build process or the virtual module generation.`);
+    // Return the post metadata with an error message in the content field.
     return {
-      ...post,
-      content
+      ...postFromList,
+      content: `Error: Content for post slug "${slug}" was not bundled correctly. Please check the build process.`
     };
-  } catch (error) {
-    console.error(`Error getting post by slug "${slug}":`, error);
-    return undefined;
   }
 } 
