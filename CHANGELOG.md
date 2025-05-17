@@ -1,3 +1,14 @@
+## [1.10.0](https://github.com/UmmItC/links/compare/v1.9.0...v1.10.0) (2025-05-17)
+
+### Features
+
+* **OG-image:** add custom image upload option, and reset ([87909d3](https://github.com/UmmItC/links/commit/87909d3cc248de66560dda6bfd558384d870590e))
+
+### Styles
+
+* **GPGModal:** improve hover effects and color ([72987f2](https://github.com/UmmItC/links/commit/72987f24a0c8baf9930133f0938377ac5817e2cd))
+* **Navbar:** correct theme icon and label for theme switching ([fedbf50](https://github.com/UmmItC/links/commit/fedbf507d104c54ceb9dd42140210ebb569551ec))
+
 ## [1.9.0](https://github.com/UmmItC/links/compare/v1.8.5...v1.9.0) (2025-05-17)
 
 ### Features
