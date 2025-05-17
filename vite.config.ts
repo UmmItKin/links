@@ -75,7 +75,7 @@ function markdownPlugin() {
             return {
               id: index + 1,
               slug,
-              filename: relativePath, // Store relative path as filename for fetching
+              filename: relativePath,
               title: data.title || 'Untitled',
               date: data.date || new Date().toISOString().split('T')[0],
               lastmod: data.lastmod !== undefined && data.lastmod !== false ? data.lastmod : false,

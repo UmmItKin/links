@@ -10,113 +10,16 @@ export interface Post {
   excerpt: string;
   tags: string[];
   slug: string;
-  content?: string; // Content will now be populated from initialPosts
-  filename?: string; // Kept for reference, but not primary for content
+  content?: string;
+  filename?: string;
 }
 
-// Posts data from the virtual module (generated at build time, now includes content)
 export const posts: Post[] = initialPosts;
 
-// The following are no longer needed if content is bundled:
-/*
-// In-memory cache of fully loaded posts (with content)
-const postContentCache: Record<string, string> = {};
-
-// Simple function to parse markdown frontmatter in the browser
-function parseFrontmatter(markdown: string): { content: string; data: Record<string, any> } {
-  // Check if the markdown has frontmatter
-  if (!markdown.startsWith('---')) {
-    return { content: markdown, data: {} };
-  }
-
-  // Find the second '---' which closes the frontmatter
-  const endOfFrontmatter = markdown.indexOf('---', 3);
-  if (endOfFrontmatter === -1) {
-    return { content: markdown, data: {} };
-  }
-
-  // Extract the frontmatter and content
-  const frontmatter = markdown.substring(3, endOfFrontmatter).trim();
-  const content = markdown.substring(endOfFrontmatter + 3).trim();
-
-  // Parse the frontmatter
-  const data: Record<string, any> = {};
-  frontmatter.split('\n').forEach(line => {
-    const colonIndex = line.indexOf(':');
-    if (colonIndex !== -1) {
-      const key = line.substring(0, colonIndex).trim();
-      let value: any = line.substring(colonIndex + 1).trim();
-      
-      // Handle arrays (assuming they're in the format [item1, item2])
-      if (value.startsWith('[') && value.endsWith(']')) {
-        try {
-          // Replace single quotes with double quotes for valid JSON
-          const jsonValue = value.replace(/'/g, '"');
-          // Parse as JSON
-          value = JSON.parse(jsonValue);
-        } catch (e) {
-          // If parsing fails, try a simpler approach - split by commas
-          const arrayValue = value.substring(1, value.length - 1).split(',');
-          value = arrayValue.map((item: string) => item.trim().replace(/^["'](.*)["']$/, '$1'));
-        }
-      } 
-      // Handle string literals
-      else if ((value.startsWith('"') && value.endsWith('"')) || 
-               (value.startsWith("'") && value.endsWith("'"))) {
-        value = value.substring(1, value.length - 1);
-      }
-      
-      data[key] = value;
-    }
-  });
-
-  return { content, data };
-}
-
-// Function to fetch and parse a markdown file
-async function fetchMarkdownContent(slug: string): Promise<string> {
-  // Find the post metadata
-  const post = posts.find(p => p.slug === slug);
-  
-  if (!post || !post.filename) {
-    throw new Error(`Post with slug "${slug}" not found or has no filename`);
-  }
-  
-  // Check if we already have this post's content in cache
-  if (postContentCache[slug]) {
-    return postContentCache[slug];
-  }
-  
-  try {
-    // Fetch the markdown file, using the relative path stored in filename
-    const response = await fetch(`/src/posts/${post.filename}`);
-    
-    if (!response.ok) {
-      throw new Error(`Failed to fetch post: ${response.statusText}`);
-    }
-    
-    const markdown = await response.text();
-    
-    // Use our browser-friendly parser
-    const { content } = parseFrontmatter(markdown);
-    
-    // Cache the content
-    postContentCache[slug] = content;
-    
-    return content;
-  } catch (error) {
-    console.error(`Error fetching post content for ${slug}:`, error);
-    throw error;
-  }
-}
-*/
-
-// Get all posts (metadata only, no content - this is fine, content is in each post object)
 export async function getAllPosts(): Promise<Post[]> {
   return posts;
 }
 
-// Get a single post by slug (with full content)
 export async function getPostBySlug(slug: string): Promise<Post | undefined> {
   const postFromList = posts.find(p => p.slug === slug);
   
@@ -125,14 +28,10 @@ export async function getPostBySlug(slug: string): Promise<Post | undefined> {
     return undefined;
   }
   
-  // The 'content' should now be directly available from the 'posts' array,
-  // as populated by the vite-plugin-markdown-posts.
   if (typeof postFromList.content === 'string') {
-    return postFromList; // Returns the post object which includes the content
+    return postFromList;
   } else {
-    // This case should ideally not be reached if the Vite plugin is correctly bundling content.
     console.error(`Content for post "${slug}" is missing or not a string from the pre-loaded list. This may indicate an issue with the build process or the virtual module generation.`);
-    // Return the post metadata with an error message in the content field.
     return {
       ...postFromList,
       content: `Error: Content for post slug "${slug}" was not bundled correctly. Please check the build process.`
