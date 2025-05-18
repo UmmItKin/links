@@ -1,6 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
 
-// Use environment variables for Supabase credentials
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
@@ -22,51 +21,20 @@ export interface PageLike {
 
 // Analytics functions
 export const incrementPageView = async (pagePath: string): Promise<number> => {
-  try {
-    // Try to get the existing record
-    const { data: existingViews, error: selectError } = await supabase
-      .from('page_views')
-      .select('*')
-      .eq('page_path', pagePath);
-    
-    if (selectError) {
-      console.error('Error fetching page views:', selectError);
-      return 0;
+  const { data, error } = await supabase.rpc('increment_page_view_rpc', { page_path_param: pagePath });
+
+  if (error) {
+    console.error(`Error calling increment_page_view_rpc for ${pagePath}:`, error);
+    try {
+      const currentViewsData = await getPageViews(pagePath);
+      console.warn(`RPC failed for ${pagePath}, returning last known views: ${currentViewsData}`);
+      return currentViewsData;
+    } catch (getViewsError) {
+      console.error(`Failed to even getPageViews after RPC error for ${pagePath}:`, getViewsError);
+      return 0; 
     }
-    
-    const existingView = existingViews && existingViews.length > 0 ? existingViews[0] : null;
-    
-    if (existingView) {
-      // Update the existing record
-      const newCount = existingView.view_count + 1;
-      const { error: updateError } = await supabase
-        .from('page_views')
-        .update({ view_count: newCount })
-        .eq('page_path', pagePath);
-        
-      if (updateError) {
-        console.error('Error updating view count:', updateError);
-        return existingView.view_count;
-      }
-      
-      return newCount;
-    } else {
-      // Insert a new record
-      const { error: insertError } = await supabase
-        .from('page_views')
-        .insert([{ page_path: pagePath, view_count: 1 }]);
-        
-      if (insertError) {
-        console.error('Error inserting new view:', insertError);
-        return 0;
-      }
-      
-      return 1;
-    }
-  } catch (err) {
-    console.error('Exception incrementing page view:', err);
-    return 0;
   }
+  return data !== null && data !== undefined ? Number(data) : 0;
 };
 
 export const getPageViews = async (pagePath: string): Promise<number> => {
@@ -75,15 +43,14 @@ export const getPageViews = async (pagePath: string): Promise<number> => {
       .from('page_views')
       .select('view_count')
       .eq('page_path', pagePath);
-    
+
     if (error) {
-      console.error('Error getting page views:', error);
+      console.error(`Error getting page views for ${pagePath}:`, error);
       return 0;
     }
-    
     return data && data.length > 0 ? data[0].view_count : 0;
   } catch (err) {
-    console.error('Exception getting page views:', err);
+    console.error(`Exception in getPageViews for ${pagePath}:`, err);
     return 0;
   }
 };
@@ -141,52 +108,46 @@ export const hasClientLikedPage = async (pagePath: string): Promise<boolean> => 
 };
 
 export const toggleLike = async (pagePath: string): Promise<boolean> => {
-  try {
-    const clientId = getClientId();
-    
-    // Check if the user already liked this page
-    const { data: existingLikes, error: selectError } = await supabase
+  const clientId = getClientId();
+  
+  // Check if the user already liked this page
+  const { data: existingLike, error: selectError } = await supabase
+    .from('page_likes')
+    .select('id')
+    .eq('page_path', pagePath)
+    .eq('user_id', clientId)
+    .maybeSingle();
+  
+  if (selectError) {
+    console.error('Error checking existing like:', selectError);
+    throw selectError; // Propagate error to be handled by the caller
+  }
+  
+  if (existingLike) {
+    // Unlike: Remove the like
+    const { error: deleteError } = await supabase
       .from('page_likes')
-      .select('*')
-      .eq('page_path', pagePath)
-      .eq('user_id', clientId);
-    
-    if (selectError) {
-      console.error('Error checking existing like:', selectError);
-      return false;
+      .delete()
+      .eq('id', existingLike.id); // Use the id from the fetched like
+      
+    if (deleteError) {
+      console.error('Error removing like:', deleteError);
+      throw deleteError; // Propagate error
     }
-    
-    const existingLike = existingLikes && existingLikes.length > 0 ? existingLikes[0] : null;
-    
-    if (existingLike) {
-      // Unlike: Remove the like
-      const { error: deleteError } = await supabase
-        .from('page_likes')
-        .delete()
-        .eq('id', existingLike.id);
-        
-      if (deleteError) {
-        console.error('Error removing like:', deleteError);
-        return true;
-      }
-      return false;
-    } else {
-      // Like: Add a new like
-      const { error: insertError } = await supabase
-        .from('page_likes')
-        .insert([{ 
-          page_path: pagePath, 
-          user_id: clientId 
-        }]);
-        
-      if (insertError) {
-        console.error('Error adding like:', insertError);
-        return false;
-      }
-      return true;
+    return false; // Successfully unliked
+  } else {
+    // Like: Add a new like
+    const { error: insertError } = await supabase
+      .from('page_likes')
+      .insert([{ 
+        page_path: pagePath, 
+        user_id: clientId 
+      }]);
+      
+    if (insertError) {
+      console.error('Error adding like:', insertError);
+      throw insertError; // Propagate error
     }
-  } catch (err) {
-    console.error('Exception toggling like:', err);
-    return false;
+    return true; // Successfully liked
   }
 }; 
