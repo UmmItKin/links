@@ -7,6 +7,7 @@ import rehypeSanitize from "rehype-sanitize";
 import { Highlight, themes } from "prism-react-renderer";
 import { FaGithub, FaEdit, FaClock, FaCalendarAlt, FaTags, FaArrowLeft } from "react-icons/fa";
 import { Post } from "../utils/postsUtil";
+import PageAnalytics from '../components/PageAnalytics';
 
 const MarkdownComponents = {
   h1: (props: any) => <h1 className="text-3xl font-bold mt-10 mb-4 text-white" {...props} />,
@@ -223,6 +224,8 @@ const BlogPostPage: React.FC = () => {
                 <span>{post.date}</span>
               </div>
               
+            <PageAnalytics />
+
               {post.lastmod && (
                 <div className="flex items-center">
                   <FaCalendarAlt className="mr-2 text-blue-400" />
