@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { FiEye, FiHeart } from "react-icons/fi";
-import { getLikeCount, incrementPageView, toggleLike, hasClientLikedPage } from "../lib/supabase";
+import { getLikeCount, incrementPageView, toggleLike, hasClientLikedPage, getPageViews } from "../lib/supabase";
 
 interface PageAnalyticsProps {
   pagePath?: string;
@@ -15,38 +15,135 @@ const PageAnalytics: React.FC<PageAnalyticsProps> = ({ pagePath }) => {
   const [likeCount, setLikeCount] = useState<number>(0);
   const [liked, setLiked] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
+  const [isLiking, setIsLiking] = useState<boolean>(false);
+
+  const incrementAttemptedForPathRef = useRef<Set<string>>(new Set());
+  const currentPathForRefReset = useRef<string | undefined | null>(null);
+  const mountedRef = useRef<boolean>(false);
 
   useEffect(() => {
+    mountedRef.current = true;
+    currentPathForRefReset.current = path;
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []); 
+
+  useEffect(() => {
+    if (path !== currentPathForRefReset.current) {
+        if (currentPathForRefReset.current) {
+            incrementAttemptedForPathRef.current.delete(currentPathForRefReset.current);
+        }
+        currentPathForRefReset.current = path;
+    }
+
+    let isActive = true;
+    
     const loadAnalytics = async () => {
+      if (!path) {
+        if (mountedRef.current && isActive) setLoading(false);
+        return;
+      }
+
+      const viewKey = `viewed-${path}`;
+      const hasViewedBefore = localStorage.getItem(viewKey) === 'true';
+      
+      // Only attempt to increment if the page hasn't been viewed by this browser ever
+      const shouldAttemptIncrement = !hasViewedBefore;
+
+      if (mountedRef.current && isActive) setLoading(true);
       try {
-        // Record page view
-        const views = await incrementPageView(path);
-        setViewCount(views);
+        let viewCountPromise: Promise<number>;
+
+        if (shouldAttemptIncrement) {
+          viewCountPromise = incrementPageView(path).then(newCount => {
+            if (isActive && mountedRef.current) {
+                localStorage.setItem(viewKey, 'true');
+            }
+            return newCount;
+          }).catch(error => {
+            console.error('Failed to increment page view, view not marked.', error);
+            throw error;
+          });
+        } else {
+          // Already viewed from this browser, just fetch the current count
+          viewCountPromise = getPageViews(path);
+        }
         
-        // Get likes
-        const likes = await getLikeCount(path);
-        setLikeCount(likes);
+        const [fetchedViewCount, fetchedLikeCount, fetchedHasLiked] = await Promise.all([
+          viewCountPromise,
+          getLikeCount(path),
+          hasClientLikedPage(path)
+        ]);
         
-        // Check if user has liked this page
-        const hasLiked = await hasClientLikedPage(path);
-        setLiked(hasLiked);
+        if (mountedRef.current && isActive) {
+          setViewCount(fetchedViewCount);
+          setLikeCount(fetchedLikeCount);
+          setLiked(fetchedHasLiked);
+        }
       } catch (error) {
-        console.error("Error loading analytics:", error);
+        if (mountedRef.current && isActive) {
+          setViewCount(prev => prev);
+          setLikeCount(prev => prev);
+          setLiked(prev => prev);
+        }
       } finally {
-        setLoading(false);
+        if (mountedRef.current && isActive) {
+          setLoading(false);
+        }
       }
     };
     
-    loadAnalytics();
+    if (mountedRef.current && path) {
+        loadAnalytics();
+    } else {
+        if(mountedRef.current && !path && loading && isActive) {
+            setLoading(false);
+        }
+    }
+
+    return () => {
+      isActive = false;
+    };
+
   }, [path]);
   
   const handleLikeClick = async () => {
+    if (!path || isLiking || !mountedRef.current) {
+      return;
+    }
+
+    if (mountedRef.current) setIsLiking(true);
+    const originalLikedStatus = liked;
+    const originalLikeCount = likeCount;
+
+    if (mountedRef.current) {
+      const newOptimisticLiked = !originalLikedStatus;
+      const newOptimisticLikeCount = !originalLikedStatus ? originalLikeCount + 1 : Math.max(0, originalLikeCount - 1);
+      setLiked(newOptimisticLiked);
+      setLikeCount(newOptimisticLikeCount);
+    }
+
     try {
-      const isLiked = await toggleLike(path);
-      setLiked(isLiked);
-      setLikeCount(prev => isLiked ? prev + 1 : Math.max(0, prev - 1));
+      const newActualLikedStatus = await toggleLike(path);
+      
+      if (mountedRef.current) {
+        setLiked(newActualLikedStatus);
+        const updatedLikeCount = await getLikeCount(path);
+        if (mountedRef.current) {
+          setLikeCount(updatedLikeCount);
+        }
+      }
     } catch (error) {
-      console.error("Error toggling like:", error);
+      console.error(`Error toggling like for path ${path}:`, error);
+      if (mountedRef.current) {
+        setLiked(originalLikedStatus);
+        setLikeCount(originalLikeCount);
+      }
+    } finally {
+      if (mountedRef.current) {
+        setIsLiking(false);
+      }
     }
   };
 
@@ -68,7 +165,8 @@ const PageAnalytics: React.FC<PageAnalyticsProps> = ({ pagePath }) => {
       <div className="flex items-center">
         <button 
           onClick={handleLikeClick}
-          className={`flex items-center focus:outline-none ${liked ? 'text-primary' : ''}`}
+          disabled={isLiking}
+          className={`flex items-center focus:outline-none ${liked ? 'text-primary' : ''} ${isLiking ? 'opacity-50 cursor-not-allowed' : ''}`}
           aria-label={liked ? "Unlike this page" : "Like this page"}
         >
           <FiHeart className={`w-6 h-6 mr-2 ${liked ? 'fill-primary' : ''}`} />
