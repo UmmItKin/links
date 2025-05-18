@@ -1,3 +1,19 @@
+## [1.12.0](https://github.com/UmmItC/links/compare/v1.11.0...v1.12.0) (2025-05-18)
+
+### Features
+
+* **BlogPostPage:** add the PageAnalytics component to the BlogPostPage for tracking View & Like ([c2f6899](https://github.com/UmmItC/links/commit/c2f68991d920bb54226dbc83273e3c4b3668a0da))
+* **PageAnalytics:** enhance analytics handling with improved state management and error handling ([22e52d6](https://github.com/UmmItC/links/commit/22e52d6beb17d0b54a59f5aa9afb45cbf86034d0))
+
+### Bug Fixes
+
+* **supabase:** streamline page view and like handling with RPC calls ([cdbb4e0](https://github.com/UmmItC/links/commit/cdbb4e064240c6e7447e7c7f65e453b81189b36a))
+
+### Documentation
+
+* **README:** add documentation for Supabase integration and analytics setup ([b6d1356](https://github.com/UmmItC/links/commit/b6d1356d7c1513eba3479c1590cbed5024b23525))
+* **README:** update to reference new SQL setup file of analytics features for supabase ([921839b](https://github.com/UmmItC/links/commit/921839bb956b7aafc8b61b1ad60d84531d049e06))
+
 ## [1.11.0](https://github.com/UmmItC/links/compare/v1.10.0...v1.11.0) (2025-05-17)
 
 ### Features
