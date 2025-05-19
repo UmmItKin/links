@@ -1,3 +1,13 @@
+## [1.14.0](https://github.com/UmmItC/links/compare/v1.13.0...v1.14.0) (2025-05-19)
+
+### Features
+
+* **img2webp:** add script for converting images to WebP format ([4df18dc](https://github.com/UmmItC/links/commit/4df18dcba4bf677eb18fd404f7e8a6c8a3bc0159))
+
+### Documentation
+
+* **README:** add section on image optimization and WebP conversion script ([622f575](https://github.com/UmmItC/links/commit/622f575a1be1c37f138af9a3a72b3c824f95b7fe))
+
 ## [1.13.0](https://github.com/UmmItC/links/compare/v1.12.0...v1.13.0) (2025-05-19)
 
 ### Features
