@@ -145,3 +145,12 @@ There are many ways to contribute, such as recommending features, reporting bugs
 If you would like to open a Pull Request (or Merge Request), please review this document first before making any commits or fixes: [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 Thank you for your interest in contributing!
+
+## Image issue
+
+One thing that concerns me is that I am using a background image as the wallpaper for the website, but the file is too large. To address this, we provide a script to convert any image file into WebP format. The tool uses the cwebp command-line interface to run.
+
+```shell
+cd public
+./img2webp.sh --input <name_of_image_file> --output <name_of_image_file.webp>
+```
