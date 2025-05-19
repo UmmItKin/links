@@ -1560,9 +1560,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/supabase-js@npm:^2.49.4":
-  version: 2.49.4
-  resolution: "@supabase/supabase-js@npm:2.49.4"
+"@supabase/supabase-js@npm:^2.49.5":
+  version: 2.49.5
+  resolution: "@supabase/supabase-js@npm:2.49.5"
   dependencies:
     "@supabase/auth-js": "npm:2.69.1"
     "@supabase/functions-js": "npm:2.4.4"
@@ -1570,7 +1570,7 @@ __metadata:
     "@supabase/postgrest-js": "npm:1.19.4"
     "@supabase/realtime-js": "npm:2.11.2"
     "@supabase/storage-js": "npm:2.7.1"
-  checksum: 10c0/43f5500b4cee89fa975ef13036846e6406d7719c79e1c9563b9e6a54529aa7b8d17e86bd0cd2cd2394ce6894e85628f43a29809572a438d2fc493175bb25ac25
+  checksum: 10c0/b81ec830200bd52b677cc9491f6fbaf8053566f9da31eb5f338bca527d39ff3864d1731e9642412c5ae9ae3d4b7876770eaee1e489927f50ba0949f139c9d9e9
   languageName: node
   linkType: hard
 
@@ -5997,7 +5997,7 @@ __metadata:
     "@semantic-release/github": "npm:^11.0.2"
     "@semantic-release/npm": "npm:^12.0.1"
     "@semantic-release/release-notes-generator": "npm:^14.0.3"
-    "@supabase/supabase-js": "npm:^2.49.4"
+    "@supabase/supabase-js": "npm:^2.49.5"
     "@tailwindcss/postcss": "npm:^4.1.7"
     "@types/node": "npm:^22.15.18"
     "@types/react": "npm:^19.1.4"
