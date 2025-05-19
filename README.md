@@ -4,6 +4,7 @@
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Made with Supabase](https://img.shields.io/badge/Made%20with-Supabase-3ECF8E?logo=supabase)](https://supabase.com)
+[![Comments by Giscus](https://img.shields.io/badge/Comments_by-Giscus-blue?logo=giscus&logoColor=white)](https://giscus.app)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/UmmItC/links)
 
 A modern, minimalist landing page that serves as your digital business card. Inspired by Linktree, but enhanced with custom features and a sleek design. Perfect for creators, developers, and professionals who want to share their online presence elegantly.
@@ -14,6 +15,7 @@ A modern, minimalist landing page that serves as your digital business card. Ins
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/) for Style
 - **Components:** [DaisyUI](https://daisyui.com/) for Style components
 - **Backend:** [Supabase](https://supabase.com/) for analytics (page views and likes)
+- **Comments:** [Giscus](https://giscus.app/) (powered by GitHub Discussions)
 - **CI/CD:** GitHub Actions for automated deployment
 - **Versioning:** Semantic Release for automated detection versioning
 - **Hosting:** GitHub Pages
@@ -39,7 +41,7 @@ A modern, minimalist landing page that serves as your digital business card. Ins
    yarn install
    ```
 
-3. Setup Supabase:
+3. Setup Supabase (for analytics):
    - Create a new project on [Supabase](https://app.supabase.com/)
    - Create the required tables for analytics:
 
@@ -63,12 +65,17 @@ A modern, minimalist landing page that serves as your digital business card. Ins
    VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
    ```
 
-4. Start the development server:
+4. Setup Giscus (for comments):
+   - Ensure GitHub Discussions is enabled for your repository.
+   - Create a new discussion category in your repository settings (e.g., "General" or "Announcements" – whichever you are using in your Giscus component).
+   - Update the `repoId` and `categoryId` in `src/components/Giscus.tsx` with the values corresponding to your repository and chosen category. You can get these from the [Giscus website](https://giscus.app).
+
+5. Start the development server:
    ```bash
    yarn run dev
    ```
 
-5. View your site at [http://localhost:5173](http://localhost:5173)
+6. View your site at [http://localhost:5173](http://localhost:5173)
 
 ## Production Build
 
