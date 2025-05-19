@@ -8,6 +8,7 @@ import { Highlight, themes } from "prism-react-renderer";
 import { FaGithub, FaEdit, FaClock, FaCalendarAlt, FaTags, FaArrowLeft } from "react-icons/fa";
 import { Post } from "../utils/postsUtil";
 import PageAnalytics from '../components/PageAnalytics';
+import GiscusComments from '../components/Giscus';
 
 const MarkdownComponents = {
   h1: (props: any) => <h1 className="text-3xl font-bold mt-10 mb-4 text-white" {...props} />,
@@ -269,6 +270,12 @@ const BlogPostPage: React.FC = () => {
           </ReactMarkdown>
         </article>
           
+        {/* Giscus comments */}
+        <div className="mt-16 border-t border-gray-700/30 pt-8">
+          <h2 className="text-2xl font-bold mb-6">Comments</h2>
+          <GiscusComments pageTitle={post.title} />
+        </div>
+        
         {/* Footer */}
         <div className="mt-12 pt-6 border-t border-gray-700/50 flex justify-between items-center">
           <div className="flex items-center space-x-4">

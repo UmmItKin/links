@@ -1,6 +1,7 @@
 import React from 'react';
 import Friends from '../components/Friends';
 import PageAnalytics from '../components/PageAnalytics';
+import GiscusComments from '../components/Giscus';
 
 const FriendsPage: React.FC = () => {
   return (
@@ -12,6 +13,14 @@ const FriendsPage: React.FC = () => {
         </div>
       </div>
       <Friends />
+      
+      {/* Giscus comments */}
+      <div className="container mx-auto px-4 mt-16">
+        <div className="border-t border-gray-700/30 pt-8">
+          <h2 className="text-2xl font-bold mb-6">Comments</h2>
+          <GiscusComments pageTitle="Friends Page :)" />
+        </div>
+      </div>
     </div>
   );
 };
