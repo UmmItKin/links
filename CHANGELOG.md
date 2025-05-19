@@ -1,3 +1,13 @@
+## [1.13.0](https://github.com/UmmItC/links/compare/v1.12.0...v1.13.0) (2025-05-19)
+
+### Features
+
+* **Giscus:** integrate Giscus comments system ([31ff164](https://github.com/UmmItC/links/commit/31ff164c3d3e6fe0a31649454147abe17f16edc0))
+
+### Documentation
+
+* **README:** update setup instructions for Giscus comments integration ([1009926](https://github.com/UmmItC/links/commit/1009926aa4d87091c67cf1e3b55517531e4091b3))
+
 ## [1.12.0](https://github.com/UmmItC/links/compare/v1.11.0...v1.12.0) (2025-05-18)
 
 ### Features
