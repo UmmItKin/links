@@ -42,7 +42,7 @@
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
     "@vitejs/plugin-react": "^4.4.1",
-    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "conventional-changelog-conventionalcommits": "^9.0.0",
     "daisyui": "^5.0.35",
     "eslint": "^9.27.0",
     "eslint-plugin-react": "^7.37.5",
