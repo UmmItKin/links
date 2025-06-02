@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
-import { SiKofi, SiReadthedocs, SiStatuspal } from "react-icons/si";
+import { SiBuymeacoffee, SiReadthedocs, SiStatuspal } from "react-icons/si";
 import { GrArchlinux, GrBlog } from "react-icons/gr";
 
 interface LinkData {
@@ -13,10 +13,10 @@ interface LinkData {
 const linksData: LinkData[] = [
   { label: "AUR", url: "https://short.ummit.dev/i-use-arch-btw", icon: <GrArchlinux className="w-5 h-5" />, alt: "@UmmIt" },
   { label: "Github", url: "https://short.ummit.dev/github", icon: <FaGithub className="w-5 h-5" />, alt: "@UmmItC" },
-  { label: "Ko-fi", url: "https://short.ummit.dev/ko-fi", icon: <SiKofi className="w-5 h-5" />, alt: "@UmmIt" }, 
+  { label: "Buy me a Coffee", url: "https://short.ummit.dev/buy-me-a-coffee", icon: <SiBuymeacoffee className="w-5 h-5" />, alt: "@UmmIt" }, 
   { label: "Blog", url: "https://short.ummit.dev/blog-old", icon: <GrBlog className="w-5 h-5" />, alt: "blog.ummit.dev" },
-  { label: "GPU-Passthru", url: "https://short.ummit.dev/gpu-passthru", icon: <SiReadthedocs className="w-5 h-5" />, alt: "gpu-passthru.ummit.dev" },
-  { label: "Monitors", url: "https://short.ummit.dev/upptime", icon: <SiStatuspal className="w-5 h-5" />, alt: "status.ummit.dev"},
+  { label: "Passthru", url: "https://short.ummit.dev/gpu-passthru", icon: <SiReadthedocs className="w-5 h-5" />, alt: "gpu-passthru.ummit.dev" },
+  { label: "Status", url: "https://short.ummit.dev/upptime", icon: <SiStatuspal className="w-5 h-5" />, alt: "status.ummit.dev"},
 ];
 
 const Links: React.FC = () => {
