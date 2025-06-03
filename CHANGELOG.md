@@ -1,3 +1,9 @@
+## [1.14.2](https://github.com/UmmItC/links/compare/v1.14.1...v1.14.2) (2025-06-03)
+
+### Bug Fixes
+
+* trigger to next release ([f9aafe5](https://github.com/UmmItC/links/commit/f9aafe5f5896035cde57ebeacf15021952796ae2))
+
 ## [1.14.1](https://github.com/UmmItC/links/compare/v1.14.0...v1.14.1) (2025-06-03)
 
 ### Bug Fixes
