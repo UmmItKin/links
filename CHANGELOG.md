@@ -1,3 +1,9 @@
+## [1.14.2](https://github.com/UmmItC/links/compare/v1.14.1...v1.14.2) (2025-06-03)
+
+### Bug Fixes
+
+* revert and trigger release into previous commit ([fbd02e1](https://github.com/UmmItC/links/commit/fbd02e14e97c50b0e9216eb17840935e70c49c2d))
+
 ## [1.14.1](https://github.com/UmmItC/links/compare/v1.14.0...v1.14.1) (2025-06-03)
 
 ### Bug Fixes
