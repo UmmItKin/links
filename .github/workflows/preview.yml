@@ -39,6 +39,9 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: build
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
 
       # Remove CNAME file
       - name: Remove CNAME file

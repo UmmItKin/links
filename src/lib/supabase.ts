@@ -3,7 +3,24 @@ import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Validate environment variables
+if (!supabaseUrl || !supabaseAnonKey) {
+  console.warn('Supabase environment variables are not set. Analytics features will be disabled.');
+  console.warn('Missing:', {
+    VITE_SUPABASE_URL: !supabaseUrl,
+    VITE_SUPABASE_ANON_KEY: !supabaseAnonKey
+  });
+}
+
+// Create Supabase client with validation
+export const supabase = supabaseUrl && supabaseAnonKey 
+  ? createClient(supabaseUrl, supabaseAnonKey)
+  : null;
+
+// Helper function to check if Supabase is available
+export const isSupabaseAvailable = (): boolean => {
+  return supabase !== null;
+};
 
 export interface PageView {
   id?: number;
@@ -21,6 +38,11 @@ export interface PageLike {
 
 // Analytics functions
 export const incrementPageView = async (pagePath: string): Promise<number> => {
+  if (!supabase) {
+    console.warn('Supabase not available, returning 0 for page views');
+    return 0;
+  }
+
   const { data, error } = await supabase.rpc('increment_page_view_rpc', { page_path_param: pagePath });
 
   if (error) {
@@ -38,6 +60,11 @@ export const incrementPageView = async (pagePath: string): Promise<number> => {
 };
 
 export const getPageViews = async (pagePath: string): Promise<number> => {
+  if (!supabase) {
+    console.warn('Supabase not available, returning 0 for page views');
+    return 0;
+  }
+
   try {
     const { data, error } = await supabase
       .from('page_views')
@@ -56,6 +83,11 @@ export const getPageViews = async (pagePath: string): Promise<number> => {
 };
 
 export const getLikeCount = async (pagePath: string): Promise<number> => {
+  if (!supabase) {
+    console.warn('Supabase not available, returning 0 for like count');
+    return 0;
+  }
+
   try {
     const { count, error } = await supabase
       .from('page_likes')
@@ -86,6 +118,11 @@ export const getClientId = (): string => {
 
 // Check if the current client has liked a page
 export const hasClientLikedPage = async (pagePath: string): Promise<boolean> => {
+  if (!supabase) {
+    console.warn('Supabase not available, returning false for like status');
+    return false;
+  }
+
   try {
     const clientId = getClientId();
     
@@ -108,6 +145,11 @@ export const hasClientLikedPage = async (pagePath: string): Promise<boolean> => 
 };
 
 export const toggleLike = async (pagePath: string): Promise<boolean> => {
+  if (!supabase) {
+    console.warn('Supabase not available, cannot toggle like');
+    throw new Error('Supabase not available');
+  }
+
   const clientId = getClientId();
   
   // Check if the user already liked this page

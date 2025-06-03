@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { FiEye, FiHeart } from "react-icons/fi";
-import { getLikeCount, incrementPageView, toggleLike, hasClientLikedPage, getPageViews } from "../lib/supabase";
+import { getLikeCount, incrementPageView, toggleLike, hasClientLikedPage, getPageViews, isSupabaseAvailable } from "../lib/supabase";
 
 interface PageAnalyticsProps {
   pagePath?: string;
@@ -45,6 +45,18 @@ const PageAnalytics: React.FC<PageAnalyticsProps> = ({ pagePath }) => {
         return;
       }
 
+      // Check if Supabase is available
+      if (!isSupabaseAvailable()) {
+        console.warn('Analytics disabled: Supabase not available');
+        if (mountedRef.current && isActive) {
+          setViewCount(0);
+          setLikeCount(0);
+          setLiked(false);
+          setLoading(false);
+        }
+        return;
+      }
+
       const viewKey = `viewed-${path}`;
       const hasViewedBefore = localStorage.getItem(viewKey) === 'true';
       
@@ -82,6 +94,7 @@ const PageAnalytics: React.FC<PageAnalyticsProps> = ({ pagePath }) => {
           setLiked(fetchedHasLiked);
         }
       } catch (error) {
+        console.error('Error loading analytics:', error);
         if (mountedRef.current && isActive) {
           setViewCount(prev => prev);
           setLikeCount(prev => prev);
@@ -110,6 +123,11 @@ const PageAnalytics: React.FC<PageAnalyticsProps> = ({ pagePath }) => {
   
   const handleLikeClick = async () => {
     if (!path || isLiking || !mountedRef.current) {
+      return;
+    }
+
+    if (!isSupabaseAvailable()) {
+      console.warn('Cannot toggle like: Supabase not available');
       return;
     }
 
@@ -151,6 +169,23 @@ const PageAnalytics: React.FC<PageAnalyticsProps> = ({ pagePath }) => {
     return (
       <div className="flex items-center space-x-4 text-lg opacity-70">
         <span>Loading analytics...</span>
+      </div>
+    );
+  }
+
+  // Show disabled state when Supabase is not available
+  if (!isSupabaseAvailable()) {
+    return (
+      <div className="flex items-center space-x-4 text-lg opacity-50">
+        <div className="flex items-center">
+          <FiEye className="w-6 h-6 mr-2" />
+          <span className="text-xl">--</span>
+        </div>
+        <div className="flex items-center">
+          <FiHeart className="w-6 h-6 mr-2" />
+          <span className="text-xl">--</span>
+        </div>
+        <span className="text-sm">(Analytics disabled)</span>
       </div>
     );
   }
