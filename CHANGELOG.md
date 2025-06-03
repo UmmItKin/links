@@ -1,3 +1,45 @@
+## [1.14.1](https://github.com/UmmItC/links/compare/v1.14.0...v1.14.1) (2025-06-03)
+
+### Bug Fixes
+
+* trigger to next release ([1a70c1a](https://github.com/UmmItC/links/commit/1a70c1a2c402c317fe30dfac4730a564068dfda9))
+
+### Documentation
+
+* **blog:** update "Why my name is UmmIt" post expand explain ([04f2afb](https://github.com/UmmItC/links/commit/04f2afbfab8b1798eb9ae6718d086146e6c5a3f1))
+
+### Chores
+
+* **deps-dev:** bump @semantic-release/github from 11.0.2 to 11.0.3 ([fb13d53](https://github.com/UmmItC/links/commit/fb13d53c3f9c2d9aa5ec4bbb75d842c0bb43faa4))
+* **deps-dev:** bump @tailwindcss/postcss from 4.1.7 to 4.1.8 ([30b1152](https://github.com/UmmItC/links/commit/30b1152005a7d3d635f46bca8b929f322403ea57))
+* **deps-dev:** bump @types/node from 22.15.18 to 22.15.19 ([08ede17](https://github.com/UmmItC/links/commit/08ede178134fdfe3919190e3406a6464ed088fff))
+* **deps-dev:** bump @types/node from 22.15.19 to 22.15.21 ([d142911](https://github.com/UmmItC/links/commit/d14291158713c051b083867241642bf5aa71abe6))
+* **deps-dev:** bump @types/node from 22.15.21 to 22.15.24 ([e1051ed](https://github.com/UmmItC/links/commit/e1051ed2f7b82d6b69a1ed47436f217d16be17cf))
+* **deps-dev:** bump @types/node from 22.15.24 to 22.15.28 ([583a269](https://github.com/UmmItC/links/commit/583a26982e965c00fd1793a8fb7a13a6480cda8f))
+* **deps-dev:** bump @types/node from 22.15.28 to 22.15.29 ([fd88fa0](https://github.com/UmmItC/links/commit/fd88fa0aa1a58ea40d734a94541f42859b7ab6a1))
+* **deps-dev:** bump @types/react from 19.1.4 to 19.1.5 ([6e7712a](https://github.com/UmmItC/links/commit/6e7712ae6a19d998d5af2827a046d4a36f719e4a))
+* **deps-dev:** bump @types/react from 19.1.5 to 19.1.6 ([d33f268](https://github.com/UmmItC/links/commit/d33f268378b5e5dec5235f0cdc25b7b73528a103))
+* **deps-dev:** bump @vitejs/plugin-react from 4.4.1 to 4.5.0 ([b86fbde](https://github.com/UmmItC/links/commit/b86fbde9b0fd40e55e09a9d49ff79c62ca7d4dfc))
+* **deps-dev:** bump conventional-changelog-conventionalcommits ([a82086d](https://github.com/UmmItC/links/commit/a82086d362a69faad8c1f0aff50887d59ed414ca))
+* **deps-dev:** bump daisyui from 5.0.35 to 5.0.37 ([17858bb](https://github.com/UmmItC/links/commit/17858bb014bdbb0845f9483810d9b7bde36c0006))
+* **deps-dev:** bump daisyui from 5.0.37 to 5.0.38 ([24995c2](https://github.com/UmmItC/links/commit/24995c20a6b30671617de4a02d656e39399e3344))
+* **deps-dev:** bump daisyui from 5.0.38 to 5.0.42 ([afb1285](https://github.com/UmmItC/links/commit/afb1285d2300f825cf99dd7df813a40ddc5daafb))
+* **deps-dev:** bump daisyui from 5.0.42 to 5.0.43 ([68fe98f](https://github.com/UmmItC/links/commit/68fe98fe9ca0512beeaf4fe61bb4e06384082b97))
+* **deps-dev:** bump eslint from 9.26.0 to 9.27.0 ([0f0796f](https://github.com/UmmItC/links/commit/0f0796f05f0b56d67a8ecccbd5006e13c91b3b44))
+* **deps-dev:** bump eslint from 9.27.0 to 9.28.0 ([06d1ab9](https://github.com/UmmItC/links/commit/06d1ab9fa9162e3ac54105f460b08df8cfe90fe0))
+* **deps-dev:** bump postcss from 8.5.3 to 8.5.4 ([66367e6](https://github.com/UmmItC/links/commit/66367e6e6e46624082b05a166e16a3fd6abc9290))
+* **deps-dev:** bump semantic-release from 24.2.3 to 24.2.4 ([fe7e1d9](https://github.com/UmmItC/links/commit/fe7e1d95157ffcc00fa78cfa7197f306d74ac244))
+* **deps-dev:** bump semantic-release from 24.2.4 to 24.2.5 ([37784be](https://github.com/UmmItC/links/commit/37784bee2bde35a185ea747ba6ad701dbc301a79))
+* **deps-dev:** bump tailwindcss from 4.1.7 to 4.1.8 ([44f6278](https://github.com/UmmItC/links/commit/44f6278839b2dd9afe09558c0c082ee51c393c27))
+* **deps:** bump @supabase/supabase-js from 2.49.4 to 2.49.5 ([1893a76](https://github.com/UmmItC/links/commit/1893a76d67c414d5069b4388fbf504ac43811ac5))
+* **deps:** bump @supabase/supabase-js from 2.49.5 to 2.49.7 ([9dffe25](https://github.com/UmmItC/links/commit/9dffe25820133365657fe89cbf2b55d1bdbb7735))
+* **deps:** bump @supabase/supabase-js from 2.49.7 to 2.49.8 ([7a45985](https://github.com/UmmItC/links/commit/7a45985ced62d58887fa7f4a2cb433f3376f3900))
+* **deps:** bump @supabase/supabase-js from 2.49.8 to 2.49.9 ([6c0d4a5](https://github.com/UmmItC/links/commit/6c0d4a5411cbe811bbcab06d153a99461814a883))
+* **deps:** bump react-router-dom from 7.6.0 to 7.6.1 ([5480475](https://github.com/UmmItC/links/commit/548047531e47a2ef003a8db859a16a108d750870))
+* **deps:** update Yarn to version 4.9.2 and update dependencies ([27cf9c4](https://github.com/UmmItC/links/commit/27cf9c42667c557960cdf7d4468f2238ea66b938))
+* **Links:** update link for Ko-fi to Buy me a Coffee and adjust labels for clarity ([d3ba2e1](https://github.com/UmmItC/links/commit/d3ba2e1c0cd250b5e9353af1a668592aad2bb863))
+* **userData:** update imageIcon and wallpaper URLs to shortURL powered by Cloudflare R2 and Sink ([763d2d6](https://github.com/UmmItC/links/commit/763d2d64f0499e647c74ad4ff079cb2722270ce0))
+
 ## [1.14.0](https://github.com/UmmItC/links/compare/v1.13.0...v1.14.0) (2025-05-19)
 
 ### Features
