@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface Project {
   title: string;
   description: string;
   tags: string[];
   url: string;
+  isExternal?: boolean;
 }
 
 const ProjectPage: React.FC = () => {
@@ -13,19 +15,22 @@ const ProjectPage: React.FC = () => {
       title: "Links",
       description: "My Links website, inspired by Linktree, built with React, Tailwind CSS, and Daisy UI.",
       tags: ["React", "Tailwind", "Daisy UI"],
-      url: "https://github.com/UmmItC/Links"
+      url: "https://github.com/UmmItC/Links",
+      isExternal: true
     },
     {
       title: "gpu-passthru",
       description: "Documentation for GPU passthrough setup for GNU/Linux virtualization.",
       tags: ["Documentation", "GNU/Linux"],
-      url: "https://github.com/UmmItC/gpu-passthru"
+      url: "https://github.com/UmmItC/gpu-passthru",
+      isExternal: true
     },
     {
       title: "Dotfiles",
       description: "My Hyprland dotfiles for Arch Linux based distributions, including installation scripts.",
       tags: ["Dotfiles", "Arch Linux", "Shell", "Python", "GNU/Linux"],
-      url: "https://github.com/UmmItC/Dotfiles"
+      url: "/project/dotfiles",
+      isExternal: false
     }
   ];
   
@@ -45,14 +50,23 @@ const ProjectPage: React.FC = () => {
                 <span key={tagIndex} className="px-3 py-1 bg-gray-700/50 rounded-full text-xs">{tag}</span>
               ))}
             </div>
-            <a 
-              href={project.url}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="mt-4 inline-block px-4 py-2 bg-myPink1/40 text-myPink1 rounded-lg border border-myPink1/50 hover:bg-myPink1/60 transition-all duration-300 hover:scale-105 hover:shadow-md hover:shadow-myPink1/30 transform"
-            >
-              View Project
-            </a>
+            {project.isExternal ? (
+              <a 
+                href={project.url}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="mt-4 inline-block px-4 py-2 bg-myPink1/40 text-myPink1 rounded-lg border border-myPink1/50 hover:bg-myPink1/60 transition-all duration-300 hover:scale-105 hover:shadow-md hover:shadow-myPink1/30 transform"
+              >
+                View Project
+              </a>
+            ) : (
+              <Link 
+                to={project.url}
+                className="mt-4 inline-block px-4 py-2 bg-myPink1/40 text-myPink1 rounded-lg border border-myPink1/50 hover:bg-myPink1/60 transition-all duration-300 hover:scale-105 hover:shadow-md hover:shadow-myPink1/30 transform"
+              >
+                View Project
+              </Link>
+            )}
           </div>
         ))}
       </div>

@@ -13,6 +13,7 @@ import ProjectPage from "./pages/ProjectPage";
 import GearPage from "./pages/GearPage";
 import AboutPage from "./pages/AboutPage";
 import FriendsPage from "./pages/FriendsPage";
+import DotfilesPage from "./pages/DotfilesPage";
 
 import { userData, socialButtons } from "./config/userData";
 import { useGPG } from "./hooks/useGPG";
@@ -39,6 +40,7 @@ const App: React.FC = () => {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug/*" element={<BlogPostPage />} />
         <Route path="/project" element={<ProjectPage />} />
+        <Route path="/project/dotfiles" element={<DotfilesPage />} />
         <Route path="/gear" element={<GearPage />} />
         <Route path="/friends" element={<FriendsPage />} />
         <Route path="/about" element={<AboutPage />} />
