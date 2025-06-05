@@ -1475,15 +1475,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/realtime-js@npm:2.11.9":
-  version: 2.11.9
-  resolution: "@supabase/realtime-js@npm:2.11.9"
+"@supabase/realtime-js@npm:2.11.10":
+  version: 2.11.10
+  resolution: "@supabase/realtime-js@npm:2.11.10"
   dependencies:
     "@supabase/node-fetch": "npm:^2.6.13"
     "@types/phoenix": "npm:^1.6.6"
     "@types/ws": "npm:^8.18.1"
     ws: "npm:^8.18.2"
-  checksum: 10c0/24caa5bfff90884324c9a5a78203b161853d0ed9f5ba1fa8ca5817ac6e2c60c8e846b146e223cb3abcc899632efc517646e616d1ae09fd30c6945740a32e98e6
+  checksum: 10c0/948dfec5bf57049f0fe7fb2a91c71e6b863714c6a312e0db2b043735161d1a7996853b899c40a651b42000876e235d3960a32e5a96f40b8b5717e8cec3508670
   languageName: node
   linkType: hard
 
@@ -1496,17 +1496,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/supabase-js@npm:^2.49.9":
-  version: 2.49.9
-  resolution: "@supabase/supabase-js@npm:2.49.9"
+"@supabase/supabase-js@npm:^2.49.10":
+  version: 2.49.10
+  resolution: "@supabase/supabase-js@npm:2.49.10"
   dependencies:
     "@supabase/auth-js": "npm:2.69.1"
     "@supabase/functions-js": "npm:2.4.4"
     "@supabase/node-fetch": "npm:2.6.15"
     "@supabase/postgrest-js": "npm:1.19.4"
-    "@supabase/realtime-js": "npm:2.11.9"
+    "@supabase/realtime-js": "npm:2.11.10"
     "@supabase/storage-js": "npm:2.7.1"
-  checksum: 10c0/bc247e77e21fe39bf5fe22ba8a2f53c2a0aa6d43430f18fd2282a43041e0ebd101b389c92ab7821618ad8b05a08fad7e8170001f44d830dc396c60ac4055c64a
+  checksum: 10c0/bc359559c7865b850435192d17d9cce61a1c8d1b5634465399f9d638a9eeb490a6c1f27900d30c6058f41fdfacdcc1d47cd432c533a1c81e9b623f7246f66781
   languageName: node
   linkType: hard
 
@@ -5342,7 +5342,7 @@ __metadata:
     "@semantic-release/github": "npm:^11.0.3"
     "@semantic-release/npm": "npm:^12.0.1"
     "@semantic-release/release-notes-generator": "npm:^14.0.3"
-    "@supabase/supabase-js": "npm:^2.49.9"
+    "@supabase/supabase-js": "npm:^2.49.10"
     "@tailwindcss/postcss": "npm:^4.1.8"
     "@types/node": "npm:^22.15.29"
     "@types/react": "npm:^19.1.6"
