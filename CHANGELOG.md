@@ -1,3 +1,14 @@
+## [1.15.0](https://github.com/UmmItC/links/compare/v1.14.2...v1.15.0) (2025-06-05)
+
+### Features
+
+* **ProjectPage:** add DotfilesPage with Plyr video player and showcases for more detailed ([3c92b40](https://github.com/UmmItC/links/commit/3c92b409c558c66ca1ed2104d40e7667ca3eb114))
+
+### Chores
+
+* **deps-dev:** bump @types/react-dom from 19.1.5 to 19.1.6 ([0285cf5](https://github.com/UmmItC/links/commit/0285cf5a8116c0308c4d6e1159e9b565ad6d47c7))
+* **deps:** bump @supabase/supabase-js from 2.49.9 to 2.49.10 ([c20171c](https://github.com/UmmItC/links/commit/c20171ca0823ff48345f468a55563ee84985cb7a))
+
 ## [1.14.2](https://github.com/UmmItC/links/compare/v1.14.1...v1.14.2) (2025-06-03)
 
 ### Bug Fixes
