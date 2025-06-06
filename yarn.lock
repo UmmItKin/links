@@ -1439,12 +1439,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/auth-js@npm:2.69.1":
-  version: 2.69.1
-  resolution: "@supabase/auth-js@npm:2.69.1"
+"@supabase/auth-js@npm:2.70.0":
+  version: 2.70.0
+  resolution: "@supabase/auth-js@npm:2.70.0"
   dependencies:
     "@supabase/node-fetch": "npm:^2.6.14"
-  checksum: 10c0/efc08fc6be48769efc84105617f2cb681791641ba86480d29a316ae83beac8cf4f747bf00b4947c32992f9b7b0b40e3c2bf74013f01e070c38558169ab68b6f1
+  checksum: 10c0/99696a5617dd55fa45815683fbb3d503146ab9c4d789ec746811af5df9fab3a41559c98175b8756247ccff727654f182c2038375a45d08da96cddcc740bfe717
   languageName: node
   linkType: hard
 
@@ -1496,17 +1496,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/supabase-js@npm:^2.49.10":
-  version: 2.49.10
-  resolution: "@supabase/supabase-js@npm:2.49.10"
+"@supabase/supabase-js@npm:^2.50.0":
+  version: 2.50.0
+  resolution: "@supabase/supabase-js@npm:2.50.0"
   dependencies:
-    "@supabase/auth-js": "npm:2.69.1"
+    "@supabase/auth-js": "npm:2.70.0"
     "@supabase/functions-js": "npm:2.4.4"
     "@supabase/node-fetch": "npm:2.6.15"
     "@supabase/postgrest-js": "npm:1.19.4"
     "@supabase/realtime-js": "npm:2.11.10"
     "@supabase/storage-js": "npm:2.7.1"
-  checksum: 10c0/bc359559c7865b850435192d17d9cce61a1c8d1b5634465399f9d638a9eeb490a6c1f27900d30c6058f41fdfacdcc1d47cd432c533a1c81e9b623f7246f66781
+  checksum: 10c0/42a1ba0bc4a902114cdb357fa194e20d67c52903b831543f67ee406ac51aba58bc9b33c0950d7c1fcaa561ebd9128fc02b04385add6a12816fd0668da5c50aa2
   languageName: node
   linkType: hard
 
@@ -5356,7 +5356,7 @@ __metadata:
     "@semantic-release/github": "npm:^11.0.3"
     "@semantic-release/npm": "npm:^12.0.1"
     "@semantic-release/release-notes-generator": "npm:^14.0.3"
-    "@supabase/supabase-js": "npm:^2.49.10"
+    "@supabase/supabase-js": "npm:^2.50.0"
     "@tailwindcss/postcss": "npm:^4.1.8"
     "@types/node": "npm:^22.15.29"
     "@types/react": "npm:^19.1.6"
