@@ -1,3 +1,13 @@
+## [1.17.0](https://github.com/UmmItC/links/compare/v1.16.0...v1.17.0) (2025-06-07)
+
+### Features
+
+* add Vercel analytics and speed insights to my application ([47e6252](https://github.com/UmmItC/links/commit/47e625250cc996096664c6c11857ddb9075c9b42))
+
+### Documentation
+
+* update README to reflect deployment changes to Vercel and update hosting details ([9f97015](https://github.com/UmmItC/links/commit/9f97015ed457c6d0da0ccb7ef5b1926d0bad9dee))
+
 ## [1.16.0](https://github.com/UmmItC/links/compare/v1.15.0...v1.16.0) (2025-06-07)
 
 ### ⚠ BREAKING CHANGES
