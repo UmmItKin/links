@@ -1,3 +1,18 @@
+## [1.16.0](https://github.com/UmmItC/links/compare/v1.15.0...v1.16.0) (2025-06-07)
+
+### ⚠ BREAKING CHANGES
+
+* update build script to include commit hash generation and remove Yarn CI/CD workflow
+
+### Features
+
+* update build script to include commit hash generation and remove Yarn CI/CD workflow ([00e6434](https://github.com/UmmItC/links/commit/00e64340a42089b9a6dd96d0ace060f6a720f963))
+
+### Chores
+
+* **deps-dev:** bump @types/node from 22.15.29 to 22.15.30 ([b259050](https://github.com/UmmItC/links/commit/b2590502ed77f09762eb459c6ded8f6d97b6321c))
+* **deps:** bump @supabase/supabase-js from 2.49.10 to 2.50.0 ([a38bbb8](https://github.com/UmmItC/links/commit/a38bbb86ed6343ffe0591079a2f81eb6d3b58a8e))
+
 ## [1.15.0](https://github.com/UmmItC/links/compare/v1.14.2...v1.15.0) (2025-06-05)
 
 ### Features
