@@ -1475,15 +1475,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/realtime-js@npm:2.11.10":
-  version: 2.11.10
-  resolution: "@supabase/realtime-js@npm:2.11.10"
+"@supabase/realtime-js@npm:2.11.15":
+  version: 2.11.15
+  resolution: "@supabase/realtime-js@npm:2.11.15"
   dependencies:
     "@supabase/node-fetch": "npm:^2.6.13"
     "@types/phoenix": "npm:^1.6.6"
     "@types/ws": "npm:^8.18.1"
+    isows: "npm:^1.0.7"
     ws: "npm:^8.18.2"
-  checksum: 10c0/948dfec5bf57049f0fe7fb2a91c71e6b863714c6a312e0db2b043735161d1a7996853b899c40a651b42000876e235d3960a32e5a96f40b8b5717e8cec3508670
+  checksum: 10c0/bcb623db5cda0ddd8a30231ced3cdb09398a55a210aedfdc2b351355f1db97a3309504f27966098d393e5c45b20e239630c38fec7df2c9636f7c0bf1e26b1dc5
   languageName: node
   linkType: hard
 
@@ -1496,17 +1497,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/supabase-js@npm:^2.50.0":
-  version: 2.50.0
-  resolution: "@supabase/supabase-js@npm:2.50.0"
+"@supabase/supabase-js@npm:^2.50.2":
+  version: 2.50.2
+  resolution: "@supabase/supabase-js@npm:2.50.2"
   dependencies:
     "@supabase/auth-js": "npm:2.70.0"
     "@supabase/functions-js": "npm:2.4.4"
     "@supabase/node-fetch": "npm:2.6.15"
     "@supabase/postgrest-js": "npm:1.19.4"
-    "@supabase/realtime-js": "npm:2.11.10"
+    "@supabase/realtime-js": "npm:2.11.15"
     "@supabase/storage-js": "npm:2.7.1"
-  checksum: 10c0/42a1ba0bc4a902114cdb357fa194e20d67c52903b831543f67ee406ac51aba58bc9b33c0950d7c1fcaa561ebd9128fc02b04385add6a12816fd0668da5c50aa2
+  checksum: 10c0/9b5fd5b786b9e3f4a26b5028d394e5aec9381358afcd1b6fd2ecbfe98fd4bb377a4dddf4f7a3956ae37b9b33f2352b94cccce24e9c7048f8c3140cde16ba7303
   languageName: node
   linkType: hard
 
@@ -4955,6 +4956,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"isows@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "isows@npm:1.0.7"
+  peerDependencies:
+    ws: "*"
+  checksum: 10c0/43c41fe89c7c07258d0be3825f87e12da8ac9023c5b5ae6741ec00b2b8169675c04331ea73ef8c172d37a6747066f4dc93947b17cd369f92828a3b3e741afbda
+  languageName: node
+  linkType: hard
+
 "issue-parser@npm:^7.0.0":
   version: 7.0.1
   resolution: "issue-parser@npm:7.0.1"
@@ -5449,7 +5459,7 @@ __metadata:
     "@semantic-release/github": "npm:^11.0.3"
     "@semantic-release/npm": "npm:^12.0.1"
     "@semantic-release/release-notes-generator": "npm:^14.0.3"
-    "@supabase/supabase-js": "npm:^2.50.0"
+    "@supabase/supabase-js": "npm:^2.50.2"
     "@tailwindcss/postcss": "npm:^4.1.10"
     "@types/node": "npm:^24.0.3"
     "@types/react": "npm:^19.1.8"
