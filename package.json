@@ -17,7 +17,7 @@
     "@supabase/supabase-js": "^2.50.2",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
-    "dotenv": "^17.0.0",
+    "dotenv": "^17.2.0",
     "gray-matter": "^4.0.3",
     "plyr": "^3.7.8",
     "prism-react-renderer": "^2.4.1",
