@@ -26,7 +26,7 @@ A modern, minimalist landing page that serves as your digital business card. Ins
 ### Prerequisites
 
 - Node.js
-- Yarn package manager
+- Bun package manager (https://bun.sh)
 - Supabase account (for analytics features)
 
 ### Development Setup
@@ -39,7 +39,7 @@ A modern, minimalist landing page that serves as your digital business card. Ins
 
 2. Install dependencies:
    ```bash
-   yarn install
+   bun install
    ```
 
 3. Setup Supabase (for analytics):
@@ -73,7 +73,7 @@ A modern, minimalist landing page that serves as your digital business card. Ins
 
 5. Start the development server:
    ```bash
-   yarn run dev
+   bun run dev
    ```
 
 6. View your site at [http://localhost:5173](http://localhost:5173)
@@ -82,12 +82,12 @@ A modern, minimalist landing page that serves as your digital business card. Ins
 
 Create a production-ready build:
 ```bash
-yarn run build
+bun run build
 ```
 
 Preview the production build:
 ```bash
-yarn run preview
+bun run preview
 ```
 
 The static files will be generated in the `dist/` directory.
