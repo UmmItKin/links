@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Plyr from 'plyr';
 import 'plyr/dist/plyr.css';
+import { FaRocket, FaCog, FaCheck, FaGithub } from 'react-icons/fa';
 
 const DotfilesPage: React.FC = () => {
   const playerRef = useRef<HTMLDivElement>(null);
@@ -73,19 +74,18 @@ const DotfilesPage: React.FC = () => {
   }, []);
 
   const stats = [
-    { label: "System", value: "Arch Linux", icon: "🐧" },
-    { label: "Window Manager", value: "Hyprland", icon: "🪟" },
-    { label: "Easy to use", value: "Config Files", icon: "📁" },
-    { label: "TUI Installer", value: "Install Scripts", icon: "💾" },
+    { label: "System", value: "Arch Linux" },
+    { label: "Window Manager", value: "Hyprland" },
+    { label: "Easy to use", value: "Config Files" },
+    { label: "TUI Installer", value: "Install Scripts" }
   ];
 
   return (
     <div className="pt-24 px-4 max-w-6xl mx-auto relative min-h-screen">
 
-
       <div className="text-center mb-12 relative z-10">
-        <h1 className="text-6xl font-black mb-4 bg-gradient-to-r from-purple-300 via-pink-300 to-purple-400 bg-clip-text text-transparent">
-          ✨ UmmIt Dotfiles :)) ✨
+        <h1 className="text-6xl font-black mb-4 bg-gradient-to-r from-purple-300 via-purple-400 to-purple-400 bg-clip-text text-transparent">
+          UmmIt Dotfiles :))
         </h1>
         <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
           My Hyprland dotfiles — A pre-built environment of dotfiles for productivity and aesthetics
@@ -93,9 +93,8 @@ const DotfilesPage: React.FC = () => {
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           {stats.map((stat, index) => (
-            <div key={index} className="bg-gray-600/40 backdrop-blur-sm rounded-2xl p-4 border border-gray-400/30 hover:border-purple-200/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-200/30 hover:bg-gray-500/30">
-              <div className="text-2xl mb-2">{stat.icon}</div>
-              <div className="text-2xl font-bold text-purple-100">{stat.value}</div>
+            <div key={index} className="bg-gray-600/40 backdrop-blur-sm rounded-2xl p-4 border border-[#9082CE]/60 hover:border-[#9082CE] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#9082CE]/30 hover:bg-gray-500/30">
+              <div className="text-2xl font-bold text-[#9082CE]">{stat.value}</div>
               <div className="text-sm text-gray-200">{stat.label}</div>
             </div>
           ))}
@@ -105,14 +104,14 @@ const DotfilesPage: React.FC = () => {
       <div className="grid lg:grid-cols-3 gap-8 mb-12">
         <div className="lg:col-span-2">
           <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-purple-200/30 via-pink-200/30 to-purple-100/30 rounded-3xl blur group-hover:from-pink-200/40 group-hover:via-purple-200/40 group-hover:to-pink-100/40 transition-all duration-1000 animate-pulse"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#9082CE]/30 to-[#9082CE]/10 rounded-3xl blur group-hover:from-[#9082CE]/40 group-hover:to-[#9082CE]/20 transition-all duration-1000 animate-pulse"></div>
             
-            <div className="relative bg-gray-600/40 backdrop-blur-xl rounded-2xl p-6 border border-gray-400/30">
+            <div className="relative bg-gray-600/40 backdrop-blur-xl rounded-2xl p-6 border border-[#9082CE]/60">
               <div className="aspect-video mb-6 relative overflow-hidden rounded-xl">
                 <div 
                   ref={playerRef}
                   data-plyr-provider="youtube" 
-                  data-plyr-embed-id="sjeKlj8mTjE"
+                  data-plyr-embed-id="kd0elrqV0O0"
                   className="w-full h-full"
                 ></div>
               </div>
@@ -125,9 +124,9 @@ const DotfilesPage: React.FC = () => {
         </div>
 
         <div className="space-y-6">
-          <div className="bg-gradient-to-br from-gray-600/40 to-gray-500/40 backdrop-blur-xl rounded-2xl p-6 border border-gray-400/30 hover:border-purple-200/50 transition-all duration-300 hover:bg-gradient-to-br hover:from-purple-600/20 hover:to-gray-500/40">
-            <h3 className="text-xl font-bold text-purple-100 mb-4 flex items-center gap-2">
-              <span className="animate-bounce">🚀</span> About This Project
+          <div className="bg-gradient-to-br from-gray-600/40 to-gray-500/40 backdrop-blur-xl rounded-2xl p-6 border border-[#9082CE]/60 hover:border-[#9082CE] transition-all duration-300 hover:bg-gradient-to-br hover:from-[#9082CE]/20 hover:to-gray-500/40">
+            <h3 className="text-xl font-bold text-[#9082CE] mb-4 flex items-center gap-2">
+              <FaRocket className="inline" /> About This Project
             </h3>
             <p className="text-gray-100 leading-relaxed mb-4">
               A comprehensive collection of Hyprland configuration files for Arch Linux distributions, 
@@ -137,27 +136,27 @@ const DotfilesPage: React.FC = () => {
             
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm text-gray-100">
-                <span className="text-green-200">✅</span> Automated installation scripts
+                <FaCheck /> Automated installation scripts
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-100">
-                <span className="text-green-200">✅</span> Modern themes and styling
+                <FaCheck /> Modern themes and styling
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-100">
-                <span className="text-green-200">✅</span> Efficient workflow setup
+                <FaCheck /> Efficient workflow setup
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-100">
-                <span className="text-green-200">✅</span> Beautiful interface design
+                <FaCheck /> Beautiful interface design
               </div>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-gray-600/40 to-gray-500/40 backdrop-blur-xl rounded-2xl p-6 border border-gray-400/30 hover:border-cyan-200/50 transition-all duration-300 hover:bg-gradient-to-br hover:from-cyan-600/20 hover:to-gray-500/40">
+          <div className="bg-gradient-to-br from-gray-600/40 to-gray-500/40 backdrop-blur-xl rounded-2xl p-6 border border-[#9082CE]/60 hover:border-[#9082CE] transition-all duration-300 hover:bg-gradient-to-br hover:from-[#9082CE]/20 hover:to-gray-500/40">
             <h3 className="text-xl font-bold text-cyan-100 mb-4 flex items-center gap-2">
-              <span className="animate-spin">⚙️</span> Stack
+              <FaCog className="inline animate-spin" /> Stack
             </h3>
             <div className="flex flex-wrap gap-2">
               {["Arch Linux", "Hyprland", "Shell", "GNU/Linux", "CSS", "JSON"].map((tech, index) => (
-                <span key={index} className="px-3 py-1 bg-gradient-to-r from-purple-400/40 to-pink-400/40 text-white rounded-full text-sm border border-purple-300/30 hover:scale-105 hover:from-pink-400/40 hover:to-purple-400/40 transition-all duration-300 cursor-default">
+                <span key={index} className="px-3 py-1 bg-gradient-to-r from-[#9082CE]/60 to-[#9082CE]/30 text-white rounded-full text-sm border border-[#9082CE]/60 hover:scale-105 hover:from-[#9082CE]/80 hover:to-[#9082CE]/40 transition-all duration-300 cursor-default">
                   {tech}
                 </span>
               ))}
@@ -169,10 +168,10 @@ const DotfilesPage: React.FC = () => {
               href="https://github.com/UmmItC/Dotfiles"
               target="_blank" 
               rel="noopener noreferrer"
-              className="block w-full text-center px-6 py-4 bg-gradient-to-r from-purple-400/60 to-pink-400/60 text-white rounded-2xl font-bold hover:from-purple-500/70 hover:to-pink-500/70 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-300/30 transform"
+              className="block w-full text-center px-6 py-4 bg-gradient-to-r from-[#9082CE]/80 to-[#9082CE]/40 text-white rounded-2xl font-bold transition-all duration-300 hover:scale-105 transform"
             >
               <span className="flex items-center justify-center gap-2">
-                <span>🔗</span> View on GitHub
+                <FaGithub /> View on GitHub
               </span>
             </a>
           </div>
