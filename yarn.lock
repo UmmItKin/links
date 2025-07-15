@@ -5501,7 +5501,7 @@ __metadata:
     react-dom: "npm:^19.1.0"
     react-icons: "npm:^5.5.0"
     react-markdown: "npm:^10.1.0"
-    react-medium-image-zoom: "npm:^5.2.14"
+    react-medium-image-zoom: "npm:^5.3.0"
     react-router-dom: "npm:^7.6.3"
     react-svg: "npm:^16.3.0"
     rehype-raw: "npm:^7.0.0"
@@ -7552,13 +7552,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-medium-image-zoom@npm:^5.2.14":
-  version: 5.2.14
-  resolution: "react-medium-image-zoom@npm:5.2.14"
+"react-medium-image-zoom@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "react-medium-image-zoom@npm:5.3.0"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10c0/016cf62e01c930bc773bc856f5f3c5e4b0ebb3df0760d0549dda9d60e80e7716b094b11729b6f8e8edbd096d0f5cecefa749161ec48e53c94a464ab9791fd025
+  checksum: 10c0/a6a0df343e437b920c7b946abf99a4080aec451c3e5872ab7f8a554d3e29bbeab0b690a16bedaded3c5b05ec2cbd28edf311dbce408cb4e21526d1b9c8620385
   languageName: node
   linkType: hard
 
