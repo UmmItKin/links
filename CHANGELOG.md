@@ -1,3 +1,13 @@
+## [1.17.2](https://github.com/UmmItC/links/compare/v1.17.1...v1.17.2) (2025-07-15)
+
+### Bug Fixes
+
+* update alt text for Passthru link ([316ba3d](https://github.com/UmmItC/links/commit/316ba3d0c3f1f782a9c348ee5e3bf8785f58c7a1))
+
+### Styles
+
+* enhance DotfilesPage with icons and styling updates ([1c2058d](https://github.com/UmmItC/links/commit/1c2058d9798b54b605bdaf123615d198185717fd))
+
 ## [1.17.1](https://github.com/UmmItC/links/compare/v1.17.0...v1.17.1) (2025-07-15)
 
 ### ⚠ BREAKING CHANGES
