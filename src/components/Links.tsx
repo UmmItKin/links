@@ -15,7 +15,7 @@ const linksData: LinkData[] = [
   { label: "Github", url: "https://short.ummit.dev/github", icon: <FaGithub className="w-5 h-5" />, alt: "@UmmItC" },
   { label: "Buy me a Coffee", url: "https://short.ummit.dev/buy-me-a-coffee", icon: <SiBuymeacoffee className="w-5 h-5" />, alt: "@UmmIt" }, 
   { label: "Blog", url: "https://short.ummit.dev/blog-old", icon: <GrBlog className="w-5 h-5" />, alt: "blog.ummit.dev" },
-  { label: "Passthru", url: "https://short.ummit.dev/gpu-passthru", icon: <SiReadthedocs className="w-5 h-5" />, alt: "gpu-passthru.ummit.dev" },
+  { label: "Passthru", url: "https://short.ummit.dev/gpu-passthru", icon: <SiReadthedocs className="w-5 h-5" />, alt: "gpu.passthru.info" },
   { label: "Status", url: "https://short.ummit.dev/upptime", icon: <SiStatuspal className="w-5 h-5" />, alt: "status.ummit.dev"},
 ];
 
