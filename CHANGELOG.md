@@ -1,3 +1,43 @@
+## [1.17.1](https://github.com/UmmItC/links/compare/v1.17.0...v1.17.1) (2025-07-15)
+
+### ⚠ BREAKING CHANGES
+
+* migrate from Yarn to Bun package manager
+
+### Bug Fixes
+
+* update bun install command to use --immutable flag ([082d061](https://github.com/UmmItC/links/commit/082d061e6bcb00bcf18eec7378191b7039ce49bc))
+
+### Refactors
+
+* migrate from Yarn to Bun package manager ([a738a66](https://github.com/UmmItC/links/commit/a738a66a50f4d3ea2a7c3282375a4d58dcccd24b))
+
+### Chores
+
+* **deps-dev:** bump @semantic-release/npm from 12.0.1 to 12.0.2 ([4866992](https://github.com/UmmItC/links/commit/486699230da0231d6b65f1300cafd2598ba4bb2a))
+* **deps-dev:** bump @tailwindcss/postcss from 4.1.10 to 4.1.11 ([ca246b5](https://github.com/UmmItC/links/commit/ca246b59a39a55ce63d820a5a8c48113adfa98ed))
+* **deps-dev:** bump @tailwindcss/postcss from 4.1.8 to 4.1.10 ([106fb47](https://github.com/UmmItC/links/commit/106fb4721266d57739a629919855d40ca3214e98))
+* **deps-dev:** bump @types/node from 22.15.30 to 24.0.0 ([13b6ae8](https://github.com/UmmItC/links/commit/13b6ae80ffd44f353afbeca63f2f11cb70a37a2b))
+* **deps-dev:** bump @types/node from 24.0.0 to 24.0.3 ([3fa5acb](https://github.com/UmmItC/links/commit/3fa5acbbf8c08d6c84cd13215a5c155c57688a6f))
+* **deps-dev:** bump @types/node from 24.0.3 to 24.0.4 ([e6fbec2](https://github.com/UmmItC/links/commit/e6fbec234cb551c0bee759b7b4f4ff77cbe04695))
+* **deps-dev:** bump @types/node from 24.0.4 to 24.0.8 ([6678d82](https://github.com/UmmItC/links/commit/6678d8262ab10ff6ff6f015f83eefcb2ade15fd3))
+* **deps-dev:** bump @types/node from 24.0.8 to 24.0.10 ([e02d97e](https://github.com/UmmItC/links/commit/e02d97e503c3894c6696391c804f81383f20db65))
+* **deps-dev:** bump @types/react from 19.1.6 to 19.1.7 ([40cc19e](https://github.com/UmmItC/links/commit/40cc19e18fb2782adc6ebd786e37216a5155cc11))
+* **deps-dev:** bump @types/react from 19.1.7 to 19.1.8 ([8f53fb0](https://github.com/UmmItC/links/commit/8f53fb050c451e67ebaf7b7d0c5e8cb14e326262))
+* **deps-dev:** bump @vitejs/plugin-react from 4.5.1 to 4.5.2 ([55fcd9d](https://github.com/UmmItC/links/commit/55fcd9d5281df41c789ba31fc0ae1a11cea592d1))
+* **deps-dev:** bump @vitejs/plugin-react from 4.5.2 to 4.6.0 ([5bc2b7a](https://github.com/UmmItC/links/commit/5bc2b7a1aee457fe1c2bc838add7d6a4b9d95317))
+* **deps-dev:** bump eslint from 9.28.0 to 9.29.0 ([a341f29](https://github.com/UmmItC/links/commit/a341f291f6a974ec22e150c48b998b5aca618f40))
+* **deps-dev:** bump eslint from 9.29.0 to 9.30.0 ([dd3303c](https://github.com/UmmItC/links/commit/dd3303c0815d8d78cf14386c4c36e91581ac0e5e))
+* **deps-dev:** bump eslint from 9.30.0 to 9.30.1 ([de6bd24](https://github.com/UmmItC/links/commit/de6bd2447371b01257e476eb3a006ac3ae7450c6))
+* **deps-dev:** bump postcss from 8.5.4 to 8.5.6 ([9a8ecce](https://github.com/UmmItC/links/commit/9a8ecce88a4d42a665763f683538d4f02abe67d8))
+* **deps-dev:** bump semantic-release from 24.2.5 to 24.2.6 ([7b6e35a](https://github.com/UmmItC/links/commit/7b6e35ab346b77dbe2f76cf671bd9a7e5248b45a))
+* **deps-dev:** bump tailwindcss from 4.1.10 to 4.1.11 ([ec98e3f](https://github.com/UmmItC/links/commit/ec98e3fec4e3cb1433a1e3f77f57950c3d64f489))
+* **deps-dev:** bump tailwindcss from 4.1.8 to 4.1.10 ([dada21e](https://github.com/UmmItC/links/commit/dada21eabf1f3313cb3f3afae50ce6d1fb6fdcdd))
+* **deps-dev:** bump vite from 6.3.5 to 7.0.0 ([e2e9350](https://github.com/UmmItC/links/commit/e2e9350aa02752b76107e32eeb2535e0eb5531ea))
+* **deps:** bump @supabase/supabase-js from 2.50.0 to 2.50.2 ([98a34ca](https://github.com/UmmItC/links/commit/98a34caf4dd3086c971ceb1f9a967bd227b1a994))
+* **deps:** bump dotenv from 16.5.0 to 16.6.1 ([b9df452](https://github.com/UmmItC/links/commit/b9df45293e2edeaab10d0efcc9d5f721f706c5b6))
+* **deps:** bump react-router-dom from 7.6.2 to 7.6.3 ([88460f4](https://github.com/UmmItC/links/commit/88460f4c61c97544aa845c9add3c656fad8c75e7))
+
 ## [1.17.0](https://github.com/UmmItC/links/compare/v1.16.0...v1.17.0) (2025-06-07)
 
 ### Features
