@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "type-check": "tsc --noEmit",
-    "check-all": "yarn type-check && yarn lint"
+    "check-all": "bun type-check && bun lint"
   },
   "dependencies": {
     "@giscus/react": "^3.1.0",
