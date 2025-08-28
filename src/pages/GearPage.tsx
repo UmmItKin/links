@@ -10,7 +10,6 @@ interface GearItem {
   name: string;
   value: string;
   icon: React.ReactNode;
-  image?: string;
 }
 
 interface GearCategory {
@@ -31,91 +30,77 @@ const GearPage: React.FC = () => {
           name: "Motherboard",
           value: "Gigabyte B760M GAMING X", 
           icon: <BsMotherboard className="text-primary text-lg" />,
-          image: "/img/gear/motherboard.webp"
         },
         { 
           name: "CPU",
           value: "Intel i5-13600K", 
           icon: <FaMicrochip className="text-primary text-lg" />,
-          image: "/img/gear/cpu.webp"
+
         },
         { 
           name: "GPU",
           value: "Sapphire RX 6650 XT 8GB", 
           icon: <BsGpuCard className="text-primary text-lg" />,
-          image: "/img/gear/gpu.webp" 
         },
         { 
           name: "GPU-2", 
           value: "PowerColor RX 6600 8GB", 
           icon: <BsGpuCard className="text-primary text-lg" />,
-          image: "/img/gear/gpu2.webp" 
         },
         { 
           name: "RAM", 
           value: "ADATA XPG 64GB", 
           icon: <FaMemory className="text-primary text-lg" />,
-          image: "/img/gear/ram.webp"
         },
         { 
           name: "NVMe SSD", 
           value: "Kingston KC3000 2TB", 
           icon: <FaHdd className="text-primary text-lg" />,
-          image: "/img/gear/nvme.webp"
         },
         { 
           name: "SATA SSD", 
           value: "Toshiba MG08 4TB", 
           icon: <FaHdd className="text-primary text-lg" />,
-          image: "/img/gear/ssd.webp"
         },
         { 
           name: "Power Supply", 
           value: "ADATA 850W Gold", 
           icon: <FaPowerOff className="text-primary text-lg" />,
-          image: "/img/gear/psu.webp"
         },
         { 
           name: "Case", 
           value: "GIGABYTE C200", 
           icon: <PiDesktopTowerDuotone className="text-primary text-lg" />,
-          image: "/img/gear/case.webp"
         },
         { 
           name: "Cooler", 
           value: "Thermalright Aqua Elite 240", 
           icon: <FaFan className="text-primary text-lg" />,
-          image: "/img/gear/cooler.webp"
         },
         { 
           name: "Fans", 
           value: "Thermalright TL-C12C x3", 
           icon: <FaFan className="text-primary text-lg" />,
-          image: "/img/gear/fans.webp"
         },
         { 
           name: "Operating System", 
           value: "GNU/Linux", 
           icon: <FaLinux className="text-primary text-lg" />,
-          image: "/img/gear/linux.webp"
         },
         { 
           name: "Distribution", 
           value: "Arch Linux / Gentoo / NixOS", 
           icon: <DiLinux className="text-primary text-lg" />,
-          image: "/img/gear/distros.webp"
         },
         { 
           name: "Dynamic Window Manager", 
           value: "Hyprland", 
           icon: <BiSolidCog className="text-primary text-lg" />,
-          image: "/img/gear/hyprland.webp"
         },
         { 
           name: "Desktop Environment", 
           value: "KDE Plasma", 
           icon: <BiSolidCog className="text-primary text-lg" />,
-          image: "/img/gear/kde.webp"
         },
       ]
     },
@@ -127,55 +112,46 @@ const GearPage: React.FC = () => {
           name: "Device", 
           value: "HP Pavilion Aero 13 (Ryzen 7, Sky Blue)", 
           icon: <FaLaptop className="text-primary text-lg" />,
-          image: "/img/gear/laptop.webp" 
         },
         { 
           name: "CPU", 
           value: "AMD Ryzen 7-8840U Processor", 
           icon: <FaMicrochip className="text-primary text-lg" />,
-          image: "/img/gear/ryzen.webp" 
         },
         { 
           name: "iGPU", 
           value: "AMD Radeon Graphics", 
           icon: <BsGpuCard className="text-primary text-lg" />,
-          image: "/img/gear/radeon.webp" 
         },
         { 
           name: "RAM", 
           value: "On-Board 16GB LPDDR5x", 
           icon: <FaMemory className="text-primary text-lg" />,
-          image: "/img/gear/laptop-ram.webp" 
         },
         { 
           name: "NVMe SSD", 
           value: "1TB PCIe NVMe M.2 SSD", 
           icon: <FaHdd className="text-primary text-lg" />,
-          image: "/img/gear/laptop-nvme.webp" 
         },
         { 
           name: "Opearting System", 
           value: "GNU/Linux", 
           icon: <FaLinux className="text-primary text-lg" />,
-          image: "/img/gear/linux.webp" 
         },
         { 
           name: "Distribution", 
           value: "Arch Linux / Kali Linux", 
           icon: <DiLinux className="text-primary text-lg" />,
-          image: "/img/gear/arch-kali.webp" 
         },
         { 
           name: "Dynamic Window Manager", 
           value: "Hyprland", 
           icon: <BiSolidCog className="text-primary text-lg" />,
-          image: "/img/gear/hyprland.webp" 
         },
         { 
           name: "Desktop Environment", 
           value: "KDE Plasma", 
           icon: <BiSolidCog className="text-primary text-lg" />,
-          image: "/img/gear/kde.webp" 
         },
       ]
     },
@@ -187,25 +163,21 @@ const GearPage: React.FC = () => {
           name: "Keyboard", 
           value: "MSI GK20 Gaming Keyboard", 
           icon: <FaKeyboard className="text-primary text-lg" />,
-          image: "/img/gear/keyboard.webp" 
         },
         { 
           name: "Mouse", 
           value: "Logitech G502 X Wired Gaming Mouse - Black", 
           icon: <FaMouse className="text-primary text-lg" />,
-          image: "/img/gear/mouse.webp" 
         },
         { 
           name: "Chair", 
           value: "Cooler Master CALIBER X2 - Grey", 
           icon: <FaChair className="text-primary text-lg" />,
-          image: "/img/gear/chair.webp" 
         },
         { 
           name: "Headphones", 
           value: "Pixel Buds Pro 2", 
           icon: <FaHeadphones className="text-primary text-lg" />,
-          image: "/img/gear/headphones.webp" 
         },
       ]
     },
@@ -217,25 +189,21 @@ const GearPage: React.FC = () => {
           name: "Server", 
           value: "Raspberry Pi 4B", 
           icon: <FaServer className="text-primary text-lg" />,
-          image: "/img/gear/raspberry.webp" 
         },
         { 
           name: "RAM", 
           value: "8GB LPDDR4-3200 SDRAM", 
           icon: <FaMemory className="text-primary text-lg" />,
-          image: "/img/gear/pi-ram.webp" 
         },
         { 
           name: "Storage", 
           value: "microSD 128GB", 
           icon: <FaHdd className="text-primary text-lg" />,
-          image: "/img/gear/microsd.webp" 
         },
         { 
           name: "OS", 
           value: "OpenWrt", 
           icon: <FaLinux className="text-primary text-lg" />,
-          image: "/img/gear/openwrt.webp" 
         },
       ]
     },
@@ -247,25 +215,21 @@ const GearPage: React.FC = () => {
           name: "Device", 
           value: "Googel Pixel 6A", 
           icon: <HiMiniDevicePhoneMobile className="text-primary text-lg" />,
-          image: "/img/gear/pixel.webp" 
         },
         { 
           name: "RAM", 
           value: "8GB", 
           icon: <FaMemory className="text-primary text-lg" />,
-          image: "/img/gear/phone-ram.webp" 
         },
         { 
           name: "Storage", 
           value: "128GB", 
           icon: <FaHdd className="text-primary text-lg" />,
-          image: "/img/gear/phone-storage.webp" 
         },
         { 
           name: "OS", 
           value: "Graphene OS", 
           icon: <FaLinux className="text-primary text-lg" />,
-          image: "/img/gear/graphene.webp" 
         },
       ]
     }
