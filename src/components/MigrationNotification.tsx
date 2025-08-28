@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaExclamationTriangle, FaTimes, FaRocket } from 'react-icons/fa';
+import { FaExclamationTriangle } from 'react-icons/fa';
 import { IoNotifications } from 'react-icons/io5';
 
 interface MigrationNotificationProps {
