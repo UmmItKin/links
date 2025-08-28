@@ -1,3 +1,4 @@
+import React from 'react';
 import { FaLaptop, FaKeyboard, FaDesktop, FaServer, FaMemory, FaMicrochip, FaHdd, FaPowerOff, FaFan, FaLinux, FaChair, FaMouse, FaHeadphones } from 'react-icons/fa';
 import { HiMiniDevicePhoneMobile } from "react-icons/hi2";
 import { DiLinux } from "react-icons/di";

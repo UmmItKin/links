@@ -5,6 +5,7 @@ import { MdEmail } from "react-icons/md";
 import { SiUmami } from "react-icons/si";
 import { UserData, SocialButton } from "../config/userData";
 import CustomZoom from "../components/CustomZoom";
+import MigrationNotification from "../components/MigrationNotification";
 import '../styles/customZoom.css';
 
 interface HomePageProps {
@@ -15,7 +16,9 @@ interface HomePageProps {
 
 const HomePage: React.FC<HomePageProps> = ({ userData, socialButtons, onGPGClick }) => {
   return (
-    <div className="hero min-h-screen bg-transparent flex items-center justify-center">
+    <>
+      <MigrationNotification />
+      <div className="hero min-h-screen bg-transparent flex items-center justify-center">
       <div className="hero-content text-center">
         <div className="max-w-md">
           <div className="pb-5 mt-20 flex justify-center items-center">
@@ -58,6 +61,7 @@ const HomePage: React.FC<HomePageProps> = ({ userData, socialButtons, onGPGClick
         </div>
       </div>
     </div>
+    </>
   );
 };
 
