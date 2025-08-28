@@ -14,7 +14,7 @@ const GiscusComments: React.FC<GiscusCommentsProps> = ({ pageTitle }) => {
     <Giscus
       key={location.pathname}
       id="comments"
-      repo="UmmItC/links"
+      repo="UmmItKin/links"
       repoId="R_kgDOL7HS6w"
       category="General"
       categoryId="DIC_kwDOL7HS684CoWvS"

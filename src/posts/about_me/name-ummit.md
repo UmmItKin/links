@@ -47,4 +47,4 @@ Commit
 然後我也沒想到，我居然不知不覺進入了香港前 25 名的 committers 排行榜！？  
 （想不到一千多個 commit 竟然就能躋身全球 GitHub top committer 了 XD）
 
-[![committers.top badge](https://user-badge.committers.top/hong_kong/UmmItC.svg)](https://user-badge.committers.top/hong_kong/UmmItC)
+[![committers.top badge](https://user-badge.committers.top/hong_kong/UmmItKin.svg)](https://user-badge.committers.top/hong_kong/UmmItKin)

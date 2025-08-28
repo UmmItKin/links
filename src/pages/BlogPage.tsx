@@ -272,7 +272,7 @@ const BlogPage: React.FC = () => {
         {/* Footer */}
         <div className="mt-16 text-center">
           <a
-            href="https://github.com/UmmItC/links"
+            href="https://github.com/UmmItKin/links"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 px-4 py-2 bg-transparent backdrop-blur-sm

@@ -15,14 +15,14 @@ const ProjectPage: React.FC = () => {
       title: "Links",
       description: "My Links website, inspired by Linktree, built with React, Tailwind CSS, and Daisy UI.",
       tags: ["React", "Tailwind", "Daisy UI"],
-      url: "https://github.com/UmmItC/Links",
+      url: "https://github.com/UmmItKin/Links",
       isExternal: true
     },
     {
       title: "gpu-passthru",
       description: "Documentation for GPU passthrough setup for GNU/Linux virtualization.",
       tags: ["Documentation", "GNU/Linux"],
-      url: "https://github.com/UmmItC/gpu-passthru",
+      url: "https://github.com/UmmItKin/gpu-passthru",
       isExternal: true
     },
     {

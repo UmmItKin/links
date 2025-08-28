@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
             
             {commitHash && (
               <a 
-                href={`https://github.com/UmmItC/Links/commit/${commitHash}`}
+                href={`https://github.com/UmmItKin/Links/commit/${commitHash}`}
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-transparent backdrop-blur-sm
                           border border-gray-700/30 rounded-full
                           transition-all duration-300 hover:text-primary hover:scale-105

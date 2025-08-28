@@ -1,11 +1,11 @@
 # Links - Your Personal Landing Page :link:
 
-[![Release](https://github.com/UmmItC/Links/actions/workflows/semantic-release.yml/badge.svg)](https://github.com/UmmItC/Links/actions/workflows/semantic-release.yml)
+[![Release](https://github.com/UmmItKin/Links/actions/workflows/semantic-release.yml/badge.svg)](https://github.com/UmmItKin/Links/actions/workflows/semantic-release.yml)
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Made with Supabase](https://img.shields.io/badge/Made%20with-Supabase-3ECF8E?logo=supabase)](https://supabase.com)
 [![Comments by Giscus](https://img.shields.io/badge/Comments_by-Giscus-blue?logo=giscus&logoColor=white)](https://giscus.app)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/UmmItC/links)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/UmmItKin/links)
 [![Deployed with Vercel](https://img.shields.io/badge/Deployed%20with-Vercel-black?logo=vercel)](https://vercel.com)
 
 A modern, minimalist landing page that serves as your digital business card. Inspired by Linktree, but enhanced with custom features and a sleek design. Perfect for creators, developers, and professionals who want to share their online presence elegantly.
@@ -33,7 +33,7 @@ A modern, minimalist landing page that serves as your digital business card. Ins
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/UmmItC/links.git
+   git clone https://github.com/UmmItKin/links.git
    cd links
    ```
 

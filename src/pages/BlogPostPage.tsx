@@ -140,7 +140,7 @@ const BlogPostPage: React.FC = () => {
   // GitHub edit URL 
   const getGitHubEditUrl = () => {
     if (!post || !post.filename) return '#';
-    return `https://github.com/UmmItC/links/blob/master/src/posts/${post.filename}`;
+    return `https://github.com/UmmItKin/links/blob/master/src/posts/${post.filename}`;
   };
 
   // Calculate reading time (rough estimate: 200 words per minute)
@@ -280,7 +280,7 @@ const BlogPostPage: React.FC = () => {
         <div className="mt-12 pt-6 border-t border-gray-700/50 flex justify-between items-center">
           <div className="flex items-center space-x-4">
             <a 
-              href="https://github.com/UmmItC"
+              href="https://github.com/UmmItKin"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-primary transition-colors"

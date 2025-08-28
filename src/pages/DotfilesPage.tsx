@@ -165,7 +165,7 @@ const DotfilesPage: React.FC = () => {
 
           <div className="space-y-3">
             <a 
-              href="https://github.com/UmmItC/Dotfiles"
+              href="https://github.com/UmmItKin/Dotfiles"
               target="_blank" 
               rel="noopener noreferrer"
               className="block w-full text-center px-6 py-4 bg-gradient-to-r from-[#9082CE]/80 to-[#9082CE]/40 text-white rounded-2xl font-bold transition-all duration-300 hover:scale-105 transform"
