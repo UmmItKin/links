@@ -1,3 +1,10 @@
+## [1.18.3](https://github.com/UmmItKin/links/compare/v1.18.2...v1.18.3) (2025-08-28)
+
+### Bug Fixes
+
+* update GPG key URL to my new shortened link ([aa968bf](https://github.com/UmmItKin/links/commit/aa968bf557348536e0d76f3e7ae6377ab2a74dec))
+* update metaseo URLs to my new shortened domain ([5eb1f20](https://github.com/UmmItKin/links/commit/5eb1f20606ab4a4835cbe547106a5fdd7fc5ea7f))
+
 ## [1.18.2](https://github.com/UmmItKin/links/compare/v1.18.1...v1.18.2) (2025-08-28)
 
 ### Bug Fixes
