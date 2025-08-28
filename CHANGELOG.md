@@ -1,3 +1,18 @@
+## [1.18.2](https://github.com/UmmItKin/links/compare/v1.18.1...v1.18.2) (2025-08-28)
+
+### Bug Fixes
+
+* update repository references to new username UmmItKin instead of UmmItC ([75a7e59](https://github.com/UmmItKin/links/commit/75a7e598215091bac34a9b715c360459ab501f25))
+
+### Styles
+
+* update GearPage with my new gear ([77124b6](https://github.com/UmmItKin/links/commit/77124b672f33af248cd55eb73fbd5fb55f65ff2f))
+* update MigrationNotification content layout and messaging for website migration ([3f4011f](https://github.com/UmmItKin/links/commit/3f4011f16f9ec7b1e3789512e0924660ee78b174))
+
+### Refactors
+
+* remove image properties from GearPage component items ([ad95b08](https://github.com/UmmItKin/links/commit/ad95b08bed549f06cf8606419f09051da734d57f))
+
 ## [1.18.1](https://github.com/UmmItKin/links/compare/v1.18.0...v1.18.1) (2025-08-28)
 
 ### Bug Fixes
