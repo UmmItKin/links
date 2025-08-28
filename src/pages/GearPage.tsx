@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLaptop, FaKeyboard, FaDesktop, FaServer, FaMemory, FaMicrochip, FaHdd, FaPowerOff, FaFan, FaLinux, FaChair, FaMouse, FaHeadphones } from 'react-icons/fa';
+import { FaLaptop, FaKeyboard, FaDesktop, FaServer, FaMemory, FaMicrochip, FaHdd, FaPowerOff, FaFan, FaLinux, FaChair, FaMouse, FaHeadphones, FaPen, FaMicrophone } from 'react-icons/fa';
 import { HiMiniDevicePhoneMobile } from "react-icons/hi2";
 import { DiLinux } from "react-icons/di";
 import { BsMotherboard, BsGpuCard } from "react-icons/bs";
@@ -8,7 +8,7 @@ import { PiDesktopTowerDuotone } from "react-icons/pi";
 
 interface GearItem {
   name: string;
-  value: string;
+  value: string | React.ReactNode;
   icon: React.ReactNode;
 }
 
@@ -19,7 +19,7 @@ interface GearCategory {
 }
 
 const GearPage: React.FC = () => {
-  const lastUpdated = "August 28, 2025";
+  const lastUpdated = "August 28, 2025 23:11:20";
 
   const gearCategories: GearCategory[] = [
     {
@@ -160,8 +160,19 @@ const GearPage: React.FC = () => {
       icon: <FaKeyboard className="text-primary text-2xl" />,
       items: [
         { 
-          name: "Keyboard", 
+          name: "Keyboard 1", 
           value: "MSI GK20 Gaming Keyboard", 
+          icon: <FaKeyboard className="text-primary text-lg" />,
+        },
+        { 
+          name: "Keyboard 2", 
+          value: (
+            <>
+              ZSA Moonlander MK1
+              <br />
+              (Kailh Silver, Black keycaps)
+            </>
+          ), 
           icon: <FaKeyboard className="text-primary text-lg" />,
         },
         { 
@@ -175,14 +186,26 @@ const GearPage: React.FC = () => {
           icon: <FaChair className="text-primary text-lg" />,
         },
         { 
-          name: "Headphones", 
-          value: "Pixel Buds Pro 2", 
-          icon: <FaHeadphones className="text-primary text-lg" />,
+          name: "Monitor", 
+          value: "AOC Q24G2A/BK 165 Hz", 
+          icon: <FaLaptop className="text-primary text-lg" />,
         },
+        { 
+          name: "Pen tab", 
+          value: "Wacom CTL-472", 
+          icon: <FaPen className="text-primary text-lg" />,
+        },
+        { 
+          name: "Microphone", 
+          value: "HyperX SoloCast - USB Microphone (Black)", 
+          icon: <FaMicrophone className="text-primary text-lg" />,
+        },
+        
+
       ]
     },
     {
-      title: "Homelab",
+      title: "Router/Server",
       icon: <FaServer className="text-primary text-2xl" />,
       items: [
         { 
@@ -231,8 +254,14 @@ const GearPage: React.FC = () => {
           value: "Graphene OS", 
           icon: <FaLinux className="text-primary text-lg" />,
         },
+        { 
+          name: "Headphones", 
+          value: "Pixel Buds Pro 2", 
+          icon: <FaHeadphones className="text-primary text-lg" />,
+        },
       ]
-    }
+    },
+    
   ];
 
   return (
