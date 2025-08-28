@@ -65,17 +65,35 @@ const MigrationNotification: React.FC<MigrationNotificationProps> = ({ onClose }
 
           {/* Content */}
           <div className="mb-6">
-            <div className="flex items-start space-x-3 mb-4">
+            <div className="flex items-start space-x-3">
               <FaExclamationTriangle className="text-amber-500 text-lg mt-1 flex-shrink-0" />
-              <div className="text-gray-300 leading-relaxed">
-                <p className="mb-3">
-                  <span className="text-white font-semibold mt-10">This website will be rewritten using Astro. <p className="text-gray-400">No more pure react. new astro will be astro with react and more.</p></span> 
-                  <br />This decision was made this month. (2025 August)
-                  <br />
-                </p>
-                <p className="text-sm text-gray-400">
-                  This current version will no longer receive updates <br />(except for security patches and package updates).
-                </p>
+              <div className="text-gray-300 space-y-4">
+                <div>
+                  <p className="text-white font-semibold text-base leading-relaxed mb-2">
+                    This website will be rewritten using Astro.
+                  </p>
+                  <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                    No more pure react. New Astro will be Astro with React and more.
+                  </p>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    This decision was made this month. (2025 August)
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-gray-400 text-sm leading-relaxed mb-2">
+                    This current version will no longer receive updates <br />(except for security patches and package updates).
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-white font-semibold text-sm leading-relaxed mb-2">
+                    So how about this website?
+                  </p>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    The answer is simple. Website will be archived and only receive security patches.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
