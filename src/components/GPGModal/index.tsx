@@ -14,7 +14,7 @@ const GPGModal: React.FC<GPGModalProps> = ({ gpgContent, onClose, onDownload }) 
       <div className="modal-box bg-transparent rounded-lg p-11 w-full max-w-2xl max-h-[75vh] overflow-auto backdrop-blur-md rounded-xl p-6 border border-gray-700/30 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
         <div className="flex justify-between items-center mb-4">
           <h3 className="text-lg font-bold italic">
-            ❯ curl https://links.ummit.dev/info/UmmIt.gpg | less
+            ❯ curl https://l.ummit.dev/info/UmmIt.gpg
           </h3>
           <div className="flex gap-2">
             <button

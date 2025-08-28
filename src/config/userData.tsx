@@ -21,7 +21,7 @@ export const userData: UserData = {
   imageIcon: "https://short.ummit.dev/cutecuteai-icon-1",
   repo: "https://short.ummit.dev/links-repo",
   umami_share_url: "https://short.ummit.dev/links-umami",
-  gpg_key: "https://links.ummit.dev/info/UmmIt.gpg",
+  gpg_key: "https://l.ummit.dev/info/UmmIt.gpg",
   wallpaper: "https://short.ummit.dev/ai-socute-1"
 };
 
