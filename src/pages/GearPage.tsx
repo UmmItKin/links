@@ -21,6 +21,7 @@ interface GearCategory {
 
 const GearPage: React.FC = () => {
   const [showImages, setShowImages] = useState(false);
+  const lastUpdated = "August 28, 2025";
 
   const toggleView = () => {
     setShowImages(!showImages);
@@ -306,6 +307,14 @@ const GearPage: React.FC = () => {
           <span className="ml-2 text-white">Images</span>
         </div>
       </div>
+      
+      {/* Last Updated Tag */}
+      <div className="flex justify-center mb-4">
+        <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
+          Gear List Updated on: {lastUpdated}
+        </span>
+      </div>
+      
       <p className="text-center text-white mb-8">These are the gears I use for my daily life and work. Without them, I Probably not here :)</p>
       
       <div className="space-y-8">
