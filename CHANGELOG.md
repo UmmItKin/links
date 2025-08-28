@@ -1,3 +1,9 @@
+## [1.18.1](https://github.com/UmmItKin/links/compare/v1.18.0...v1.18.1) (2025-08-28)
+
+### Bug Fixes
+
+* remove unused icon import from MigrationNotification component ([07bc355](https://github.com/UmmItKin/links/commit/07bc355f17046b248deb5fd040a53531c45e5c05))
+
 ## [1.18.0](https://github.com/UmmItKin/links/compare/v1.17.2...v1.18.0) (2025-08-28)
 
 ### Features
