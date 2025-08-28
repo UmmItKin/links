@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { FaLaptop, FaKeyboard, FaDesktop, FaServer, FaMemory, FaMicrochip, FaHdd, FaPowerOff, FaFan, FaLinux, FaChair, FaMouse, FaHeadphones } from 'react-icons/fa';
 import { HiMiniDevicePhoneMobile } from "react-icons/hi2";
 import { DiLinux } from "react-icons/di";
@@ -20,12 +19,7 @@ interface GearCategory {
 }
 
 const GearPage: React.FC = () => {
-  const [showImages, setShowImages] = useState(false);
   const lastUpdated = "August 28, 2025";
-
-  const toggleView = () => {
-    setShowImages(!showImages);
-  };
 
   const gearCategories: GearCategory[] = [
     {
@@ -278,34 +272,10 @@ const GearPage: React.FC = () => {
 
   return (
     <div className="pt-24 px-4 max-w-5xl mx-auto">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-4xl font-bold text-center flex-grow">
+      <div className="text-center mb-6">
+        <h1 className="text-4xl font-bold">
           UmmIt Gears <DiLinux className="text-primary text-4xl inline-block mb-1" /> :)
         </h1>
-        <div className="flex items-center">
-          <span className="mr-2 text-white">Text</span>
-          <div className="relative inline-block w-12 h-6 transition duration-200">
-            <input
-              type="checkbox"
-              className="opacity-0 w-0 h-0"
-              checked={showImages}
-              onChange={toggleView}
-            />
-            <span 
-              onClick={toggleView} 
-              className={`absolute cursor-pointer inset-0 rounded-full ${
-                showImages ? 'bg-primary' : 'bg-gray-700'
-              }`}
-            >
-              <span 
-                className={`absolute w-5 h-5 bg-white rounded-full transition-transform duration-200 transform ${
-                  showImages ? 'translate-x-6' : 'translate-x-1'
-                } top-0.5`}
-              ></span>
-            </span>
-          </div>
-          <span className="ml-2 text-white">Images</span>
-        </div>
       </div>
       
       {/* Last Updated Tag */}
@@ -328,56 +298,15 @@ const GearPage: React.FC = () => {
               <h2 className="text-2xl font-bold ml-3 text-white">{category.title}</h2>
             </div>
             
-            {showImages ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {category.items.map((item, itemIndex) => (
-                  <div 
-                    key={itemIndex} 
-                    className="bg-gray-900/60 rounded-lg p-4 flex flex-col items-center text-center hover:bg-gray-800/80 transition-all"
-                  >
-                    <div className="w-full h-40 mb-3 overflow-hidden rounded-lg bg-gray-700/50 flex items-center justify-center">
-                      {item.image ? (
-                        <img 
-                          src={item.image} 
-                          alt={item.name} 
-                          className="object-cover w-full h-full"
-                          onError={(e) => {
-                            e.currentTarget.style.display = 'none';
-                            const parent = e.currentTarget.parentElement;
-                            if (parent) {
-                              const placeholderDiv = document.createElement('div');
-                              placeholderDiv.className = 'text-4xl text-gray-500 flex flex-col items-center justify-center h-full w-full';
-                              placeholderDiv.innerHTML = `
-                                <div class="text-gray-500 text-4xl mb-2"></div>
-                                <span class="text-sm text-gray-500">No Image</span>
-                              `;
-                              parent.appendChild(placeholderDiv);
-                            }
-                          }}
-                        />
-                      ) : (
-                        <div className="text-4xl text-gray-500 flex flex-col items-center justify-center">
-                          {item.icon}
-                          <span className="text-sm mt-2 text-gray-500">No Image</span>
-                        </div>
-                      )}
-                    </div>
-                    <div className="font-medium text-lg text-base-content">{item.name}</div>
-                    <div className="text-base-content/80 text-sm">{item.value}</div>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {category.items.map((item, itemIndex) => (
-                  <div key={itemIndex} className="flex items-center space-x-2">
-                    {item.icon}
-                    <span className="font-medium text-white">{item.name}:</span>
-                    <span className="text-white/80">{item.value}</span>
-                  </div>
-                ))}
-              </div>
-            )}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {category.items.map((item, itemIndex) => (
+                <div key={itemIndex} className="flex items-center space-x-2">
+                  {item.icon}
+                  <span className="font-medium text-white">{item.name}:</span>
+                  <span className="text-white/80">{item.value}</span>
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>
