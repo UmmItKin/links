@@ -1,3 +1,20 @@
+## [1.18.0](https://github.com/UmmItKin/links/compare/v1.17.2...v1.18.0) (2025-08-28)
+
+### Features
+
+* add last updated tag to GearPage component ([d5f98fc](https://github.com/UmmItKin/links/commit/d5f98fc748720b03f762041933315815b7ade6fa))
+* add MigrationNotification component to inform users about website migration ([50cc1b9](https://github.com/UmmItKin/links/commit/50cc1b94e87dc8deda62dfb57836e82311f4cf39))
+
+### Refactors
+
+* remove image toggle functionality of GearPage layout ([8a85730](https://github.com/UmmItKin/links/commit/8a85730248745b09c5e5a9a9df8ed395f121dfa9))
+
+### Chores
+
+* **deps-dev:** bump @vitejs/plugin-react from 4.7.0 to 5.0.0 ([37ed41c](https://github.com/UmmItKin/links/commit/37ed41cbbf96ee3d23e297c3947f52004cc1e660))
+* update dependencies and delete file related to Yarn package manager ([43f1882](https://github.com/UmmItKin/links/commit/43f1882e6d38666d687a90eeaaaee6ce9f84b7fb))
+* update dependencies to lastest version ([da6f42e](https://github.com/UmmItKin/links/commit/da6f42e4ec23e74cb8210893a4a3c3c11af52331))
+
 ## [1.17.2](https://github.com/UmmItC/links/compare/v1.17.1...v1.17.2) (2025-07-15)
 
 ### Bug Fixes
